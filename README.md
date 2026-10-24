@@ -5,6 +5,14 @@
 Claude อ่าน repo เอง → สแกน requirement / design / workflow / feature → เขียนสเปกคู่มือ → รันระบบด้วยข้อมูลทดสอบ → เขียนหน้า → ถ่ายภาพ → ออกไฟล์ → ตรวจผล
 **คุณแค่สั่ง แล้วอ่านทวนก่อนส่งลูกค้า**
 
+## ดูวิดีโอแนะนำ
+
+วิดีโอ 1 นาทีครึ่ง: คำสั่ง, สเปกคู่มือ, PDF, Word, เว็บคู่มือ (ค้นหา, ภาพทีละขั้น, มือถือ, ธีมมืด), `manual-kit check` และวิธีติดตั้ง มีเสียงบรรยายภาษาไทยและคำบรรยายบนภาพ ภาพในวิดีโอมาจากคู่มือของ manual-kit เอง
+
+[![ภาพปกวิดีโอ: กดเพื่อเปิดวิดีโอ](docs/media/manual-kit-demo-poster.jpg)](docs/media/manual-kit-demo.mp4)
+
+กดที่ภาพเพื่อเปิดวิดีโอ · ข้อความคำบรรยาย: [`docs/media/manual-kit-demo.th.vtt`](docs/media/manual-kit-demo.th.vtt) · วิธีทำวิดีโอนี้ใหม่: [`tools/demo`](tools/demo/README.md)
+
 ---
 
 ## ทำอะไรได้บ้าง

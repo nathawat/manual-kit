@@ -1,0 +1,38 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><link rel="stylesheet" href="/common.css"><style>
+body { background: #e9edf4; display: grid; place-items: center; }
+.win { width: 1060px; height: 540px; background: #11161f; border-radius: 14px; box-shadow: 0 24px 60px rgba(15,27,45,.35); overflow: hidden; position: relative; }
+.bar { height: 40px; background: #1c2330; display: flex; align-items: center; padding: 0 16px; gap: 8px; }
+.bar i { width: 12px; height: 12px; border-radius: 50%; background: #ff5f57; } .bar i:nth-child(2) { background: #febc2e } .bar i:nth-child(3) { background: #28c840 }
+.bar span { margin-left: 14px; color: #8b97ab; font: 14px Menlo, monospace; }
+.badge { position: absolute; right: 16px; top: 7px; background: #d9480f; color: #fff; font: 700 16px 'Plex'; padding: 2px 14px; border-radius: 999px; }
+.body { padding: 26px 32px; color: #e6edf6; font-size: 21px; line-height: 1.6; }
+.prompt { color: #f6a77f; } .typed::after { content: '▋'; color: #f6a77f; animation: blink 1s steps(1) infinite; } .done::after { content: '' }
+@keyframes blink { 50% { opacity: 0 } }
+.hint { color: #8b97ab; font-size: 17px; margin: 14px 0 10px; font-family: 'Plex'; }
+ol { list-style: none; margin: 0; padding: 0; font-family: 'Plex'; font-size: 22px; }
+li { display: grid; grid-template-columns: 34px 330px 1fr; align-items: center; opacity: 0; transform: translateX(-8px); transition: all .35s; height: 40px; }
+li.on { opacity: 1; transform: none; }
+li .s { color: #f6a77f; } li.ok .s { color: #3fd08a; }
+li .out { color: #8b97ab; font: 16px Menlo, monospace; }
+</style></head><body><div class="win">
+<div class="bar"><i></i><i></i><i></i><span>claude — โปรเจกต์ของคุณ</span><div class="badge">ตัวอย่างคำสั่ง</div></div>
+<div class="body"><div class="mono"><span class="prompt">&gt; </span><span id="cmd" class="typed"></span></div>
+<div class="hint" id="hint" style="opacity:0">Claude ทำตามขั้นตอนของ skill /manual</div>
+<ol id="steps">
+<li><span class="s">●</span><span>สแกนระบบ (discover)</span><span class="out">manual/discovery.md</span></li>
+<li><span class="s">●</span><span>เขียนสเปกคู่มือ</span><span class="out">manual/manual-spec.md</span></li>
+<li><span class="s">●</span><span>รันระบบด้วยข้อมูลสมมติ</span><span class="out"></span></li>
+<li><span class="s">●</span><span>เขียนหน้า</span><span class="out">manual/pages/</span></li>
+<li><span class="s">●</span><span>ถ่ายภาพ / ภาพทีละขั้น / วิดีโอ</span><span class="out">manual/media/</span></li>
+<li><span class="s">●</span><span>ตรวจ (check)</span><span class="out"></span></li>
+<li><span class="s">●</span><span>ออกไฟล์ PDF · Word · เว็บ</span><span class="out">manual/dist/</span></li>
+</ol></div></div>
+<script>
+const text = '/manual ทำคู่มือผู้ใช้ ภาษาไทย ออก PDF, Word และเว็บ'
+const seg = [...new Intl.Segmenter('th', { granularity: 'grapheme' }).segment(text)].map(s => s.segment)
+let i = 0; const cmd = document.getElementById('cmd')
+const type = () => { if (i < seg.length) { cmd.textContent += seg[i++]; setTimeout(type, 55) } else { cmd.className = 'done'; setTimeout(run, 350) } }
+const lis = [...document.querySelectorAll('li')]
+const run = () => { document.getElementById('hint').style.opacity = 1; lis.forEach((li, k) => { setTimeout(() => li.classList.add('on'), 250 + k * 520); setTimeout(() => { li.classList.add('ok'); li.querySelector('.s').textContent = '✓' }, 600 + k * 520) }) }
+setTimeout(type, 400)
+</script></body></html>

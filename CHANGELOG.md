@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- A new demo video at the top of the README (`docs/media/manual-kit-demo.mp4`, 1:25): manual-kit's own manual in the
+  new theme, Thai narration, captions and a soft pad. `tools/demo` rebuilds it; the narration is read by ElevenLabs
+  through OpenRouter (the only step that needs an API key; manual-kit itself has none).
+- The install steps of manual-kit's own manual were captured again: they showed `github.com/OWNER/manual-kit`.
 - New default PDF cover (`templates.cover: formal`): a thin band in the product's colour with the accent rule, the
   organisation and logos centred, the title and the book at the left, the illustration at the right
   (`document.coverImage`, else the theme's line drawing), the document fields along the bottom and a footer line with

@@ -1,0 +1,21 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><link rel="stylesheet" href="/common.css"><style>
+body { width: 1280px; height: 720px; background: var(--deep); position: relative; }
+#wrap { position: absolute; left: 0; top: 0; width: 1280px; height: 628px; display: grid; place-items: center; transition: background .3s; }
+#view { border: 0; width: 1280px; height: 628px; background: #fff; display: block; }
+body.phone #wrap { background: var(--brand); }
+body.phone #view { width: 390px; height: 580px; border-radius: 22px; box-shadow: 0 0 0 10px #0b1c2d, 0 0 0 12px #3a5068, 0 20px 50px rgba(0,0,0,.45); }
+#band { position: absolute; left: 0; right: 0; bottom: 0; height: 92px; background: var(--deep); display: flex; align-items: center; padding: 0 40px; gap: 22px; border-top: 4px solid var(--accent); }
+#cap { flex: 1; color: #fff; font: 600 25px/1.4 'Plex'; transition: opacity .25s; }
+#tag { color: #9fb3c8; font: 600 16px 'Plex'; white-space: nowrap; }
+#tag b { color: #fff; }
+#fade { position: absolute; left: 0; top: 0; width: 1280px; height: 628px; background: var(--deep); opacity: 0; pointer-events: none; transition: opacity .3s; }
+#cursor { position: absolute; left: 640px; top: 300px; width: 26px; height: 26px; pointer-events: none; display: none; z-index: 9; filter: drop-shadow(0 2px 3px rgba(0,0,0,.35)); }
+#cursor .ring { position: absolute; left: -16px; top: -16px; width: 32px; height: 32px; border-radius: 50%; background: rgba(217,72,15,.4); transform: scale(0); }
+#cursor.click .ring { animation: ring .45s ease-out; }
+@keyframes ring { from { transform: scale(.2); opacity: 1 } to { transform: scale(1.6); opacity: 0 } }
+</style></head><body>
+<div id="wrap"><iframe id="view" name="view"></iframe></div>
+<div id="fade"></div>
+<div id="cursor"><span class="ring"></span><svg width="26" height="26" viewBox="0 0 24 24"><path d="M4 2l15 11-6.5 1.2L16 21l-3 1.4-3.6-6.9L4 20z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
+<div id="band"><div id="cap"></div><div id="tag"><b>manual-kit</b></div></div>
+</body></html>

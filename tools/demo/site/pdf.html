@@ -1,0 +1,19 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><link rel="stylesheet" href="/common.css"><style>
+body { background: #3b4350; }
+.tb { height: 46px; background: #2a2f3a; color: #dfe6f1; display: flex; align-items: center; padding: 0 24px; gap: 16px; font: 600 17px 'Plex'; }
+.tb .f { font: 15px Menlo, monospace; color: #fff; } .tb .n { margin-left: auto; color: #aab6c9; }
+.lab { position: absolute; top: 58px; left: 0; right: 0; text-align: center; color: #fff; font: 600 20px 'Plex'; transition: opacity .3s; }
+.strip { position: absolute; top: 94px; left: 0; height: 520px; display: flex; gap: 40px; transition: transform .9s cubic-bezier(.6,0,.2,1); }
+.strip img { height: 520px; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,.4); transition: transform .9s, opacity .9s; transform: scale(.86); opacity: .55; }
+.strip img.cur { transform: scale(1); opacity: 1; }
+</style></head><body>
+<div class="tb"><span class="f">user-guide.th.pdf</span><span>คู่มือการใช้งาน manual-kit (ทำด้วย manual-kit เอง)</span><span class="n" id="n">หน้า 1 จาก 37</span></div>
+<div class="lab" id="lab">ปก</div>
+<div class="strip" id="s">
+<img src="/img/pdf-1.png" data-p="1" data-l="ปก"><img src="/img/pdf-4.png" data-p="4" data-l="สารบัญมีเลขหน้า"><img src="/img/pdf-9.png" data-p="9" data-l="เนื้อหาเป็นบทเป็นหัวข้อ"><img src="/img/pdf-11.png" data-p="11" data-l="ภาพหน้าจอพร้อมคำบรรยายภาพ"><img src="/img/pdf-15.png" data-p="15" data-l="ภาพทีละขั้น">
+</div>
+<script>
+const s = document.getElementById('s'), imgs = [...s.children]
+window.go = (i) => { const im = imgs[i]; imgs.forEach(x => x.classList.toggle('cur', x === im)); s.style.transform = `translateX(${640 - (im.offsetLeft + im.offsetWidth / 2)}px)`; document.getElementById('n').textContent = `หน้า ${im.dataset.p} จาก 37`; document.getElementById('lab').textContent = im.dataset.l }
+Promise.all(imgs.map(i => i.decode())).then(() => { s.style.transition = 'none'; go(0); s.offsetWidth; s.style.transition = ''; window.ready = true })
+</script></body></html>
