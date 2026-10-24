@@ -1,0 +1,15 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"><title>Login</title></head>
+<body>
+<header id="title">Sign in</header>
+<main>
+  <label for="email">Email</label><input id="email" value="teacher@example.com">
+  <div class="email-hint">teacher@example.com (private, masked in screenshots)</div>
+  <button id="submit">Sign in</button>
+</main>
+<script>
+  // shows that capture sets localStorage before the page loads
+  const lang = localStorage.getItem('app:lang')
+  if (lang === 'th') { document.getElementById('title').textContent = 'เข้าสู่ระบบ'; document.getElementById('submit').textContent = 'เข้าสู่ระบบ' }
+</script>
+</body></html>

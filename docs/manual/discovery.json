@@ -1,0 +1,914 @@
+{
+  "version": 1,
+  "project": {
+    "name": "manual-kit",
+    "description": "Build and maintain formal customer manuals (PDF/DOCX) that stay in sync with the code. No AI inside.",
+    "adapter": "generic",
+    "packageRoots": [
+      ".",
+      "plugins/manual-kit/runtime"
+    ],
+    "scripts": [
+      {
+        "name": "build",
+        "source": "package.json",
+        "detail": "tsc -p tsconfig.build.json"
+      },
+      {
+        "name": "check",
+        "source": "package.json",
+        "detail": "tsc -p tsconfig.json --noEmit"
+      },
+      {
+        "name": "test",
+        "source": "package.json",
+        "detail": "vitest run"
+      },
+      {
+        "name": "verify",
+        "source": "package.json",
+        "detail": "pnpm check && pnpm bundle && pnpm test && pnpm build"
+      },
+      {
+        "name": "prepare",
+        "source": "package.json",
+        "detail": "tsc -p tsconfig.build.json"
+      },
+      {
+        "name": "bundle",
+        "source": "package.json",
+        "detail": "node scripts/bundle-plugin.mjs"
+      }
+    ],
+    "runFiles": []
+  },
+  "docs": [
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "title": "manual-kit",
+      "headings": [
+        "manual-kit",
+        "  ทำอะไรได้บ้าง",
+        "  ตัวอย่างผลลัพธ์",
+        "  ขั้นตอนการทำ (ภาพรวม)",
+        "  1. ติดตั้ง (ครั้งเดียวต่อเครื่อง ~3 นาที)",
+        "  2. ใช้งาน",
+        "    Claude จะทำอะไรบ้าง",
+        "  3. สิ่งที่ควรเตรียม",
+        "  4. ผลลัพธ์อยู่ที่ไหน",
+        "  5. ก่อนส่งลูกค้า (เช็กลิสต์)",
+        "  6. กติกา",
+        "  7. ปัญหาที่พบบ่อย",
+        "    อัปเดต plugin",
+        "  คู่มือของ manual-kit (ทำด้วย manual-kit เอง)",
+        "    สำหรับคนพัฒนา manual-kit"
+      ]
+    },
+    {
+      "path": "docs/engineering-principles.md",
+      "kind": "doc",
+      "title": "หลักการวิศวกรรมของ manual-kit",
+      "headings": [
+        "หลักการวิศวกรรมของ manual-kit",
+        "  แกนหลัก",
+        "  สถาปัตยกรรม",
+        "  การตรวจสอบ",
+        "  การมอบหมายงานและการเรียนรู้"
+      ]
+    },
+    {
+      "path": "docs/plan-v0.md",
+      "kind": "doc",
+      "title": "manual-kit v0 — Implementation plan",
+      "headings": [
+        "manual-kit v0 — Implementation plan"
+      ]
+    },
+    {
+      "path": "docs/project-memory.md",
+      "kind": "doc",
+      "title": "Project memory: manual-kit",
+      "headings": [
+        "Project memory: manual-kit",
+        "  ที่มา",
+        "  การตัดสินใจของเจ้าของ",
+        "  แนวทางที่ลองแล้วไม่ใช้",
+        "  บทเรียนทางเทคนิค",
+        "  การทดสอบกับระบบจริง",
+        "  สถานะ (2026-10-09)",
+        "  งานค้าง"
+      ]
+    },
+    {
+      "path": "docs/reference.md",
+      "kind": "doc",
+      "title": "manual-kit",
+      "headings": [
+        "manual-kit",
+        "  เริ่มใช้งาน (ภาษาไทย)",
+        "  Quick start (English)",
+        "  Page tokens",
+        "    Project inputs (`init` answers and checklist)",
+        "  CI",
+        "  Signing (people only)",
+        "  Folder layout",
+        "    manual.config.yaml (main keys)",
+        "    Discover scope",
+        "  Coverage",
+        "  What `check` verifies",
+        "  Adapters",
+        "  shots.yaml",
+        "    Clips: title cards and music",
+        "    Redaction (private data in every image)",
+        "    Ready-made videos",
+        "    Walkthrough videos (from captured screenshots)",
+        "    Terminal sessions (command-line tools)",
+        "    Before each image",
+        "    Signing in by hand (SSO, 2FA)",
+        "    When a shot fails",
+        "  Output",
+        "  Development"
+      ]
+    },
+    {
+      "path": "docs/spec.md",
+      "kind": "requirement",
+      "title": "manual-kit — Design spec",
+      "headings": [
+        "manual-kit — Design spec",
+        "  1. เป้าหมาย",
+        "  2. การตัดสินใจของเจ้าของ",
+        "  3. โครงในโครงการที่ใช้",
+        "    หน้าเนื้อหา",
+        "  4. คำสั่ง",
+        "  5. Adapter (อ่านโค้ดของแต่ละชนิดโครงการ)",
+        "  6. เอกสารส่งมอบ (build)",
+        "  7. การดูแลเมื่อระบบเปลี่ยน",
+        "  8. หลักออกแบบ",
+        "  9. ขอบเขต v0"
+      ]
+    },
+    {
+      "path": "plugins/manual-kit/skills/building-product-manuals/spec-template.md",
+      "kind": "requirement",
+      "title": "Manual spec template (manual/manual-spec.md)",
+      "headings": [
+        "Manual spec template (manual/manual-spec.md)"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "name": "build",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "capture",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "check",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "discover",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "doctor",
+      "source": "plugins/manual-kit/bin/manual-kit"
+    },
+    {
+      "name": "encode",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "init",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "inventory",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "login",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "measure",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "new-page",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "outline",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "preview",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "publish",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "setup",
+      "source": "plugins/manual-kit/bin/manual-kit"
+    },
+    {
+      "name": "shotlist",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "sign",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "snap",
+      "source": "src/cli.ts"
+    },
+    {
+      "name": "walkthrough",
+      "source": "src/cli.ts"
+    }
+  ],
+  "notes": [],
+  "sections": [],
+  "roles": [],
+  "permissions": [],
+  "states": [
+    {
+      "name": "BITEXACT",
+      "values": [
+        "-map_metadata",
+        "-1",
+        "-fflags",
+        "+bitexact",
+        "-flags:v",
+        "-flags:a"
+      ],
+      "source": "src/encode.ts:208"
+    },
+    {
+      "name": "CONFIGS",
+      "values": [
+        "nuxt.config.ts",
+        "nuxt.config.js",
+        "nuxt.config.mjs"
+      ],
+      "source": "src/adapters/nuxt-routes.ts:24"
+    },
+    {
+      "name": "CONFIG_FILES",
+      "values": [
+        "manual.config.ts",
+        "manual.config.json",
+        "manual.config.yaml",
+        "manual.config.yml"
+      ],
+      "source": "src/config.ts:471"
+    },
+    {
+      "name": "FONTS",
+      "values": [
+        "Sarabun-SemiBold.ttf",
+        "Sarabun-Bold.ttf"
+      ],
+      "source": "src/walkthrough/build.ts:33"
+    },
+    {
+      "name": "HOOKS",
+      "values": [
+        "data-testid",
+        "data-test",
+        "data-cy",
+        "id",
+        "aria-label",
+        "name",
+        "placeholder",
+        "title"
+      ],
+      "source": "src/capture-failure.ts:79"
+    },
+    {
+      "name": "ItemKind",
+      "values": [
+        "route",
+        "role",
+        "permission",
+        "section",
+        "flag"
+      ],
+      "source": "src/adapters/types.ts:3"
+    },
+    {
+      "name": "NEXT_STRING_FILES",
+      "values": [
+        "app/**/*.{tsx,jsx}",
+        "src/**/*.{tsx,jsx}",
+        "components/**/*.{tsx,jsx}",
+        "pages/**/*.{tsx,jsx}"
+      ],
+      "source": "src/adapters/frameworks.ts:77"
+    },
+    {
+      "name": "OUTPUTS",
+      "values": [
+        "pdf",
+        "docx",
+        "web",
+        "video"
+      ],
+      "source": "src/inputs.ts:85"
+    },
+    {
+      "name": "PACKAGE_FILES",
+      "values": [
+        "package.json",
+        "go.mod",
+        "pyproject.toml",
+        "composer.json",
+        "Gemfile",
+        "Cargo.toml",
+        "pom.xml",
+        "build.gradle",
+        "build.gradle.kts"
+      ],
+      "source": "src/discover.ts:91"
+    },
+    {
+      "name": "PAGES_DIRS",
+      "values": [
+        "pages",
+        "app/pages",
+        "src/pages"
+      ],
+      "source": "src/adapters/nuxt-routes.ts:23"
+    },
+    {
+      "name": "PALETTE",
+      "values": [
+        "#2e3440",
+        "#ff6b6b",
+        "#4fd18b",
+        "#f5c542",
+        "#6aa8ff",
+        "#d48cff",
+        "#4fd1d1",
+        "#d8dee9",
+        "#7b8597",
+        "#ff8f8f",
+        "#7ee2a8",
+        "#ffd76a",
+        "#8fbcff",
+        "#e2a8ff",
+        "#7ee2e2",
+        "#ffffff"
+      ],
+      "source": "src/terminal.ts:135"
+    },
+    {
+      "name": "PLAIN_ALLOW",
+      "values": [
+        "PDF",
+        "DOCX",
+        "CSV",
+        "PNG",
+        "JPG",
+        "JPEG",
+        "OTP",
+        "SMS",
+        "USB",
+        "LINE",
+        "HTML",
+        "iPhone",
+        "iPad",
+        "iOS",
+        "macOS"
+      ],
+      "source": "src/check.ts:75"
+    },
+    {
+      "name": "ROUTER_OPTIONS",
+      "values": [
+        "app/router.options.ts",
+        "router.options.ts",
+        "src/router.options.ts",
+        "app/router.options.js",
+        "router.options.js"
+      ],
+      "source": "src/adapters/nuxt-routes.ts:25"
+    },
+    {
+      "name": "RUNTIME",
+      "values": [
+        "playwright",
+        "pagedjs",
+        "typescript"
+      ],
+      "source": "scripts/bundle-plugin.mjs:17"
+    },
+    {
+      "name": "SPA_ROUTERS",
+      "values": [
+        "react-router-dom",
+        "react-router",
+        "wouter",
+        "@tanstack/react-router"
+      ],
+      "source": "src/discover.ts:226"
+    },
+    {
+      "name": "TokenKind",
+      "values": [
+        "ui",
+        "shot",
+        "steps",
+        "clip",
+        "data",
+        "link",
+        "unknown"
+      ],
+      "source": "src/pages.ts:35"
+    }
+  ],
+  "forms": [
+    {
+      "name": "...",
+      "source": "src/discover.ts:315",
+      "detail": "input"
+    }
+  ],
+  "messages": [
+    {
+      "name": "${OUTLINE_MAP} belongs to ${stored.baseUrl}, not ${baseUrl}: move it away to publish to another wiki",
+      "source": "src/publish/outline.ts:141"
+    },
+    {
+      "name": "${OUTLINE_MAP} belongs to collection ${stored.collection.id}, not ${collectionArg}: move it away to publish to another collection",
+      "source": "src/publish/outline.ts:143"
+    },
+    {
+      "name": "${file} has no video stream",
+      "source": "src/media/probe.ts:16"
+    },
+    {
+      "name": "${j.kind} \"${j.id}\": ${new URL(url).hostname} is not in capture.allowlist",
+      "source": "src/capture.ts:935"
+    },
+    {
+      "name": "${j.kind} \"${j.id}\": upload ${JSON.stringify(a.upload)}: file \"${f}\" does not exist (upload files are relative to the manual folder)",
+      "source": "src/capture.ts:880"
+    },
+    {
+      "name": "${key}: ${rel} not found in ${project.manualDir}",
+      "source": "src/front-matter.ts:185"
+    },
+    {
+      "name": "${new URL(base).hostname} is not in capture.allowlist (${config.capture.allowlist.join(', ')})",
+      "source": "src/capture.ts:867"
+    },
+    {
+      "name": "${new URL(capture.baseUrl).hostname} is not in capture.allowlist (${capture.allowlist.join(', ')})",
+      "source": "src/walkthrough/measure.ts:30"
+    },
+    {
+      "name": "${new URL(url).hostname} is not in capture.allowlist",
+      "source": "src/capture.ts:386"
+    },
+    {
+      "name": "${new URL(url).hostname} is not in capture.allowlist (${config.capture.allowlist.join(', ')})",
+      "source": "src/runtime-routes.ts:48"
+    },
+    {
+      "name": "--login ${f.login}: ${parsed.error.issues.map((i) =>",
+      "source": "src/inputs.ts:135"
+    },
+    {
+      "name": "--login is used with --runtime",
+      "source": "src/cli.ts:163"
+    },
+    {
+      "name": "--only \"${p}\" matches no shot, step set or clip; ${hint}",
+      "source": "src/capture.ts:162"
+    },
+    {
+      "name": "--outputs: unknown ${bad.join(', ')} (choose from ${OUTPUTS.join(', ')})",
+      "source": "src/inputs.ts:117"
+    },
+    {
+      "name": "--redact: unknown ${bad.join(', ')} (choose from ${Object.keys(REDACT_PRESETS).join(', ')}, or none)",
+      "source": "src/inputs.ts:124"
+    },
+    {
+      "name": "--runtime needs a manual config (capture.baseUrl and capture.allowlist): run manual-kit init first",
+      "source": "src/cli.ts:164"
+    },
+    {
+      "name": "Authentication required",
+      "source": "tests/helpers/outline-mock.ts:43"
+    },
+    {
+      "name": "Cannot read ${configFile}: ${(e as Error).message}",
+      "source": "src/config.ts:497"
+    },
+    {
+      "name": "HyperFrames render failed in ${dir} (exit ${r.status ?? r.signal}):\\n${tail}",
+      "source": "src/walkthrough/build.ts:193"
+    },
+    {
+      "name": "Invalid ${COVERAGE_FILE}:\\n${formatIssues(parsed.error.issues)}",
+      "source": "src/coverage.ts:37"
+    },
+    {
+      "name": "Invalid ${LOCK_FILE}; delete it and sign again",
+      "source": "src/lock.ts:22"
+    },
+    {
+      "name": "Invalid ${SHOTS_FILE}: ${kind} \"${id}\": \"show\" works only in a terminal spec",
+      "source": "src/shots.ts:263"
+    },
+    {
+      "name": "Invalid ${SHOTS_FILE}: ${kind} \"${id}\": login \"${spec.login}\" is not in logins (${Object.keys(shots.logins).join(', ') || 'none defined'})",
+      "source": "src/shots.ts:262"
+    },
+    {
+      "name": "Invalid ${SHOTS_FILE}: login \"${name}\": a login with storageState needs a name of letters, digits, - and _ (it names the file ${authPath('<name>')})",
+      "source": "src/shots.ts:259"
+    },
+    {
+      "name": "Invalid ${SHOTS_FILE}:\\n${formatIssues(parsed.error.issues)}",
+      "source": "src/shots.ts:256"
+    },
+    {
+      "name": "Invalid config ${configFile}:\\n${formatIssues(parsed.error.issues)}",
+      "source": "src/config.ts:500"
+    },
+    {
+      "name": "No manual.config.(ts|json|yaml) in ${dir}. Run \"manual-kit init\" first.",
+      "source": "src/config.ts:492"
+    },
+    {
+      "name": "Outline upload of ${name}: ${res.status} ${res.statusText}",
+      "source": "src/publish/outline.ts:265"
+    },
+    {
+      "name": "Packages the manual-kit plugin installs at session start (not bundled).",
+      "source": "scripts/bundle-plugin.mjs:50"
+    },
+    {
+      "name": "Resource not found",
+      "source": "tests/helpers/outline-mock.ts:46"
+    },
+    {
+      "name": "a captured clip needs segments (at least one)",
+      "source": "src/shots.ts:202"
+    },
+    {
+      "name": "a component name",
+      "source": "src/config.ts:52"
+    },
+    {
+      "name": "a group id is listed twice",
+      "source": "src/config.ts:212"
+    },
+    {
+      "name": "a route path starting with /",
+      "source": "src/config.ts:84"
+    },
+    {
+      "name": "a section needs component or selector",
+      "source": "src/config.ts:55"
+    },
+    {
+      "name": "an environment variable name such as MANUAL_USER (never the value)",
+      "source": "src/inputs.ts:15"
+    },
+    {
+      "name": "answers ${file}: expected a map of config keys",
+      "source": "src/inputs.ts:50"
+    },
+    {
+      "name": "answers ${file}: login: ${parsed.error.issues.map((i) =>",
+      "source": "src/inputs.ts:54"
+    },
+    {
+      "name": "book \"${b}\": use lower-case letters, digits and \"-\" (it is a folder name)",
+      "source": "src/init.ts:242"
+    },
+    {
+      "name": "book \"${opts.book}\" is made from \"${from.book}\" (books.${opts.book}.from) and has no pages of its own: use --book ${from.book} and set the page's audience",
+      "source": "src/sign.ts:45"
+    },
+    {
+      "name": "book \"${opts.book}\" is made from another book (books.${opts.book}.from): publish that book instead",
+      "source": "src/publish/outline.ts:74"
+    },
+    {
+      "name": "book \"${opts.book}\" must be a lower-case folder name",
+      "source": "src/sign.ts:43"
+    },
+    {
+      "name": "cannot read answers ${file}: ${(e as Error).message}",
+      "source": "src/inputs.ts:48"
+    },
+    {
+      "name": "capture.settle.spinners: \"${state.invalid}\" is not a CSS selector",
+      "source": "src/capture.ts:336"
+    },
+    {
+      "name": "clips need media level \"steps+video\" (now \"${config.media}\")",
+      "source": "src/encode.ts:212"
+    },
+    {
+      "name": "environment variable ${name} is not set (used as {env:${name}} in shots.yaml)",
+      "source": "src/capture.ts:68"
+    },
+    {
+      "name": "expected <book>=<${field}>, got \"${p}\"",
+      "source": "src/inputs.ts:99"
+    },
+    {
+      "name": "ffmpeg not found (install it, or set FFMPEG=/path/to/ffmpeg)",
+      "source": "src/encode.ts:213"
+    },
+    {
+      "name": "ffprobe could not read ${file} (install ffmpeg, or set FFPROBE): ${(e as Error).message.split('\\n')[0]}",
+      "source": "src/media/probe.ts:12"
+    },
+    {
+      "name": "front matter is not valid YAML: ${(e as Error).message}",
+      "source": "src/pages.ts:143"
+    },
+    {
+      "name": "give either url or terminal (an app page, or a transcript file), not both",
+      "source": "src/shots.ts:120"
+    },
+    {
+      "name": "give one of url, terminal or video (an app page, a transcript file or a ready-made video)",
+      "source": "src/shots.ts:201"
+    },
+    {
+      "name": "give page ids or --all",
+      "source": "src/cli.ts:220"
+    },
+    {
+      "name": "give { selector: \"...\" } (an element on the page) or { url: /path } (the address starts with it)",
+      "source": "src/shots.ts:61"
+    },
+    {
+      "name": "invalid front matter:\\n${formatIssues(parsed.error.issues)}",
+      "source": "src/pages.ts:148"
+    },
+    {
+      "name": "letters, digits, . _ -",
+      "source": "src/config.ts:49"
+    },
+    {
+      "name": "login \"${name}\" (${lang}) failed: ${await failureReport(page, project.manualDir,",
+      "source": "src/capture.ts:778"
+    },
+    {
+      "name": "login \"${name}\" is not in shots.yaml logins (${Object.keys(logins).join(', ') || 'none defined'})",
+      "source": "src/login.ts:37"
+    },
+    {
+      "name": "login \"${name}\" signs in with actions during capture; to sign in by hand instead, give it storageState: true (and until) in shots.yaml",
+      "source": "src/login.ts:38"
+    },
+    {
+      "name": "login \"${name}\": ${relative(process.cwd(), file)} is not a saved session; sign in again with: ${loginCommand(name)}",
+      "source": "src/capture.ts:795"
+    },
+    {
+      "name": "login \"${opts.login}\" is not in shots.yaml (logins: ${Object.keys(shots.logins).join(', ') || 'none'})",
+      "source": "src/runtime-routes.ts:45"
+    },
+    {
+      "name": "login \"${spec.login}\": ${new URL(loginUrl).hostname} is not in capture.allowlist",
+      "source": "src/capture.ts:939"
+    },
+    {
+      "name": "lower-case id like \"teacher.create-class\"",
+      "source": "src/pages.ts:11"
+    },
+    {
+      "name": "mask \"${m}\" matched nothing, so nothing was covered",
+      "source": "src/capture.ts:1054"
+    },
+    {
+      "name": "more than ${MAX_REDIRECTS} redirects from ${bare(req.url())}",
+      "source": "src/capture.ts:624"
+    },
+    {
+      "name": "name the Outline collection: --collection <id or urlId> (or outline.collection in the config)",
+      "source": "src/publish/outline.ts:137"
+    },
+    {
+      "name": "name the Outline wiki: outline.baseUrl in the config, such as https://wiki.example.com",
+      "source": "src/publish/outline.ts:134"
+    },
+    {
+      "name": "no route ${path}",
+      "source": "tests/helpers/outline-mock.ts:87"
+    },
+    {
+      "name": "no web build yet: run \"manual-kit build web\" first",
+      "source": "src/cli.ts:400"
+    },
+    {
+      "name": "not a WebP file",
+      "source": "src/media/webp.ts:10"
+    },
+    {
+      "name": "not a storageState",
+      "source": "src/capture.ts:793"
+    },
+    {
+      "name": "not a valid regular expression",
+      "source": "src/config.ts:28"
+    },
+    {
+      "name": "nothing to build: config outputs has pdf, docx and web all off",
+      "source": "src/cli.ts:250"
+    },
+    {
+      "name": "optional needs a target: press on an element (on: selector)",
+      "source": "src/shots.ts:22"
+    },
+    {
+      "name": "package \"${name}\" is not installed${home ?",
+      "source": "src/deps.ts:16"
+    },
+    {
+      "name": "page id \"${id}\" must be lower-case letters, digits, \".\", \"-\" or \"_\"",
+      "source": "src/sign.ts:42"
+    },
+    {
+      "name": "regex flags: any of i m s u v y d (g is always on)",
+      "source": "src/config.ts:32"
+    },
+    {
+      "name": "seed hook failed (exit ${r.status}): ${(r.stderr || r.stdout).trim().slice(0, 500)}",
+      "source": "src/capture.ts:947"
+    },
+    {
+      "name": "set the Outline API key in the environment variable ${TOKEN_ENV} (it is never read from a file)",
+      "source": "src/publish/outline.ts:139"
+    },
+    {
+      "name": "shot \"${shot}\" is not an app screen in shots.yaml",
+      "source": "src/walkthrough/measure.ts:81"
+    },
+    {
+      "name": "snap opens local files and 127.0.0.1/localhost only, not ${url.hostname}",
+      "source": "src/snap.ts:15"
+    },
+    {
+      "name": "terminal transcript \"${t.file}\" does not exist",
+      "source": "src/capture.ts:357"
+    },
+    {
+      "name": "the answers make an invalid config:\\n${formatIssues(parsed.error.issues)}",
+      "source": "src/init.ts:254"
+    },
+    {
+      "name": "the element has no box on the page",
+      "source": "src/capture.ts:205"
+    },
+    {
+      "name": "unknown page \"${id}\"",
+      "source": "src/sign.ts:17"
+    },
+    {
+      "name": "use element and crop separately (element photographs one element, crop a fixed region)",
+      "source": "src/shots.ts:90"
+    },
+    {
+      "name": "video \"${video.file}\" does not exist",
+      "source": "src/capture.ts:965"
+    },
+    {
+      "name": "walkthrough \"${only}\" is not in shots.yaml (${Object.keys(shots.walkthroughs).join(', ') || 'none defined'})",
+      "source": "src/walkthrough/measure.ts:19"
+    },
+    {
+      "name": "walkthrough \"${opts.only}\" is not in shots.yaml (${Object.keys(shots.walkthroughs).join(', ') || 'none defined'})",
+      "source": "src/walkthrough/build.ts:126"
+    },
+    {
+      "name": "walkthroughs are shown as clips, which need media level \"steps+video\" (now \"${config.media}\")",
+      "source": "src/walkthrough/build.ts:123"
+    }
+  ],
+  "api": [],
+  "flags": [],
+  "env": [
+    {
+      "name": "FFMPEG",
+      "source": "src/encode.ts:25"
+    },
+    {
+      "name": "FFPROBE",
+      "source": "src/media/probe.ts:5"
+    },
+    {
+      "name": "MANUAL_KIT_HOME",
+      "source": "src/deps.ts:8"
+    },
+    {
+      "name": "OUTLINE_API_KEY",
+      "source": "src/publish/outline.ts:39"
+    }
+  ],
+  "integrations": [],
+  "seed": [
+    "tests/helpers/fixture.ts",
+    "tests/helpers/outline-mock.ts"
+  ],
+  "uiStrings": {
+    "count": 75,
+    "sample": [
+      "setup",
+      "doctor",
+      "building-product-manuals",
+      "manual",
+      "--manual",
+      "--verbose",
+      "init",
+      "--languages",
+      "--title",
+      "--adapter",
+      "--books",
+      "--no-samples",
+      "--ignore-dist",
+      "--ci",
+      "--answers",
+      "--app-url",
+      "--environment",
+      "--allowlist",
+      "--login",
+      "--login-url",
+      "--user-env",
+      "--password-env",
+      "--cookie",
+      "--cookie-env",
+      "--client",
+      "--developer",
+      "--system-name",
+      "--logos",
+      "--cover-image",
+      "--audience",
+      "--book-icon",
+      "--brand-color",
+      "--accent-color",
+      "--outputs",
+      "--redact",
+      "discover",
+      "--print",
+      "--runtime",
+      "inventory",
+      "check",
+      "--json",
+      "--allow-unsigned",
+      "--docx",
+      "--font",
+      "--latin-font",
+      "sign",
+      "--all",
+      "new-page",
+      "--kind",
+      "build",
+      "--lang",
+      "--book",
+      "--base",
+      "--finalize",
+      "shotlist",
+      "capture",
+      "--changed",
+      "--only",
+      "--dry-run",
+      "login",
+      "encode",
+      "walkthrough",
+      "measure",
+      "--list",
+      "--no-render",
+      "snap",
+      "--width",
+      "--out",
+      "publish",
+      "outline",
+      "--collection",
+      "--parent",
+      "preview",
+      "--port",
+      "--no-open"
+    ]
+  },
+  "truncated": []
+}

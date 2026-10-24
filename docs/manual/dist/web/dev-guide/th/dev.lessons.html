@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>บทเรียนที่ได้ — คู่มือการพัฒนา — คู่มือ manual-kit</title>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/brand.css">
+
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('mk-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};window.ManualKitWords={"results":"{n} รายการ","none":"ไม่พบหัวข้อที่ตรงกับคำค้น ลองใช้คำที่สั้นลงหรือคำอื่น","all":"ดูผลการค้นหาทั้งหมด","close":"ปิด","prev":"ก่อนหน้า","next":"ถัดไป","showFix":"ดูวิธีแก้","hideFix":"ซ่อนวิธีแก้","readSteps":"อ่านวิธีทำทีละขั้น","captions":"คำบรรยาย"}</script>
+<script src="../../assets/search-core.js" defer></script>
+<script src="search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#content">ข้ามไปที่เนื้อหา</a>
+<header class="top">
+<button type="button" class="top-btn top-btn--ghost nav-toggle" aria-expanded="false" aria-controls="site-nav"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span class="visually-hidden">สารบัญ</span></button>
+<a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">m</span><span>manual-kit</span></a>
+<details class="book-pill"><summary aria-label="เปลี่ยนเล่ม: คู่มือการพัฒนา"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>คู่มือการพัฒนา</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../../dev-guide/th/index.html" aria-current="true">คู่มือการพัฒนา</a></li><li><a href="../../user-guide/th/index.html">คู่มือการใช้งาน</a></li></ul></details>
+<form class="search" role="search" action="search.html" method="get">
+<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><label for="q" class="visually-hidden">ค้นหาในคู่มือ</label>
+<input type="search" id="q" name="q" placeholder="ค้นหาในคู่มือ" autocomplete="off" enterkeyhint="search" aria-keyshortcuts="Control+K Meta+K /" aria-controls="search-pop">
+<kbd class="kbd" aria-hidden="true">⌘K</kbd>
+<div id="search-pop" class="pop" hidden></div>
+</form>
+<div class="top-right">
+<button type="button" class="top-btn top-btn--ghost search-open" aria-label="ค้นหา"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<a class="top-btn top-btn--ghost top-faq" href="faq.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span class="faq-label">ปัญหาที่พบบ่อย</span></a>
+
+<button type="button" class="top-btn top-btn--ghost theme-toggle" aria-label="สลับโหมดสว่างและมืด" title="สลับโหมดสว่างและมืด"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+
+</div>
+</header>
+<div class="scrim" hidden></div>
+<div class="layout">
+<nav id="site-nav" class="side" aria-label="สารบัญ">
+<button type="button" class="top-btn side-close" aria-label="ปิดสารบัญ"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+<a class="reading" href="index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span><small>คุณกำลังอ่าน</small><strong>คู่มือการพัฒนา</strong></span></a>
+<a class="switch" href="../../user-guide/th/index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ไปที่ คู่มือการใช้งาน</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+<details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>โครงสร้าง</span><small>3</small></summary><ul><li data-aud="developer"><a href="dev.architecture.html">สถาปัตยกรรม</a></li><li data-aud="developer"><a href="dev.repo-layout.html">โครงสร้าง repo</a></li><li data-aud="developer"><a href="dev.setup.html">ตั้งเครื่องสำหรับพัฒนา</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><span>ต่อยอด</span><small>5</small></summary><ul><li data-aud="developer"><a href="dev.add-adapter.html">เพิ่ม adapter</a></li><li data-aud="developer"><a href="dev.add-check-rule.html">เพิ่มกฎตรวจ</a></li><li data-aud="developer"><a href="dev.add-capture-action.html">เพิ่ม action ถ่ายภาพ</a></li><li data-aud="developer"><a href="dev.add-output.html">เพิ่มผลลัพธ์หรือช่องทางเผยแพร่</a></li><li data-aud="developer"><a href="dev.themes.html">ธีม แม่แบบลูกค้า และกฎ DOCX ภาษาไทย</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>คุณภาพและการปล่อย</span><small>4</small></summary><ul><li data-aud="developer"><a href="dev.skills.html">แก้และทดสอบ skill</a></li><li data-aud="developer"><a href="dev.testing.html">กลยุทธ์การทดสอบ</a></li><li data-aud="developer"><a href="dev.release.html">ปล่อยเวอร์ชันและกติกาการทำงาน</a></li><li data-aud="developer"><a href="dev.lessons.html" aria-current="page">บทเรียนที่ได้</a></li></ul></details>
+<div class="side-downloads"><p>ดาวน์โหลด</p><ul><li><a href="dev-guide.th.pdf" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ PDF</a></li><li><a href="dev-guide.th.docx" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ Word (DOCX)</a></li></ul></div>
+</nav>
+<main id="content" tabindex="-1">
+<div class="page">
+<article class="chapter sheet" data-page="dev.lessons">
+<header class="head"><nav class="crumbs" aria-label="ตำแหน่งของหน้านี้"><ol><li><a href="index.html">คู่มือการพัฒนา</a></li><li>คุณภาพและการปล่อย</li><li><a href="dev.lessons.html" aria-current="page">บทเรียนที่ได้</a></li></ol></nav><span class="kind">ข้อมูลอ้างอิง</span><h1>บทเรียนที่ได้</h1><p class="summary">ปัญหาจริงที่เจอระหว่างสร้าง manual-kit สาเหตุ และสิ่งที่เปลี่ยนในโครงสร้างเพื่อไม่ให้เกิดซ้ำ</p><div class="control"><span>อัปเดตล่าสุด <b>2026-10-07</b></span><button type="button" class="btn print" data-print hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>พิมพ์หน้านี้</button></div></header>
+<div class="sheet-body">
+<dl class="facts" aria-label="ข้อมูลของหน้านี้"><div><dt>สำหรับ</dt><dd class="who">นักพัฒนา</dd></div></dl>
+<details class="toc-inline"><summary>ในหน้านี้</summary><ol><li class="l2"><a href="#sec-12-1">Microsoft Word ค้างระหว่างทำงานอัตโนมัติ</a></li><li class="l2"><a href="#sec-12-2">ฟอนต์ไทยใน DOCX ถูกแทนด้วยฟอนต์อื่น</a></li><li class="l2"><a href="#sec-12-3">ข้อความถูก escape สองครั้ง</a></li><li class="l2"><a href="#sec-12-4">CSS ถูกบล็อกระหว่างถ่ายภาพ</a></li><li class="l2"><a href="#sec-12-5">bash 3.2 บน macOS</a></li><li class="l2"><a href="#sec-12-6">การหาโมดูลแบบ ESM ใน bundle</a></li><li class="l2"><a href="#sec-12-7">คำบรรยายวิดีโอขึ้นสองชั้น</a></li><li class="l2"><a href="#sec-12-8">บทเรียนจากการทำคู่มือเล่มนี้</a></li><li class="l2"><a href="#sec-12-9">หน้าที่เกี่ยวข้อง</a></li></ol></details>
+<div class="body">
+<p>แต่ละข้อคือปัญหาที่เกิดจริงตอนสร้าง manual-kit (อ้าง commit ใน git log) พร้อมสิ่งที่เปลี่ยนในโค้ดหรือเทสต์
+อ่านก่อนแก้ส่วนที่เกี่ยวข้อง เพื่อไม่ทำให้ปัญหาเดิมกลับมา</p>
+<h2 id="sec-12-1">Microsoft Word ค้างระหว่างทำงานอัตโนมัติ</h2>
+<ul>
+<li><strong>อาการ</strong>: build DOCX ที่สั่ง Word ผ่าน AppleScript เพื่อใส่เลขหน้าในสารบัญ ค้างไม่จบ</li>
+<li><strong>สาเหตุ</strong>: Word เปิดกล่องข้อความรอคนตอบ (เช่น ขอสิทธิ์เข้าถึงไฟล์) ซึ่งไม่มีใครเห็น และ osascript ที่ถูก kill อาจค้างตอนปิดตัว</li>
+<li><strong>สิ่งที่เปลี่ยน</strong> (commit c805472): <code>--finalize auto</code> ใช้ LibreOffice แบบ headless เท่านั้น Word ใช้เฉพาะ <code>--finalize word</code>
+ที่สั่งตรง ๆ, ทุก build พิมพ์ว่าเลือกทางไหนเพราะอะไร, การเรียกภายนอกมีเวลาจำกัดและไม่รอ event ปิดตัว
+(<code>src/build/finalize.ts</code>) กติกา &quot;ไม่ใช้ Word อัตโนมัติ&quot; อยู่ใน skill และในคู่มือ</li>
+</ul>
+<h2 id="sec-12-2">ฟอนต์ไทยใน DOCX ถูกแทนด้วยฟอนต์อื่น</h2>
+<ul>
+<li><strong>อาการ</strong>: เปิดใน Word แล้วตัวไทยเป็นฟอนต์อื่น ขนาดเล็ก ตัวหนาไม่ติด</li>
+<li><strong>สาเหตุ</strong>: style บอกชื่อ Sarabun แต่ไม่ได้ฝังฟอนต์ และเครื่องส่วนใหญ่ไม่มี Sarabun อีกทั้ง run ไม่มีช่อง complex script
+(<code>cs</code>, <code>szCs</code>, <code>bCs</code>) ที่ Word ใช้กับภาษาไทย</li>
+<li><strong>สิ่งที่เปลี่ยน</strong> (commit 137c5c3, ae6d335): ฝังทุกหน้าฟอนต์เป็น <code>.odttf</code> (คีย์จากไบต์ของฟอนต์ build ซ้ำได้ผลเดิม),
+กฎภาษาไทยครบทุก run และ style (<code>src/build/thai.ts</code>), <code>check --docx</code> ตรวจทุกครั้งที่ build ดู <a href="dev.themes.html">ธีม แม่แบบลูกค้า และกฎ DOCX ภาษาไทย</a></li>
+</ul>
+<h2 id="sec-12-3">ข้อความถูก escape สองครั้ง</h2>
+<ul>
+<li><strong>อาการ</strong>: ป้ายที่อ้างแบบมีเครื่องหมายคำพูดขึ้นเป็น <code>&amp;quot;</code> บนเว็บ และ <code>&lt;b&gt;</code> หายใน DOCX</li>
+<li><strong>สาเหตุ</strong>: ข้อความขั้นตอนและคำบรรยายถูก escape ทั้งตอนแทน token และตอน render</li>
+<li><strong>สิ่งที่เปลี่ยน</strong> (commit 5993697): escape ครั้งเดียวที่จุดเดียวใน <code>src/render.ts</code> (token ที่แทนแล้วพักไว้เป็นตัวแทนระหว่าง render)
+เทสต์ <code>tests/escaping.test.ts</code> ตรวจ <code>&quot;</code>, <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code> ในเว็บ PDF DOCX และ WebVTT</li>
+</ul>
+<h2 id="sec-12-4">CSS ถูกบล็อกระหว่างถ่ายภาพ</h2>
+<ul>
+<li><strong>อาการ</strong>: ภาพหน้าจอไม่มีสไตล์ ฟอนต์ผิด แต่ capture รายงานว่าสำเร็จ</li>
+<li><strong>สาเหตุ</strong>: capture บล็อกทุก request นอก allowlist (กันการเปิดระบบจริง) รวมถึง CSS และฟอนต์จาก CDN</li>
+<li><strong>สิ่งที่เปลี่ยน</strong> (commit 56f58c6): <code>capture.assetHosts</code> อนุญาตไฟล์ CSS/ฟอนต์/ภาพจาก host นั้นโดยไม่อนุญาตให้เปิดหน้าไปที่นั่น
+และ stylesheet ที่ถูกบล็อกทำให้ภาพนั้น <strong>ล้ม</strong> (ลบภาพ ไม่ลง manifest exit 1) พร้อมบอกวิธีแก้ ความผิดพลาดจึงไม่เงียบอีก</li>
+</ul>
+<h2 id="sec-12-5">bash 3.2 บน macOS</h2>
+<ul>
+<li><strong>อาการ</strong>: <code>bin/manual-kit</code> พังบน macOS แต่ผ่านบน Linux</li>
+<li><strong>สาเหตุ</strong>: macOS มากับ bash 3.2 ซึ่ง parse <code>case ... esac</code> ภายใน <code>$(...)</code> ไม่ได้</li>
+<li><strong>สิ่งที่เปลี่ยน</strong> (commit cf4ffa4): ย้ายไปเป็นฟังก์ชัน (<code>plugin_root</code>) พร้อมคอมเมนต์เหตุผล เทสต์รันตัวเรียกด้วย <code>/bin/bash</code></li>
+</ul>
+<h2 id="sec-12-6">การหาโมดูลแบบ ESM ใน bundle</h2>
+<ul>
+<li><strong>อาการ</strong>: CLI ที่ bundle แล้วหา playwright, pagedjs และ typescript ไม่เจอ และหาไฟล์ assets ไม่เจอ</li>
+<li><strong>สาเหตุ</strong>: ตัวโหลด ESM ของ Node ไม่สนใจ <code>NODE_PATH</code> แพ็กเกจที่ติดตั้งในโฟลเดอร์ข้อมูลของ plugin จึง import ตรงไม่ได้
+และที่อยู่ของ assets ต่างกันระหว่าง repo กับ bundle</li>
+<li><strong>สิ่งที่เปลี่ยน</strong> (commit 518ed5d): <code>src/deps.ts</code> ใช้ <code>createRequire</code> ที่ปักรากไว้ที่ <code>MANUAL_KIT_HOME</code> และโหลดเมื่อใช้ครั้งแรก
+(<code>lazyDep</code>) ไฟล์ที่ส่งไปกับเครื่องมือหาจากรากเดียว <code>src/paths.ts</code> ซึ่งอยู่ห่างจาก assets เท่ากันทั้งสองแบบ</li>
+</ul>
+<h2 id="sec-12-7">คำบรรยายวิดีโอขึ้นสองชั้น</h2>
+<ul>
+<li><strong>อาการ</strong>: ในเว็บคู่มือ คำบรรยายของวิดีโอขึ้นซ้อนกันสองชุด</li>
+<li><strong>สาเหตุ</strong>: คำบรรยายถูกเขียนลงบนภาพ (burned in) แล้ว แต่ track WebVTT ก็เปิดโดยค่าเริ่มต้นด้วย</li>
+<li><strong>สิ่งที่เปลี่ยน</strong> (commit b0e2e11): track ยังมีให้ (สำหรับโปรแกรมอ่านหน้าจอและผู้ที่ต้องการ) แต่ปิดไว้จนผู้อ่านกดปุ่มคำบรรยาย</li>
+</ul>
+<h2 id="sec-12-8">บทเรียนจากการทำคู่มือเล่มนี้</h2>
+<ul>
+<li>check ของเล่มนี้จับคำโอ้อวดที่หลุดมาในประโยคธรรมดาได้ (เช่น ประโยคที่ขึ้นต้นด้วยคำว่า &quot;ที่สุด&quot;) และจับป้ายของคำสั่ง
+<code>setup</code> / <code>doctor</code> ที่ adapter ยังไม่รู้จักได้ ทั้งสองแก้ก่อน build</li>
+<li><code>init</code> ตั้ง <code>projectRoot: ..</code> เสมอ คู่มือที่อยู่ลึกสองชั้น (<code>docs/manual</code>) ต้องแก้เป็น <code>../..</code> เอง และ <code>discover</code>
+ก่อน <code>init</code> สแกนโฟลเดอร์แม่ของคู่มือแทนทั้ง repo (บันทึกเป็นปัญหาของระบบในสเปกของเล่มนี้)</li>
+</ul>
+<h2 id="sec-12-9">หน้าที่เกี่ยวข้อง</h2>
+<ul>
+<li><a href="dev.themes.html">ธีม แม่แบบลูกค้า และกฎ DOCX ภาษาไทย</a></li>
+<li><a href="dev.release.html">ปล่อยเวอร์ชันและกติกาการทำงาน</a></li>
+</ul>
+
+</div>
+<nav class="pager" aria-label="หน้าก่อนหน้าและถัดไป"><a rel="prev" href="dev.release.html"><small>ก่อนหน้า</small><strong>ปล่อยเวอร์ชันและกติกาการทำงาน</strong></a></nav>
+</div>
+</article>
+<aside class="toc" aria-label="ในหน้านี้"><p>ในหน้านี้</p><ol><li class="l2"><a href="#sec-12-1">Microsoft Word ค้างระหว่างทำงานอัตโนมัติ</a></li><li class="l2"><a href="#sec-12-2">ฟอนต์ไทยใน DOCX ถูกแทนด้วยฟอนต์อื่น</a></li><li class="l2"><a href="#sec-12-3">ข้อความถูก escape สองครั้ง</a></li><li class="l2"><a href="#sec-12-4">CSS ถูกบล็อกระหว่างถ่ายภาพ</a></li><li class="l2"><a href="#sec-12-5">bash 3.2 บน macOS</a></li><li class="l2"><a href="#sec-12-6">การหาโมดูลแบบ ESM ใน bundle</a></li><li class="l2"><a href="#sec-12-7">คำบรรยายวิดีโอขึ้นสองชั้น</a></li><li class="l2"><a href="#sec-12-8">บทเรียนจากการทำคู่มือเล่มนี้</a></li><li class="l2"><a href="#sec-12-9">หน้าที่เกี่ยวข้อง</a></li></ol></aside>
+</div>
+</main>
+</div>
+<footer class="site-footer">
+<p>คู่มือ manual-kit — คู่มือการพัฒนา · อัปเดตล่าสุด 2026-10-07</p>
+<p><a href="../../index.html">คู่มือทั้งหมด</a></p>
+</footer>
+</body>
+</html>

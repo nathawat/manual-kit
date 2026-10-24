@@ -1,0 +1,5 @@
+$ manual-kit check
+error    signature    pages/th/user-guide/01-sign-in.md  teacher.sign-in changed since it was signed (sources changed: src/routes.ts); a person reviews it, then runs "manual-kit sign teacher.sign-in"
+error    signature    pages/th/user-guide/02-create-class.md  teacher.create-class changed since it was signed (sources changed: src/routes.ts); a person reviews it, then runs "manual-kit sign teacher.create-class"
+not signed (2): teacher.create-class, teacher.sign-in (only a person signs, after reading the page)
+failed: 2 errors, 0 warnings

@@ -1,0 +1,18 @@
+$ manual-kit publish outline --collection Hq7RtK2xWm --dry-run
+outline: https://wiki.example.com · collection Hq7RtK2xWm (dry run: nothing is sent)
+  upload    dist/dev-guide.th.pdf (826 KB)
+  upload    dist/dev-guide.th.docx (293 KB)
+  upload    media/th/verify.png (61 KB)
+  … (อัปโหลดอีก 23 ไฟล์ และเล่ม dev-guide 13 เอกสาร: ย่อไว้)
+  create    book  user-guide/th  "คู่มือ manual-kit: คู่มือการใช้งาน"
+  create    page  use.about  "1. manual-kit คืออะไรและทำอะไรได้"
+  create    page  use.install  "2. ติดตั้ง plugin"
+  create    page  use.new-manual  "3. ทำคู่มือใหม่ด้วย /manual"
+  create    page  use.spec  "4. อ่านและแก้สเปกคู่มือ"
+  create    page  use.deliver  "5. ส่งมอบคู่มือให้ลูกค้า"
+  create    page  use.keep-current  "6. ดูแลคู่มือให้ตามระบบ"
+  create    page  use.publish-wiki  "7. เผยแพร่ขึ้น Outline wiki"
+  create    page  use.options  "8. ตัวเลือกของคู่มือ"
+  create    page  use.troubleshooting  "9. ปัญหาที่พบบ่อย"
+  create    page  use.commands  "10. ภาคผนวก: คำสั่งและกติกา"
+would create 24, update 0, upload 26 files, unchanged 0

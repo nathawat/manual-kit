@@ -1,0 +1,56 @@
+# Media of the manual-kit manual. manual-kit has no web UI, so most images are terminal windows rendered from
+# transcripts in terminal/ (real commands and output; a scripted session carries the badge ตัวอย่าง).
+# Output examples are photographed from a local static server (see capture in manual.config.yaml):
+#   /docs/images/*.jpg  README images      /docs/manual/dist/web/...  this manual's own web build
+shots:
+  out-pdf:
+    url: /docs/images/pdf-pages.jpg
+    element: img
+    caption: { th: "ตัวอย่างหน้า PDF: ปก ข้อมูลเอกสาร สารบัญ และเนื้อหาพร้อมภาพหน้าจอ (คู่มือเล่มนี้)" }
+  out-web:
+    url: /docs/manual/dist/web/user-guide/th/use.new-manual.html
+    maxHeight: 720
+    caption: { th: "เว็บคู่มือ: เมนูซ้าย ค้นหา และ \"ในหน้านี้\" (คู่มือเล่มนี้)" }
+  out-web-mobile:
+    url: /docs/manual/dist/web/user-guide/th/use.new-manual.html
+    viewport: { width: 390, height: 844 }
+    caption: { th: "เว็บคู่มือบนจอมือถือ (กว้าง 390 px)" }
+  out-web-search:
+    url: /docs/manual/dist/web/user-guide/th/search.html?q=สเปก
+    maxHeight: 640
+    caption: { th: "ค้นหาคำภาษาไทยในเว็บคู่มือ" }
+  doctor:
+    terminal: { file: terminal/doctor.txt, title: "Claude Code — ! manual-kit doctor" }
+    caption: { th: "manual-kit doctor บนเครื่องทดสอบหลังติดตั้ง" }
+  sign:
+    terminal: { file: terminal/sign.txt, title: "zsh — โครงการทดสอบ" }
+    highlight: '[data-cmd="2"]'
+    caption: { th: "ก่อนรับรอง check ไม่ผ่าน หลัง sign --all ผ่าน (ผลจริงบนโครงการทดสอบ)" }
+  check-drift:
+    terminal: { file: terminal/check-drift.txt, title: "zsh — โครงการทดสอบ" }
+    caption: { th: "check ชี้หน้าที่ไฟล์ต้นทางเปลี่ยนหลังรับรอง (ผลจริงบนโครงการทดสอบ)" }
+  check-errors:
+    terminal: { file: terminal/check-errors.txt, title: "zsh — โครงการทดสอบ" }
+    caption: { th: "check ครั้งแรกของโครงการทดสอบ: หน้าที่ขาด ภาพที่ยังไม่ถ่าย หน้าที่ยังไม่รับรอง" }
+  publish-dry-run:
+    terminal: { file: terminal/publish-dry-run.txt, title: "zsh — manual-kit" }
+    caption: { th: "แผนการเผยแพร่คู่มือเล่มนี้ขึ้น wiki สมมติ (--dry-run ไม่ส่งอะไร ย่อบางบรรทัด)" }
+  verify:
+    terminal: { file: terminal/verify.txt, title: "zsh — manual-kit" }
+    caption: { th: "pnpm verify ผ่านทั้งหมด (ผลจริง ตัดเส้นทางโฟลเดอร์ให้สั้น)" }
+steps:
+  install:
+    terminal: { file: terminal/install.txt, title: "zsh — ติดตั้ง manual-kit" }
+    steps:
+      - { text: { th: "ตรวจรุ่น Node ต้องเป็น 22.17 ขึ้นไป" }, actions: [{ show: 1 }], highlight: '[data-cmd="1"]' }
+      - { text: { th: "เพิ่ม marketplace ของ manual-kit ได้ marketplace ชื่อ manual-kit" }, actions: [{ show: 2 }], highlight: '[data-cmd="2"]' }
+      - { text: { th: "ติดตั้ง plugin manual-kit จาก marketplace นั้น" }, actions: [{ show: 3 }], highlight: '[data-cmd="3"]' }
+      - { text: { th: "ตรวจว่า plugin ติดตั้งและเปิดใช้แล้ว" }, actions: [{ show: 4 }], highlight: '[data-cmd="4"]' }
+  new-manual:
+    terminal: { file: terminal/new-manual.txt, title: "Claude Code — /manual", badge: { th: ตัวอย่าง } }
+    steps:
+      - { text: { th: "พิมพ์ /manual พร้อมสิ่งที่ต้องการ" }, actions: [{ show: 1 }], highlight: '[data-cmd="1"]' }
+      - { text: { th: "Claude สแกนหลักฐาน (discover) แล้วเขียนสเปก" }, actions: [{ show: 2 }], highlight: '[data-cmd="2"]' }
+      - { text: { th: "สร้างโครงคู่มือ (init) และรายการที่ต้องมีหน้า (inventory)" }, actions: [{ show: 4 }], highlight: '[data-cmd="4"]' }
+      - { text: { th: "เขียนหน้า ถ่ายภาพ แล้วตรวจจนไม่มีข้อผิด (check)" }, actions: [{ show: 6 }], highlight: '[data-cmd="6"]' }
+      - { text: { th: "ออก PDF, Word และเว็บ" }, actions: [{ show: 7 }], highlight: '[data-cmd="7"]' }

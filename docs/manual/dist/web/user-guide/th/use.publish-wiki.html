@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>เผยแพร่ขึ้น Outline wiki — คู่มือการใช้งาน — คู่มือ manual-kit</title>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/brand.css">
+
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('mk-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};window.ManualKitWords={"results":"{n} รายการ","none":"ไม่พบหัวข้อที่ตรงกับคำค้น ลองใช้คำที่สั้นลงหรือคำอื่น","all":"ดูผลการค้นหาทั้งหมด","close":"ปิด","prev":"ก่อนหน้า","next":"ถัดไป","showFix":"ดูวิธีแก้","hideFix":"ซ่อนวิธีแก้","readSteps":"อ่านวิธีทำทีละขั้น","captions":"คำบรรยาย"}</script>
+<script src="../../assets/search-core.js" defer></script>
+<script src="search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#content">ข้ามไปที่เนื้อหา</a>
+<header class="top">
+<button type="button" class="top-btn top-btn--ghost nav-toggle" aria-expanded="false" aria-controls="site-nav"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span class="visually-hidden">สารบัญ</span></button>
+<a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">m</span><span>manual-kit</span></a>
+<details class="book-pill"><summary aria-label="เปลี่ยนเล่ม: คู่มือการใช้งาน"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>คู่มือการใช้งาน</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../../user-guide/th/index.html" aria-current="true">คู่มือการใช้งาน</a></li><li><a href="../../dev-guide/th/index.html">คู่มือการพัฒนา</a></li></ul></details>
+<form class="search" role="search" action="search.html" method="get">
+<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><label for="q" class="visually-hidden">ค้นหาในคู่มือ</label>
+<input type="search" id="q" name="q" placeholder="ค้นหาในคู่มือ" autocomplete="off" enterkeyhint="search" aria-keyshortcuts="Control+K Meta+K /" aria-controls="search-pop">
+<kbd class="kbd" aria-hidden="true">⌘K</kbd>
+<div id="search-pop" class="pop" hidden></div>
+</form>
+<div class="top-right">
+<button type="button" class="top-btn top-btn--ghost search-open" aria-label="ค้นหา"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<a class="top-btn top-btn--ghost top-faq" href="faq.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span class="faq-label">ปัญหาที่พบบ่อย</span></a>
+
+<button type="button" class="top-btn top-btn--ghost theme-toggle" aria-label="สลับโหมดสว่างและมืด" title="สลับโหมดสว่างและมืด"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+
+</div>
+</header>
+<div class="scrim" hidden></div>
+<div class="layout">
+<nav id="site-nav" class="side" aria-label="สารบัญ">
+<button type="button" class="top-btn side-close" aria-label="ปิดสารบัญ"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+<a class="reading" href="index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span><small>คุณกำลังอ่าน</small><strong>คู่มือการใช้งาน</strong></span></a>
+<a class="switch" href="../../dev-guide/th/index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ไปที่ คู่มือการพัฒนา</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<div class="aud" data-book="user-guide"><span class="aud-label" id="aud-label">ฉันเป็น…</span><div class="chips" role="group" aria-labelledby="aud-label"><button type="button" class="chip" data-aud="" aria-pressed="true">ดูทุกงาน <small>10</small></button><button type="button" class="chip" data-aud="team" aria-pressed="false">ทีมที่ทำคู่มือ <small>10</small></button><button type="button" class="chip" data-aud="lead" aria-pressed="false">หัวหน้าทีม / PM <small>6</small></button></div></div>
+<details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>เริ่มต้น</span><small>2</small></summary><ul><li data-aud="team|lead"><a href="use.about.html">manual-kit คืออะไรและทำอะไรได้</a></li><li data-aud="team"><a href="use.install.html">ติดตั้ง plugin</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ทำคู่มือ</span><small>2</small></summary><ul><li data-aud="team"><a href="use.new-manual.html">ทำคู่มือใหม่ด้วย /manual</a></li><li data-aud="team|lead"><a href="use.spec.html">อ่านและแก้สเปกคู่มือ</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg><span>ส่งมอบและดูแล</span><small>3</small></summary><ul><li data-aud="team|lead"><a href="use.deliver.html">ส่งมอบคู่มือให้ลูกค้า</a></li><li data-aud="team|lead"><a href="use.keep-current.html">ดูแลคู่มือให้ตามระบบ</a></li><li data-aud="team"><a href="use.publish-wiki.html" aria-current="page">เผยแพร่ขึ้น Outline wiki</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h1M4 12h1M4 18h1"/></svg><span>อ้างอิง</span><small>3</small></summary><ul><li data-aud="team|lead"><a href="use.options.html">ตัวเลือกของคู่มือ</a></li><li data-aud="team"><a href="use.troubleshooting.html">ปัญหาที่พบบ่อย</a></li><li data-aud="team|lead"><a href="use.commands.html">ภาคผนวก: คำสั่งและกติกา</a></li></ul></details>
+<div class="side-downloads"><p>ดาวน์โหลด</p><ul><li><a href="user-guide.th.pdf" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ PDF</a></li><li><a href="user-guide.th.docx" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ Word (DOCX)</a></li></ul></div>
+</nav>
+<main id="content" tabindex="-1">
+<div class="page">
+<article class="chapter sheet" data-page="use.publish-wiki">
+<header class="head"><nav class="crumbs" aria-label="ตำแหน่งของหน้านี้"><ol><li><a href="index.html">คู่มือการใช้งาน</a></li><li>ส่งมอบและดูแล</li><li><a href="use.publish-wiki.html" aria-current="page">เผยแพร่ขึ้น Outline wiki</a></li></ol></nav><span class="kind">วิธีทำ</span><h1>เผยแพร่ขึ้น Outline wiki</h1><p class="summary">ส่งคู่มือขึ้น Outline wiki (เล่มละหนึ่งเอกสาร หน้าละหนึ่งเอกสารย่อย) ดูแผนก่อนด้วย --dry-run แล้วค่อยส่งจริง</p><div class="control"><span>อัปเดตล่าสุด <b>2026-10-07</b></span><button type="button" class="btn print" data-print hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>พิมพ์หน้านี้</button></div></header>
+<div class="sheet-body">
+<dl class="facts" aria-label="ข้อมูลของหน้านี้"><div><dt>สำหรับ</dt><dd class="who">ทีมที่ทำคู่มือ</dd></div></dl>
+<details class="toc-inline"><summary>ในหน้านี้</summary><ol><li class="l2"><a href="#sec-7-1">ก่อนเริ่ม</a></li><li class="l2"><a href="#sec-7-2">ขั้นตอน</a></li><li class="l2"><a href="#sec-7-3">ผลลัพธ์ที่ได้</a></li><li class="l2"><a href="#sec-7-4">ปัญหาที่พบบ่อย</a></li><li class="l2"><a href="#sec-7-5">หน้าที่เกี่ยวข้อง</a></li></ol></details>
+<div class="body">
+<p>นอกจากไฟล์ส่งลูกค้า คู่มือภายในหรือคู่มือที่ทีมต้องเปิดบ่อยควรอยู่บน wiki ขององค์กร
+คำสั่ง <strong>publish</strong> <strong>outline</strong> ส่งคู่มือขึ้น Outline โดยเล่มหนึ่งเป็นเอกสารหนึ่งฉบับ (ข้อมูลเอกสาร ลิงก์ดาวน์โหลด PDF/Word
+และสารบัญ) และแต่ละหน้าเป็นเอกสารย่อยใต้เล่ม ภาพ วิดีโอ และไฟล์ PDF/Word ขึ้นเป็นไฟล์แนบ ลิงก์ข้ามหน้าชี้ไปเอกสารบน wiki</p>
+<h2 id="sec-7-1">ก่อนเริ่ม</h2>
+<ul>
+<li>ออกไฟล์ PDF และ Word แล้ว (ถ้าต้องการให้เอกสารเล่มมีลิงก์ดาวน์โหลด)</li>
+<li>ตั้งที่อยู่ wiki ไว้ใน <code>manual.config.yaml</code>: <code>outline: { baseUrl: https://wiki.example.com }</code> (ไม่มีค่าเริ่มต้น)</li>
+<li>รู้ collection ปลายทาง: รหัสหรือ urlId ของ collection (ส่วนท้ายของ URL collection เช่น <code>Hq7RtK2xWm</code>)</li>
+<li>มี API key ของ Outline (Outline: Settings → API &amp; Apps) <strong>เก็บไว้ในตัวแปรสภาพแวดล้อม <code>OUTLINE_API_KEY</code> เท่านั้น</strong>
+manual-kit ไม่อ่าน key จากไฟล์และไม่พิมพ์ key ออกมา</li>
+</ul>
+<h2 id="sec-7-2">ขั้นตอน</h2>
+<ol>
+<li>
+<p>ดูแผนก่อน (ไม่ส่งอะไร ไม่ต้องใช้ key) ด้วย <strong>--dry-run</strong>:</p>
+<pre><code class="language-bash">manual-kit publish outline --collection Hq7RtK2xWm --dry-run
+</code></pre>
+<p>ภาพด้านล่างคือตัวอย่างแผนของคู่มือเล่มนี้ (wiki และ collection สมมติ):</p>
+</li>
+</ol>
+<figure class="figure" id="fig-7-1"><img src="../../media/th/publish-dry-run.png" width="960" height="494" loading="lazy" decoding="async" alt="แผนการเผยแพร่คู่มือเล่มนี้ขึ้น wiki สมมติ (--dry-run ไม่ส่งอะไร ย่อบางบรรทัด)"><figcaption>แผนการเผยแพร่คู่มือเล่มนี้ขึ้น wiki สมมติ (--dry-run ไม่ส่งอะไร ย่อบางบรรทัด)</figcaption></figure>
+<ol start="2">
+<li>
+<p>ถ้าแผนถูก ส่งจริง โดยใส่ key เฉพาะคำสั่งนั้น:</p>
+<pre><code class="language-bash">OUTLINE_API_KEY=... manual-kit publish outline --collection Hq7RtK2xWm
+</code></pre>
+<p>ตัวเลือกเพิ่มเติม: <strong>--parent</strong> <code>&lt;docId&gt;</code> วางเล่มไว้ใต้เอกสารที่มีอยู่ <strong>--book</strong> ส่งเฉพาะเล่มเดียว <strong>--lang</strong> เฉพาะภาษาเดียว
+หรือใส่ค่าประจำไว้ใน <code>manual.config.yaml</code>: <code>outline: { baseUrl: https://wiki.example.com, collection: Hq7RtK2xWm }</code>
+ถ้าเปลี่ยนชื่อเล่มบน wiki ให้ใส่ชื่อเดียวกันไว้ที่ <code>books.&lt;เล่ม&gt;.outline.title</code> ด้วย ไม่อย่างนั้นการส่งครั้งต่อไปจะเปลี่ยนชื่อกลับ</p>
+</li>
+<li>
+<p>commit ไฟล์ <code>manual/outline.json</code> ที่เกิดขึ้น ไฟล์นี้จำว่าหน้าไหนเป็นเอกสารไหนบน wiki และไฟล์แนบไหนส่งไปแล้ว</p>
+</li>
+</ol>
+<h2 id="sec-7-3">ผลลัพธ์ที่ได้</h2>
+<p>เอกสารบน wiki ตามแผน เมื่อคู่มือเปลี่ยนแล้วสั่งซ้ำ manual-kit จะแก้เฉพาะเอกสารที่ข้อความเปลี่ยน อัปโหลดเฉพาะไฟล์ใหม่
+และสร้างเอกสารใหม่ถ้ามีคนลบไปจาก wiki ไม่มีการสร้างซ้ำ คนในทีมจึงสั่งซ้ำได้ปลอดภัยทุกครั้งที่ build ใหม่</p>
+<h2 id="sec-7-4">ปัญหาที่พบบ่อย</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>อาการ</th>
+<th>สาเหตุ</th>
+<th>วิธีแก้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set the Outline API key in the environment variable OUTLINE_API_KEY</code></td>
+<td>ไม่ได้ตั้ง key</td>
+<td>ตั้งตัวแปรตามขั้นตอนที่ 2</td>
+</tr>
+<tr>
+<td><code>name the Outline wiki: outline.baseUrl in the config</code></td>
+<td>ไม่ได้บอกที่อยู่ wiki</td>
+<td>ใส่ <code>outline.baseUrl</code> ใน config</td>
+</tr>
+<tr>
+<td><code>name the Outline collection: --collection &lt;id or urlId&gt;</code></td>
+<td>ไม่ได้บอก collection</td>
+<td>ใส่ <code>--collection</code> หรือ <code>outline.collection</code> ใน config</td>
+</tr>
+<tr>
+<td><code>outline.json belongs to collection ...</code></td>
+<td>เคยส่งไป collection หรือ wiki อื่น</td>
+<td>ย้าย <code>manual/outline.json</code> ออกก่อน (ไฟล์หนึ่งผูกกับ wiki และ collection เดียว)</td>
+</tr>
+<tr>
+<td>เอกสารเล่มไม่มีลิงก์ PDF</td>
+<td>ยังไม่ได้ build PDF/Word</td>
+<td><code>manual-kit build pdf</code> และ <code>build docx</code> ก่อน แล้วส่งใหม่</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sec-7-5">หน้าที่เกี่ยวข้อง</h2>
+<ul>
+<li><a href="use.deliver.html">ส่งมอบคู่มือให้ลูกค้า</a></li>
+<li><a href="use.commands.html">ภาคผนวก: คำสั่งและกติกา</a></li>
+</ul>
+
+</div>
+<nav class="pager" aria-label="หน้าก่อนหน้าและถัดไป"><a rel="prev" href="use.keep-current.html"><small>ก่อนหน้า</small><strong>ดูแลคู่มือให้ตามระบบ</strong></a><a rel="next" href="use.options.html"><small>ถัดไป</small><strong>ตัวเลือกของคู่มือ</strong></a></nav>
+</div>
+</article>
+<aside class="toc" aria-label="ในหน้านี้"><p>ในหน้านี้</p><ol><li class="l2"><a href="#sec-7-1">ก่อนเริ่ม</a></li><li class="l2"><a href="#sec-7-2">ขั้นตอน</a></li><li class="l2"><a href="#sec-7-3">ผลลัพธ์ที่ได้</a></li><li class="l2"><a href="#sec-7-4">ปัญหาที่พบบ่อย</a></li><li class="l2"><a href="#sec-7-5">หน้าที่เกี่ยวข้อง</a></li></ol></aside>
+</div>
+</main>
+</div>
+<footer class="site-footer">
+<p>คู่มือ manual-kit — คู่มือการใช้งาน · อัปเดตล่าสุด 2026-10-07</p>
+<p><a href="../../index.html">คู่มือทั้งหมด</a></p>
+</footer>
+</body>
+</html>

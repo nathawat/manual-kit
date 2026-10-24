@@ -1,0 +1,9 @@
+$ manual-kit check
+error    coverage     coverage.yaml  role:admin has no manual page (name it in a page's front matter routes/covers, add page ids to "pages", or set status ignored/manual-later)
+error    coverage     coverage.yaml  role:teacher has no manual page (name it in a page's front matter routes/covers, add page ids to "pages", or set status ignored/manual-later)
+error    shot         pages/en/user-guide/01-sign-in.md  shot "login" not captured yet: media/en/login.png (run "manual-kit capture")
+error    shot         pages/th/user-guide/01-sign-in.md  shot "login" not captured yet: media/th/login.png (run "manual-kit capture")
+error    signature    pages/th/user-guide/01-sign-in.md  teacher.sign-in has not been signed (a person reads it, then runs "manual-kit sign teacher.sign-in")
+error    signature    pages/th/user-guide/02-create-class.md  teacher.create-class has not been signed (a person reads it, then runs "manual-kit sign teacher.create-class")
+not signed (2): teacher.create-class, teacher.sign-in (only a person signs, after reading the page)
+failed: 6 errors, 0 warnings

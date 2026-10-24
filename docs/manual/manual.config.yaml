@@ -1,0 +1,96 @@
+# manual-kit config for the manual OF manual-kit (dogfood). Text fields take a string or { th: ..., en: ... }.
+# The manual lives in docs/manual, so the project root is two folders up.
+projectRoot: ../..
+languages:
+  - th
+books:
+  user-guide:
+    title:
+      th: คู่มือการใช้งาน
+    outline: { title: { th: คู่มือการใช้งาน (user-guide) } }
+  dev-guide:
+    title:
+      th: คู่มือการพัฒนา
+    outline: { title: { th: คู่มือการพัฒนา (dev-guide) } }
+document:
+  title: คู่มือ manual-kit
+  subtitle: เครื่องมือทำคู่มือการใช้งานระบบแบบทางการด้วย Claude Code
+  client: ผู้ใช้ manual-kit
+  project: manual-kit
+  docNumber: (รอระบุ)
+  version: "0.1"
+  date: "2026-10-07"
+  classification: (รอระบุ)
+  preparedBy: ผู้ร่วมพัฒนา manual-kit (ฉบับร่างเขียนโดย Claude Code ด้วย manual-kit)
+  approvers:
+    - { name: (รอระบุ), role: หัวหน้าทีมพัฒนา }
+  revisions:
+    - { version: "0.1", date: "2026-10-07", author: Claude Code (ร่าง), changes: "ฉบับร่างแรก: คู่มือการใช้งานและคู่มือการพัฒนา เขียนด้วย manual-kit เอง" }
+  purpose: >-
+    อธิบายว่า manual-kit คืออะไร ใช้ทำคู่มือการใช้งานระบบแบบทางการให้ลูกค้าอย่างไรตั้งแต่ติดตั้งจนส่งมอบและดูแลต่อ
+    (คู่มือการใช้งาน) และอธิบายโครงสร้างภายในกับวิธีต่อยอดเครื่องมือสำหรับนักพัฒนา (คู่มือการพัฒนา)
+  scope: >-
+    ครอบคลุม plugin สำหรับ Claude Code (คำสั่ง /manual และ skill) คำสั่ง manual-kit ทุกคำสั่ง ผลลัพธ์ PDF, Word, เว็บคู่มือ
+    และ Outline wiki งาน CI บน GitLab และการพัฒนา repo manual-kit ไม่ครอบคลุมวิธีใช้ระบบของลูกค้าแต่ละโครงการ
+  audience: >-
+    คู่มือการใช้งาน: เพื่อนร่วมทีมที่ต้องทำคู่มือส่งลูกค้า หัวหน้าทีม และผู้จัดการโครงการ (ไม่ต้องเขียนโค้ดเป็น)
+    คู่มือการพัฒนา: นักพัฒนาที่ดูแลหรือเพิ่มความสามารถให้ manual-kit (เขียน TypeScript และใช้ Git เป็น)
+  contact: (รอระบุ) ช่องทางติดต่อผู้ดูแล manual-kit
+  glossary:
+    - { term: Claude Code, definition: "โปรแกรมผู้ช่วยเขียนโค้ดของ Anthropic ที่ทำงานใน terminal เราสั่งงานด้วยข้อความหรือคำสั่งที่ขึ้นต้นด้วย /" }
+    - { term: plugin, definition: "ชุดส่วนเสริมของ Claude Code ที่ติดตั้งเพิ่มได้ manual-kit มาเป็น plugin ที่มีคำสั่ง /manual, skill และเครื่องมือ manual-kit" }
+    - { term: marketplace, definition: "ที่เก็บรายการ plugin ให้ Claude Code ติดตั้ง repo manual-kit เป็น marketplace ชื่อ manual-kit" }
+    - { term: skill, definition: "เอกสารวิธีทำงานที่ Claude อ่านแล้วทำตาม manual-kit มีสองตัว: manual (ขั้นตอนตั้งแต่ต้นจนจบ) และ building-product-manuals (กติกาการเขียนคู่มือ)" }
+    - { term: สเปกคู่มือ, definition: "ไฟล์ manual-spec.md ที่สรุประบบ ผู้ใช้ ความสามารถ ขั้นตอนการทำงาน และแผนหน้าคู่มือ ทุกข้ออ้างไฟล์ต้นทาง" }
+    - { term: การรับรอง (sign), definition: "การบันทึกว่าคนอ่านหน้านั้นแล้วและเห็นว่าตรงกับระบบ ทำโดยคนเท่านั้น" }
+    - { term: (รอระบุ), definition: "เครื่องหมายแทนข้อมูลที่ยังไม่รู้ เช่น เลขที่เอกสารหรือผู้อนุมัติ ต้องกรอกก่อนส่งลูกค้า" }
+outputs:
+  pdf: true
+  docx: true
+  web: true
+  dir: dist
+media: steps+video
+signing: required
+adapter:
+  type: generic
+  # manual-kit has no screens: its "UI" is the command line. Labels are the command and option names in src/cli.ts and
+  # the skill names, so {{ui:"--allow-unsigned"}} fails check when an option is renamed or removed.
+  strings:
+    th:
+      files: [src/cli.ts, plugins/manual-kit/bin/manual-kit, plugins/manual-kit/skills/*/SKILL.md]
+      pattern: '(?:\.command\(|\.option\(|new Option\()''(?:-\w, )?(?<value>--[\w-]+|[a-z][\w-]*)|^name: (?<value>[\w-]+)$|^  (?<value>setup|doctor)\)$'
+      flags: m
+  # Coverage items: every command of the CLI and of the plugin wrapper needs a page (route:<command>).
+  routes:
+    files: [src/cli.ts, plugins/manual-kit/bin/manual-kit]
+    pattern: '\.command\(''(?<value>[a-z-]+)''|^  (?<value>setup|doctor)\)$'
+    flags: m
+  data:
+    pkg: package.json
+capture:
+  # A static server (python3 -m http.server --bind 127.0.0.1 8790) over a folder with one link:
+  #   docs -> this repository's docs/ (README images and this manual's own build in docs/manual/dist)
+  baseUrl: http://127.0.0.1:8790
+  allowlist:
+    - 127.0.0.1
+    - localhost
+  viewport: { width: 1280, height: 800 }
+wording:
+  superlatives: true
+  forbidden:
+    - { pattern: "คลิก", message: "ใช้คำว่า กด (คำเดียวกันทั้งเล่ม)" }
+web:
+  brand:
+    name: { th: manual-kit }
+  audiences:
+    team: { th: ทีมที่ทำคู่มือ }
+    lead: { th: หัวหน้าทีม / PM }
+    developer: { th: นักพัฒนา }
+  groups:
+    start: { title: { th: เริ่มต้น }, icon: home }
+    work: { title: { th: ทำคู่มือ }, icon: book }
+    deliver: { title: { th: ส่งมอบและดูแล }, icon: shield }
+    reference: { title: { th: อ้างอิง }, icon: list }
+    design: { title: { th: โครงสร้าง }, icon: folder }
+    extend: { title: { th: ต่อยอด }, icon: gear }
+    quality: { title: { th: คุณภาพและการปล่อย }, icon: chart }

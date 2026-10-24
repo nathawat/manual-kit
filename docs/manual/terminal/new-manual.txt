@@ -1,0 +1,31 @@
+$ /manual ทำคู่มือการใช้งานและคู่มือการพัฒนา ภาษาไทย ออก PDF, Word และเว็บ
+⏺ อ่าน README.md, CLAUDE.md, package.json และเอกสารใน docs/
+$ manual-kit discover
+wrote manual/discovery.json and discovery.md
+adapter generic: 7 documents, 16 routes, 0 roles, 0 permissions, 6 state sets, 1 form fields, 54 messages, 0 API routes, 0 flags
+⏺ เขียน manual/manual-spec.md แล้วสรุป: 13 ความสามารถ, 4 ขั้นตอนการทำงาน, 2 เล่ม 22 หน้า, 3 คำถามที่ต้องยืนยัน
+$ manual-kit init --no-samples --languages th --books user-guide,dev-guide --adapter generic --title "คู่มือ manual-kit"
+created manual/manual.config.yaml
+created manual/shots.yaml
+created manual/.gitignore
+created manual/pages/th/user-guide/.gitkeep
+created manual/pages/th/dev-guide/.gitkeep
+$ manual-kit inventory
+coverage.yaml: 16 new, 0 removed, 16 unmapped (of 16)
+$ manual-kit capture
+  th shot out-pdf
+  th shot out-web
+  th steps install
+  th clip demo
+  …
+captured 14
+$ manual-kit check --allow-unsigned
+not signed (22): dev.add-adapter, dev.add-capture-action, … (only a person signs, after reading the page)
+ok: 0 errors, 22 warnings
+$ manual-kit build
+wrote manual/dist/dev-guide.th.pdf
+wrote manual/dist/user-guide.th.pdf
+wrote manual/dist/dev-guide.th.docx
+wrote manual/dist/user-guide.th.docx
+finalize: none (config docx.finalize: auto; no LibreOffice found (Microsoft Word is used only with --finalize word))
+wrote manual/dist/web/index.html

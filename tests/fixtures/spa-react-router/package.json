@@ -1,0 +1,1 @@
+{ "name": "spa-react-router", "private": true, "dependencies": { "react": "^19.0.0", "react-router-dom": "^6.30.0" }, "devDependencies": { "vite": "^7.0.0" } }

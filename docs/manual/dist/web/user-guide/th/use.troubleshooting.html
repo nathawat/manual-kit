@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>ปัญหาที่พบบ่อย — คู่มือการใช้งาน — คู่มือ manual-kit</title>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/brand.css">
+
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('mk-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};window.ManualKitWords={"results":"{n} รายการ","none":"ไม่พบหัวข้อที่ตรงกับคำค้น ลองใช้คำที่สั้นลงหรือคำอื่น","all":"ดูผลการค้นหาทั้งหมด","close":"ปิด","prev":"ก่อนหน้า","next":"ถัดไป","showFix":"ดูวิธีแก้","hideFix":"ซ่อนวิธีแก้","readSteps":"อ่านวิธีทำทีละขั้น","captions":"คำบรรยาย"}</script>
+<script src="../../assets/search-core.js" defer></script>
+<script src="search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#content">ข้ามไปที่เนื้อหา</a>
+<header class="top">
+<button type="button" class="top-btn top-btn--ghost nav-toggle" aria-expanded="false" aria-controls="site-nav"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span class="visually-hidden">สารบัญ</span></button>
+<a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">m</span><span>manual-kit</span></a>
+<details class="book-pill"><summary aria-label="เปลี่ยนเล่ม: คู่มือการใช้งาน"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>คู่มือการใช้งาน</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../../user-guide/th/index.html" aria-current="true">คู่มือการใช้งาน</a></li><li><a href="../../dev-guide/th/index.html">คู่มือการพัฒนา</a></li></ul></details>
+<form class="search" role="search" action="search.html" method="get">
+<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><label for="q" class="visually-hidden">ค้นหาในคู่มือ</label>
+<input type="search" id="q" name="q" placeholder="ค้นหาในคู่มือ" autocomplete="off" enterkeyhint="search" aria-keyshortcuts="Control+K Meta+K /" aria-controls="search-pop">
+<kbd class="kbd" aria-hidden="true">⌘K</kbd>
+<div id="search-pop" class="pop" hidden></div>
+</form>
+<div class="top-right">
+<button type="button" class="top-btn top-btn--ghost search-open" aria-label="ค้นหา"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<a class="top-btn top-btn--ghost top-faq" href="faq.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span class="faq-label">ปัญหาที่พบบ่อย</span></a>
+
+<button type="button" class="top-btn top-btn--ghost theme-toggle" aria-label="สลับโหมดสว่างและมืด" title="สลับโหมดสว่างและมืด"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+
+</div>
+</header>
+<div class="scrim" hidden></div>
+<div class="layout">
+<nav id="site-nav" class="side" aria-label="สารบัญ">
+<button type="button" class="top-btn side-close" aria-label="ปิดสารบัญ"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+<a class="reading" href="index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span><small>คุณกำลังอ่าน</small><strong>คู่มือการใช้งาน</strong></span></a>
+<a class="switch" href="../../dev-guide/th/index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ไปที่ คู่มือการพัฒนา</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<div class="aud" data-book="user-guide"><span class="aud-label" id="aud-label">ฉันเป็น…</span><div class="chips" role="group" aria-labelledby="aud-label"><button type="button" class="chip" data-aud="" aria-pressed="true">ดูทุกงาน <small>10</small></button><button type="button" class="chip" data-aud="team" aria-pressed="false">ทีมที่ทำคู่มือ <small>10</small></button><button type="button" class="chip" data-aud="lead" aria-pressed="false">หัวหน้าทีม / PM <small>6</small></button></div></div>
+<details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>เริ่มต้น</span><small>2</small></summary><ul><li data-aud="team|lead"><a href="use.about.html">manual-kit คืออะไรและทำอะไรได้</a></li><li data-aud="team"><a href="use.install.html">ติดตั้ง plugin</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ทำคู่มือ</span><small>2</small></summary><ul><li data-aud="team"><a href="use.new-manual.html">ทำคู่มือใหม่ด้วย /manual</a></li><li data-aud="team|lead"><a href="use.spec.html">อ่านและแก้สเปกคู่มือ</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg><span>ส่งมอบและดูแล</span><small>3</small></summary><ul><li data-aud="team|lead"><a href="use.deliver.html">ส่งมอบคู่มือให้ลูกค้า</a></li><li data-aud="team|lead"><a href="use.keep-current.html">ดูแลคู่มือให้ตามระบบ</a></li><li data-aud="team"><a href="use.publish-wiki.html">เผยแพร่ขึ้น Outline wiki</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h1M4 12h1M4 18h1"/></svg><span>อ้างอิง</span><small>3</small></summary><ul><li data-aud="team|lead"><a href="use.options.html">ตัวเลือกของคู่มือ</a></li><li data-aud="team"><a href="use.troubleshooting.html" aria-current="page">ปัญหาที่พบบ่อย</a></li><li data-aud="team|lead"><a href="use.commands.html">ภาคผนวก: คำสั่งและกติกา</a></li></ul></details>
+<div class="side-downloads"><p>ดาวน์โหลด</p><ul><li><a href="user-guide.th.pdf" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ PDF</a></li><li><a href="user-guide.th.docx" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ Word (DOCX)</a></li></ul></div>
+</nav>
+<main id="content" tabindex="-1">
+<div class="page">
+<article class="chapter sheet" data-page="use.troubleshooting">
+<header class="head"><nav class="crumbs" aria-label="ตำแหน่งของหน้านี้"><ol><li><a href="index.html">คู่มือการใช้งาน</a></li><li>อ้างอิง</li><li><a href="use.troubleshooting.html" aria-current="page">ปัญหาที่พบบ่อย</a></li></ol></nav><span class="kind">ข้อมูลอ้างอิง</span><h1>ปัญหาที่พบบ่อย</h1><p class="summary">อาการ สาเหตุ และวิธีแก้ ตั้งแต่ติดตั้ง ทำคู่มือ ตรวจ ออกไฟล์ จนถึงเผยแพร่</p><div class="control"><span>อัปเดตล่าสุด <b>2026-10-07</b></span><button type="button" class="btn print" data-print hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>พิมพ์หน้านี้</button></div></header>
+<div class="sheet-body">
+<dl class="facts" aria-label="ข้อมูลของหน้านี้"><div><dt>สำหรับ</dt><dd class="who">ทีมที่ทำคู่มือ</dd></div></dl>
+<details class="toc-inline"><summary>ในหน้านี้</summary><ol><li class="l2"><a href="#sec-9-1">ติดตั้งและเริ่มใช้</a></li><li class="l2"><a href="#sec-9-2">ตรวจ (check)</a></li><li class="l2"><a href="#sec-9-3">ถ่ายภาพและวิดีโอ</a></li><li class="l2"><a href="#sec-9-4">ออกไฟล์และเผยแพร่</a></li><li class="l2"><a href="#sec-9-5">อัปเดต plugin</a></li><li class="l2"><a href="#sec-9-6">หน้าที่เกี่ยวข้อง</a></li></ol></details>
+<div class="body">
+<p>เริ่มจาก <code>! manual-kit doctor</code> ใน Claude Code เสมอ คำสั่งนี้บอกที่อยู่ของ plugin รุ่น Node และโปรแกรมเสริมที่มีหรือขาด
+ครอบคลุมสาเหตุส่วนใหญ่ของปัญหาตอนติดตั้ง ข้อความในตารางเป็นข้อความที่ manual-kit แสดงจริง (ภาษาอังกฤษ)</p>
+<h2 id="sec-9-1">ติดตั้งและเริ่มใช้</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>อาการ</th>
+<th>สาเหตุ</th>
+<th>วิธีแก้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>marketplace add</code> ไม่ผ่าน</td>
+<td>ที่อยู่ repo ผิด หรือเครื่องต่อ repo ไม่ได้</td>
+<td>ตรวจที่อยู่ repo แล้วลองเปิดด้วย <code>git ls-remote &lt;ที่อยู่ repo&gt;</code></td>
+</tr>
+<tr>
+<td><code>/manual</code> ไม่ขึ้น</td>
+<td>plugin ยังไม่โหลด</td>
+<td>ใช้ <code>/manual-kit:manual</code> หรือ <code>claude plugin list</code> ดูว่าติดตั้งแล้ว แล้วเปิด Claude Code ใหม่</td>
+</tr>
+<tr>
+<td><code>manual-kit: Node.js 22.17 or newer is needed</code></td>
+<td>Node เก่า</td>
+<td><code>brew upgrade node</code></td>
+</tr>
+<tr>
+<td><code>package &quot;playwright&quot; is not installed ...</code></td>
+<td>runtime ยังไม่ติดตั้ง (เช่น hook ตอนเปิดยังไม่จบ)</td>
+<td><code>! manual-kit setup</code> แล้วลองใหม่</td>
+</tr>
+<tr>
+<td>ใช้ครั้งแรกช้า</td>
+<td>กำลังติดตั้ง Chromium</td>
+<td>รอ 2–3 นาที ครั้งเดียว</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sec-9-2">ตรวจ (check)</h2>
+<p>ตัวอย่างผลจริงของ check บนโครงการทดสอบที่ยังไม่ได้ถ่ายภาพ ยังไม่ได้รับรอง และมีบทบาทที่ยังไม่มีหน้า:</p>
+<figure class="figure" id="fig-9-1"><img src="../../media/th/check-errors.png" width="960" height="422" loading="lazy" decoding="async" alt="check ครั้งแรกของโครงการทดสอบ: หน้าที่ขาด ภาพที่ยังไม่ถ่าย หน้าที่ยังไม่รับรอง"><figcaption>check ครั้งแรกของโครงการทดสอบ: หน้าที่ขาด ภาพที่ยังไม่ถ่าย หน้าที่ยังไม่รับรอง</figcaption></figure>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>ข้อความ</th>
+<th>ความหมาย</th>
+<th>ทำอย่างไร</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>... has no manual page</code></td>
+<td>มีหน้าจอ บทบาท หรือคำสั่งที่ยังไม่มีหน้าพูดถึง</td>
+<td>ให้ Claude เพิ่มหน้า หรือตั้ง <code>manual-later</code> / <code>ignored</code> ใน coverage.yaml</td>
+</tr>
+<tr>
+<td><code>shot &quot;...&quot; not captured yet</code></td>
+<td>ยังไม่ได้ถ่ายภาพ</td>
+<td>ให้ Claude รัน <code>capture</code></td>
+</tr>
+<tr>
+<td><code>... has not been signed</code></td>
+<td>ยังไม่มีคนรับรอง</td>
+<td>อ่าน แล้ว <code>! manual-kit sign ...</code></td>
+</tr>
+<tr>
+<td><code>... changed since it was signed</code></td>
+<td>หน้าหรือไฟล์ต้นทางเปลี่ยน</td>
+<td>อ่านใหม่ แล้วรับรองใหม่</td>
+</tr>
+<tr>
+<td>คำเตือน <code>structure</code></td>
+<td>หน้าแบบ how-to ขาดหัวข้อมาตรฐาน</td>
+<td>เพิ่มหัวข้อ ก่อนเริ่ม / ขั้นตอน / ผลลัพธ์ที่ได้ / ปัญหาที่พบบ่อย / หน้าที่เกี่ยวข้อง</td>
+</tr>
+<tr>
+<td>คำเตือน <code>spec</code></td>
+<td>โค้ดมีสิ่งที่สเปกไม่ได้พูดถึง</td>
+<td><code>/manual update</code></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sec-9-3">ถ่ายภาพและวิดีโอ</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>ข้อความ</th>
+<th>สาเหตุ</th>
+<th>วิธีแก้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>... is not in capture.allowlist</code></td>
+<td>ที่อยู่ระบบไม่ใช่เครื่องตัวเองหรือที่อนุญาต</td>
+<td>ใช้ระบบในเครื่อง ห้ามชี้ไป production</td>
+</tr>
+<tr>
+<td><code>stylesheet blocked (...); add the host to capture.assetHosts</code></td>
+<td>หน้าเว็บโหลด CSS หรือฟอนต์จาก CDN ซึ่งถูกบล็อก</td>
+<td>เพิ่ม host ใน <code>capture.assetHosts</code> (โหลดได้แต่ไม่เปิดหน้าไปที่นั่น)</td>
+</tr>
+<tr>
+<td><code>environment variable ... is not set</code></td>
+<td>ขาดรหัสผ่านทดสอบในตัวแปรสภาพแวดล้อม</td>
+<td>ตั้งตัวแปรที่ shots.yaml อ้าง (<code>{env:NAME}</code>)</td>
+</tr>
+<tr>
+<td><code>mask &quot;...&quot; matched nothing</code></td>
+<td>ส่วนที่ควรปิดบังไม่อยู่ในหน้า</td>
+<td>ตรวจภาพ ข้อมูลส่วนตัวอาจหลุด แก้ selector</td>
+</tr>
+<tr>
+<td><code>ffmpeg not found</code></td>
+<td>ไม่มี ffmpeg</td>
+<td><code>brew install ffmpeg</code> หรือใช้ media <code>steps</code></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sec-9-4">ออกไฟล์และเผยแพร่</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>อาการ</th>
+<th>สาเหตุ</th>
+<th>วิธีแก้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ไฟล์ Word สารบัญไม่มีเลขหน้า</td>
+<td>ไม่มี LibreOffice</td>
+<td>เปิดใน Word แล้วอัปเดตสารบัญ หรือติดตั้ง LibreOffice แล้วทำใหม่</td>
+</tr>
+<tr>
+<td>ไม่ได้ไฟล์ Word</td>
+<td>ไม่มี pandoc</td>
+<td><code>brew install pandoc</code></td>
+</tr>
+<tr>
+<td><code>nothing to build: config outputs has pdf, docx and web all off</code></td>
+<td>ปิดผลลัพธ์ทุกแบบ</td>
+<td>เปิดใน <code>outputs</code></td>
+</tr>
+<tr>
+<td><code>set the Outline API key ...</code></td>
+<td>ไม่มี <code>OUTLINE_API_KEY</code></td>
+<td>ดู <a href="use.publish-wiki.html">เผยแพร่ขึ้น Outline wiki</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sec-9-5">อัปเดต plugin</h2>
+<pre><code class="language-bash">claude plugin update manual-kit@manual-kit
+</code></pre>
+<p>หรือเปิดอัปเดตอัตโนมัติ: ใน Claude Code พิมพ์ <code>/plugin</code> → Marketplaces → manual-kit → Enable auto-update</p>
+<h2 id="sec-9-6">หน้าที่เกี่ยวข้อง</h2>
+<ul>
+<li><a href="use.install.html">ติดตั้ง plugin</a></li>
+<li><a href="use.commands.html">ภาคผนวก: คำสั่งและกติกา</a></li>
+</ul>
+
+</div>
+<nav class="pager" aria-label="หน้าก่อนหน้าและถัดไป"><a rel="prev" href="use.options.html"><small>ก่อนหน้า</small><strong>ตัวเลือกของคู่มือ</strong></a><a rel="next" href="use.commands.html"><small>ถัดไป</small><strong>ภาคผนวก: คำสั่งและกติกา</strong></a></nav>
+</div>
+</article>
+<aside class="toc" aria-label="ในหน้านี้"><p>ในหน้านี้</p><ol><li class="l2"><a href="#sec-9-1">ติดตั้งและเริ่มใช้</a></li><li class="l2"><a href="#sec-9-2">ตรวจ (check)</a></li><li class="l2"><a href="#sec-9-3">ถ่ายภาพและวิดีโอ</a></li><li class="l2"><a href="#sec-9-4">ออกไฟล์และเผยแพร่</a></li><li class="l2"><a href="#sec-9-5">อัปเดต plugin</a></li><li class="l2"><a href="#sec-9-6">หน้าที่เกี่ยวข้อง</a></li></ol></aside>
+</div>
+</main>
+</div>
+<footer class="site-footer">
+<p>คู่มือ manual-kit — คู่มือการใช้งาน · อัปเดตล่าสุด 2026-10-07</p>
+<p><a href="../../index.html">คู่มือทั้งหมด</a></p>
+</footer>
+</body>
+</html>

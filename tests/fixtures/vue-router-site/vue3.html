@@ -1,0 +1,18 @@
+<!doctype html>
+<html><body>
+<div id="__nuxt" data-v-app><p>Loading</p></div>
+<script>
+  // mounted a moment after load, as a real app hydrates
+  setTimeout(() => {
+    const routes = [
+      { path: '/login', name: 'login' },
+      { path: '/users/:id()', name: 'users-id' },
+      { path: '/reports/:year?', name: 'reports-year' },
+      { path: '/about', name: 'about___en' },
+      { path: '/th/about', name: 'about___th' },
+      { path: '/settings', name: undefined },
+    ]
+    document.getElementById('__nuxt').__vue_app__ = { config: { globalProperties: { $router: { getRoutes: () => routes } } } }
+  }, 300)
+</script>
+</body></html>

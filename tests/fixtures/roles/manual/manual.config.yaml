@@ -1,0 +1,21 @@
+languages: [th]
+projectRoot: .
+books:
+  office: { title: คู่มือระบบงานสารบรรณ, description: ทุกงานในระบบงานสารบรรณ เรียงตามเมนูของระบบ,
+    groups: [ { id: start, title: เริ่มต้นใช้งาน }, { id: inbox, title: หนังสือเข้า }, { id: outbox, title: หนังสือออก }, { id: settings, title: ตั้งค่า } ] }
+  clerk-guide: { title: คู่มือเจ้าหน้าที่สารบรรณ, from: { book: office, audience: [clerk] } }
+  signer-guide: { title: คู่มือผู้ลงนาม, from: { book: office, audience: [signer] } }
+  staff-guide: { title: คู่มือผู้ใช้งานทั่วไป, from: { book: office, audience: [staff] } }
+document:
+  title: คู่มือการใช้งานระบบงานสารบรรณ
+  client: หน่วยงานตัวอย่าง
+  version: "1.0"
+  date: "2026-10-08"
+media: none
+outputs: { pdf: true, docx: false, web: true }
+docx: { finalize: none }
+web:
+  audiences:
+    clerk: { label: เจ้าหน้าที่สารบรรณ, description: รับหนังสือเข้า ลงทะเบียน และส่งต่อให้ผู้เกี่ยวข้อง }
+    signer: { label: ผู้ลงนาม, description: ตรวจและลงนามหนังสือออก มอบหมายผู้ลงนามแทน }
+    staff: ผู้ใช้งานทั่วไป

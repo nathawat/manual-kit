@@ -1,0 +1,16 @@
+# actions run first (prepare the screen), then the highlight is drawn and the image is taken.
+shots:
+  login:
+    url: /login.html
+    caption: { th: "หน้า {{ui:login.title}}", en: "The {{ui:login.title}} page" }
+    highlight: "#submit"
+    mask: [".email-hint"]
+steps:
+  create-class:
+    url: /classes.html
+    steps:
+      - text: { th: "กด {{ui:class.new}}", en: "Press {{ui:class.new}}" }
+        highlight: "#new-class"
+      - text: { th: "พิมพ์{{ui:class.name}} แล้วกด {{ui:class.save}}", en: "Type the {{ui:class.name}} and press {{ui:class.save}}" }
+        actions: [{ click: "#new-class" }, { fill: "#class-name", value: "ป.5/1" }]
+        highlight: "#save"

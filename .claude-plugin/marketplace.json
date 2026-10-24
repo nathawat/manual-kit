@@ -1,0 +1,12 @@
+{
+  "name": "manual-kit",
+  "description": "manual-kit: formal user manuals for Claude Code",
+  "owner": { "name": "manual-kit contributors" },
+  "plugins": [
+    {
+      "name": "manual-kit",
+      "source": "./plugins/manual-kit",
+      "description": "Formal user manuals (PDF, Word, web) written from the code and the running app, kept in step with it: /manual-kit:manual"
+    }
+  ]
+}

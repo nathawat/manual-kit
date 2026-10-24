@@ -1,0 +1,17 @@
+{
+  "th/clip/demo": "b5894f1898bdf8a7",
+  "th/encode/demo": "3dd39c9ef157de99",
+  "th/shot/check-drift": "3e2f598bd90d23a3",
+  "th/shot/check-errors": "7a8c757b0621be98",
+  "th/shot/doctor": "fffe70109c13ba75",
+  "th/shot/out-pdf": "4b65fd54c84b2606",
+  "th/shot/out-web": "fae2898ce94b43ce",
+  "th/shot/out-web-mobile": "855e0fd32b3a211c",
+  "th/shot/out-web-search": "e3925fb21eddd702",
+  "th/shot/out-word": "45a81a393c457e92",
+  "th/shot/publish-dry-run": "eb85147a7faba909",
+  "th/shot/sign": "d33a4af928d8e5f4",
+  "th/shot/verify": "e837c97b94ed060d",
+  "th/steps/install": "e98304f60b5c8919",
+  "th/steps/new-manual": "223841a8c253c2cf"
+}

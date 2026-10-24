@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>อ่านและแก้สเปกคู่มือ — คู่มือการใช้งาน — คู่มือ manual-kit</title>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/brand.css">
+
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('mk-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};window.ManualKitWords={"results":"{n} รายการ","none":"ไม่พบหัวข้อที่ตรงกับคำค้น ลองใช้คำที่สั้นลงหรือคำอื่น","all":"ดูผลการค้นหาทั้งหมด","close":"ปิด","prev":"ก่อนหน้า","next":"ถัดไป","showFix":"ดูวิธีแก้","hideFix":"ซ่อนวิธีแก้","readSteps":"อ่านวิธีทำทีละขั้น","captions":"คำบรรยาย"}</script>
+<script src="../../assets/search-core.js" defer></script>
+<script src="search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#content">ข้ามไปที่เนื้อหา</a>
+<header class="top">
+<button type="button" class="top-btn top-btn--ghost nav-toggle" aria-expanded="false" aria-controls="site-nav"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span class="visually-hidden">สารบัญ</span></button>
+<a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">m</span><span>manual-kit</span></a>
+<details class="book-pill"><summary aria-label="เปลี่ยนเล่ม: คู่มือการใช้งาน"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>คู่มือการใช้งาน</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../../user-guide/th/index.html" aria-current="true">คู่มือการใช้งาน</a></li><li><a href="../../dev-guide/th/index.html">คู่มือการพัฒนา</a></li></ul></details>
+<form class="search" role="search" action="search.html" method="get">
+<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><label for="q" class="visually-hidden">ค้นหาในคู่มือ</label>
+<input type="search" id="q" name="q" placeholder="ค้นหาในคู่มือ" autocomplete="off" enterkeyhint="search" aria-keyshortcuts="Control+K Meta+K /" aria-controls="search-pop">
+<kbd class="kbd" aria-hidden="true">⌘K</kbd>
+<div id="search-pop" class="pop" hidden></div>
+</form>
+<div class="top-right">
+<button type="button" class="top-btn top-btn--ghost search-open" aria-label="ค้นหา"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<a class="top-btn top-btn--ghost top-faq" href="faq.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span class="faq-label">ปัญหาที่พบบ่อย</span></a>
+
+<button type="button" class="top-btn top-btn--ghost theme-toggle" aria-label="สลับโหมดสว่างและมืด" title="สลับโหมดสว่างและมืด"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+
+</div>
+</header>
+<div class="scrim" hidden></div>
+<div class="layout">
+<nav id="site-nav" class="side" aria-label="สารบัญ">
+<button type="button" class="top-btn side-close" aria-label="ปิดสารบัญ"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+<a class="reading" href="index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span><small>คุณกำลังอ่าน</small><strong>คู่มือการใช้งาน</strong></span></a>
+<a class="switch" href="../../dev-guide/th/index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ไปที่ คู่มือการพัฒนา</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<div class="aud" data-book="user-guide"><span class="aud-label" id="aud-label">ฉันเป็น…</span><div class="chips" role="group" aria-labelledby="aud-label"><button type="button" class="chip" data-aud="" aria-pressed="true">ดูทุกงาน <small>10</small></button><button type="button" class="chip" data-aud="team" aria-pressed="false">ทีมที่ทำคู่มือ <small>10</small></button><button type="button" class="chip" data-aud="lead" aria-pressed="false">หัวหน้าทีม / PM <small>6</small></button></div></div>
+<details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>เริ่มต้น</span><small>2</small></summary><ul><li data-aud="team|lead"><a href="use.about.html">manual-kit คืออะไรและทำอะไรได้</a></li><li data-aud="team"><a href="use.install.html">ติดตั้ง plugin</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ทำคู่มือ</span><small>2</small></summary><ul><li data-aud="team"><a href="use.new-manual.html">ทำคู่มือใหม่ด้วย /manual</a></li><li data-aud="team|lead"><a href="use.spec.html" aria-current="page">อ่านและแก้สเปกคู่มือ</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg><span>ส่งมอบและดูแล</span><small>3</small></summary><ul><li data-aud="team|lead"><a href="use.deliver.html">ส่งมอบคู่มือให้ลูกค้า</a></li><li data-aud="team|lead"><a href="use.keep-current.html">ดูแลคู่มือให้ตามระบบ</a></li><li data-aud="team"><a href="use.publish-wiki.html">เผยแพร่ขึ้น Outline wiki</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h1M4 12h1M4 18h1"/></svg><span>อ้างอิง</span><small>3</small></summary><ul><li data-aud="team|lead"><a href="use.options.html">ตัวเลือกของคู่มือ</a></li><li data-aud="team"><a href="use.troubleshooting.html">ปัญหาที่พบบ่อย</a></li><li data-aud="team|lead"><a href="use.commands.html">ภาคผนวก: คำสั่งและกติกา</a></li></ul></details>
+<div class="side-downloads"><p>ดาวน์โหลด</p><ul><li><a href="user-guide.th.pdf" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ PDF</a></li><li><a href="user-guide.th.docx" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ Word (DOCX)</a></li></ul></div>
+</nav>
+<main id="content" tabindex="-1">
+<div class="page">
+<article class="chapter sheet" data-page="use.spec">
+<header class="head"><nav class="crumbs" aria-label="ตำแหน่งของหน้านี้"><ol><li><a href="index.html">คู่มือการใช้งาน</a></li><li>ทำคู่มือ</li><li><a href="use.spec.html" aria-current="page">อ่านและแก้สเปกคู่มือ</a></li></ol></nav><span class="kind">วิธีทำ</span><h1>อ่านและแก้สเปกคู่มือ</h1><p class="summary">สเปกคู่มือคือสิ่งที่คู่มือทั้งเล่มเขียนตาม อ่านมันก่อนจะประหยัดการแก้ทีหลัง</p><div class="control"><span>อัปเดตล่าสุด <b>2026-10-07</b></span><button type="button" class="btn print" data-print hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>พิมพ์หน้านี้</button></div></header>
+<div class="sheet-body">
+<dl class="facts" aria-label="ข้อมูลของหน้านี้"><div><dt>สำหรับ</dt><dd class="who">ทีมที่ทำคู่มือ หัวหน้าทีม / PM</dd></div></dl>
+<details class="toc-inline"><summary>ในหน้านี้</summary><ol><li class="l2"><a href="#sec-4-1">ก่อนเริ่ม</a></li><li class="l2"><a href="#sec-4-2">ขั้นตอน</a></li><li class="l2"><a href="#sec-4-3">ผลลัพธ์ที่ได้</a></li><li class="l2"><a href="#sec-4-4">ปัญหาที่พบบ่อย</a></li><li class="l2"><a href="#sec-4-5">หน้าที่เกี่ยวข้อง</a></li></ol></details>
+<div class="body">
+<p>ก่อนเขียนหน้าใด ๆ Claude เขียน <strong>สเปกคู่มือ</strong> (<code>manual/manual-spec.md</code>) ก่อนเสมอ เหมือนแบบบ้านก่อนสร้างบ้าน:
+บอกว่าระบบทำอะไร ใครใช้ มีความสามารถอะไรบ้าง ขั้นตอนการทำงานตั้งแต่ต้นจนจบ กฎทางธุรกิจ และแผนว่าจะมีกี่เล่ม กี่หน้า หน้าไหนพูดเรื่องอะไร
+ทุกข้อบอกไฟล์ต้นทาง สิ่งที่หาหลักฐานไม่ได้กลายเป็นคำถาม ไม่ใช่การเดา หัวหน้าทีมหรือ PM ใช้สเปกคุยกับลูกค้าได้</p>
+<h2 id="sec-4-1">ก่อนเริ่ม</h2>
+<ul>
+<li>ติดตั้ง plugin แล้ว และเปิด Claude Code ในโฟลเดอร์โครงการ</li>
+<li>ถ้ามีเอกสาร requirement / design (SRS, PRD, SDDS) ใน repo Claude จะอ่านให้เอง ยิ่งมียิ่งได้สเปกที่ครบ</li>
+</ul>
+<h2 id="sec-4-2">ขั้นตอน</h2>
+<ol>
+<li>
+<p>พิมพ์ <code>/manual spec</code> Claude จะสแกนด้วยคำสั่ง <strong>discover</strong> แล้วเขียนสเปก <strong>และหยุดแค่นั้น</strong> ไม่เขียนหน้าคู่มือ</p>
+</li>
+<li>
+<p>เปิด <code>manual/manual-spec.md</code> อ่านตามหัวข้อ:</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>หัวข้อ</th>
+<th>ดูอะไร</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–3 วัตถุประสงค์ ภาพรวม ผู้ใช้</td>
+<td>ผู้อ่านถูกกลุ่มไหม บทบาทครบไหม</td>
+</tr>
+<tr>
+<td>4 รายการความสามารถ</td>
+<td>มีความสามารถที่ลูกค้าจ้างครบไหม มีอะไรที่ไม่ควรอยู่ในคู่มือ</td>
+</tr>
+<tr>
+<td>5 ขั้นตอนการทำงาน</td>
+<td>ลำดับงานจริงของลูกค้าตรงไหม สถานะของงานถูกไหม</td>
+</tr>
+<tr>
+<td>6–9 กฎ ข้อความ ระบบภายนอก ข้อมูล</td>
+<td>กฎที่ลูกค้าต้องรู้ ข้อความ error ที่พบบ่อย</td>
+</tr>
+<tr>
+<td>10 แผนคู่มือ</td>
+<td>จำนวนเล่ม หน้า ภาพ ถูกใจไหม</td>
+</tr>
+<tr>
+<td>11 คำถามที่ต้องยืนยัน</td>
+<td>ตอบได้ข้อไหน ตอบเลย</td>
+</tr>
+<tr>
+<td>12 ปัญหาของระบบ</td>
+<td>ส่งต่อทีมพัฒนา อย่าเขียนลงคู่มือเหมือนเป็นฟีเจอร์</td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li>
+<p>แก้สเปกได้สองทาง: แก้ไฟล์เองโดยตรง หรือบอก Claude เป็นประโยค เช่น &quot;ตัดบทการตั้งค่าระบบออก ลูกค้าไม่ได้ใช้&quot;
+หรือ &quot;เลขที่เอกสารคือ XX-UM-001 ผู้อนุมัติคือ ...&quot;</p>
+</li>
+<li>
+<p>พอใจแล้ว พิมพ์ <code>/manual</code> เพื่อให้ Claude ทำต่อจากสเปกที่แก้แล้ว</p>
+</li>
+</ol>
+<p>ตัวอย่างบางส่วนของสเปก (ระบบลางานสมมติ) สเปกเต็มของคู่มือเล่มนี้ดูได้ที่ <code>docs/manual/manual-spec.md</code> ใน repo manual-kit:</p>
+<pre><code class="language-text">## 4. รายการความสามารถ (feature inventory)
+| #  | ความสามารถ   | ทำอะไร                              | ใครใช้      | หลักฐาน                        |
+| F2 | ยื่นใบลา      | ประเภทการลา วันที่ เหตุผล แนบไฟล์         | พนักงาน     | src/pages/LeaveForm.tsx:40-88  |
+| F5 | อนุมัติใบลา    | อนุมัติ หรือไม่อนุมัติพร้อมเหตุผล           | หัวหน้างาน   | src/pages/Approvals.tsx:112    |
+- สถานะ: draft → submitted → approved / rejected
+</code></pre>
+<h2 id="sec-4-3">ผลลัพธ์ที่ได้</h2>
+<p>สเปกที่ทีมเห็นตรงกัน คู่มือที่ Claude เขียนต่อจะตามแผนนี้ และเมื่อระบบเปลี่ยน <code>/manual update</code> จะแก้สเปกก่อนแล้วจึงแก้หน้า
+<code>manual-kit check</code> ยังเตือนเมื่อโค้ดมีหน้าจอ บทบาท สิทธิ์ หรือ feature flag ที่สเปกไม่ได้พูดถึง สเปกจึงไม่ตกหล่นเงียบ ๆ</p>
+<h2 id="sec-4-4">ปัญหาที่พบบ่อย</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>อาการ</th>
+<th>สาเหตุ</th>
+<th>วิธีแก้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>สเปกมีความสามารถที่ไม่ได้ใช้แล้ว</td>
+<td>โค้ดเก่ายังอยู่ใน repo</td>
+<td>ย้ายไปหัวข้อ 13 &quot;นอกขอบเขต&quot; พร้อมเหตุผล อย่าลบเฉย ๆ เพราะ check จะเตือนอีก</td>
+</tr>
+<tr>
+<td>มี <code>(รอระบุ)</code> เยอะ</td>
+<td>หาไม่เจอในโค้ดหรือเอกสาร</td>
+<td>ตอบในหัวข้อ 11 หรือบอก Claude ข้อมูลที่ถูก Claude ไม่เดาแทน</td>
+</tr>
+<tr>
+<td>สเปกเป็นภาษาอังกฤษปน</td>
+<td>ชื่อหน้าจอ ไฟล์ และรหัสหน้าคงไว้ตามจริง</td>
+<td>เป็นปกติ เนื้อความเป็นภาษาไทย</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sec-4-5">หน้าที่เกี่ยวข้อง</h2>
+<ul>
+<li><a href="use.new-manual.html">ทำคู่มือใหม่ด้วย /manual</a></li>
+<li><a href="use.keep-current.html">ดูแลคู่มือให้ตามระบบ</a></li>
+</ul>
+
+</div>
+<nav class="pager" aria-label="หน้าก่อนหน้าและถัดไป"><a rel="prev" href="use.new-manual.html"><small>ก่อนหน้า</small><strong>ทำคู่มือใหม่ด้วย /manual</strong></a><a rel="next" href="use.deliver.html"><small>ถัดไป</small><strong>ส่งมอบคู่มือให้ลูกค้า</strong></a></nav>
+</div>
+</article>
+<aside class="toc" aria-label="ในหน้านี้"><p>ในหน้านี้</p><ol><li class="l2"><a href="#sec-4-1">ก่อนเริ่ม</a></li><li class="l2"><a href="#sec-4-2">ขั้นตอน</a></li><li class="l2"><a href="#sec-4-3">ผลลัพธ์ที่ได้</a></li><li class="l2"><a href="#sec-4-4">ปัญหาที่พบบ่อย</a></li><li class="l2"><a href="#sec-4-5">หน้าที่เกี่ยวข้อง</a></li></ol></aside>
+</div>
+</main>
+</div>
+<footer class="site-footer">
+<p>คู่มือ manual-kit — คู่มือการใช้งาน · อัปเดตล่าสุด 2026-10-07</p>
+<p><a href="../../index.html">คู่มือทั้งหมด</a></p>
+</footer>
+</body>
+</html>

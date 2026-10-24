@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>ติดตั้ง plugin — คู่มือการใช้งาน — คู่มือ manual-kit</title>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/brand.css">
+
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('mk-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};window.ManualKitWords={"results":"{n} รายการ","none":"ไม่พบหัวข้อที่ตรงกับคำค้น ลองใช้คำที่สั้นลงหรือคำอื่น","all":"ดูผลการค้นหาทั้งหมด","close":"ปิด","prev":"ก่อนหน้า","next":"ถัดไป","showFix":"ดูวิธีแก้","hideFix":"ซ่อนวิธีแก้","readSteps":"อ่านวิธีทำทีละขั้น","captions":"คำบรรยาย"}</script>
+<script src="../../assets/search-core.js" defer></script>
+<script src="search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#content">ข้ามไปที่เนื้อหา</a>
+<header class="top">
+<button type="button" class="top-btn top-btn--ghost nav-toggle" aria-expanded="false" aria-controls="site-nav"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span class="visually-hidden">สารบัญ</span></button>
+<a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">m</span><span>manual-kit</span></a>
+<details class="book-pill"><summary aria-label="เปลี่ยนเล่ม: คู่มือการใช้งาน"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>คู่มือการใช้งาน</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../../user-guide/th/index.html" aria-current="true">คู่มือการใช้งาน</a></li><li><a href="../../dev-guide/th/index.html">คู่มือการพัฒนา</a></li></ul></details>
+<form class="search" role="search" action="search.html" method="get">
+<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><label for="q" class="visually-hidden">ค้นหาในคู่มือ</label>
+<input type="search" id="q" name="q" placeholder="ค้นหาในคู่มือ" autocomplete="off" enterkeyhint="search" aria-keyshortcuts="Control+K Meta+K /" aria-controls="search-pop">
+<kbd class="kbd" aria-hidden="true">⌘K</kbd>
+<div id="search-pop" class="pop" hidden></div>
+</form>
+<div class="top-right">
+<button type="button" class="top-btn top-btn--ghost search-open" aria-label="ค้นหา"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<a class="top-btn top-btn--ghost top-faq" href="faq.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span class="faq-label">ปัญหาที่พบบ่อย</span></a>
+
+<button type="button" class="top-btn top-btn--ghost theme-toggle" aria-label="สลับโหมดสว่างและมืด" title="สลับโหมดสว่างและมืด"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+
+</div>
+</header>
+<div class="scrim" hidden></div>
+<div class="layout">
+<nav id="site-nav" class="side" aria-label="สารบัญ">
+<button type="button" class="top-btn side-close" aria-label="ปิดสารบัญ"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+<a class="reading" href="index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span><small>คุณกำลังอ่าน</small><strong>คู่มือการใช้งาน</strong></span></a>
+<a class="switch" href="../../dev-guide/th/index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ไปที่ คู่มือการพัฒนา</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<div class="aud" data-book="user-guide"><span class="aud-label" id="aud-label">ฉันเป็น…</span><div class="chips" role="group" aria-labelledby="aud-label"><button type="button" class="chip" data-aud="" aria-pressed="true">ดูทุกงาน <small>10</small></button><button type="button" class="chip" data-aud="team" aria-pressed="false">ทีมที่ทำคู่มือ <small>10</small></button><button type="button" class="chip" data-aud="lead" aria-pressed="false">หัวหน้าทีม / PM <small>6</small></button></div></div>
+<details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>เริ่มต้น</span><small>2</small></summary><ul><li data-aud="team|lead"><a href="use.about.html">manual-kit คืออะไรและทำอะไรได้</a></li><li data-aud="team"><a href="use.install.html" aria-current="page">ติดตั้ง plugin</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ทำคู่มือ</span><small>2</small></summary><ul><li data-aud="team"><a href="use.new-manual.html">ทำคู่มือใหม่ด้วย /manual</a></li><li data-aud="team|lead"><a href="use.spec.html">อ่านและแก้สเปกคู่มือ</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg><span>ส่งมอบและดูแล</span><small>3</small></summary><ul><li data-aud="team|lead"><a href="use.deliver.html">ส่งมอบคู่มือให้ลูกค้า</a></li><li data-aud="team|lead"><a href="use.keep-current.html">ดูแลคู่มือให้ตามระบบ</a></li><li data-aud="team"><a href="use.publish-wiki.html">เผยแพร่ขึ้น Outline wiki</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h1M4 12h1M4 18h1"/></svg><span>อ้างอิง</span><small>3</small></summary><ul><li data-aud="team|lead"><a href="use.options.html">ตัวเลือกของคู่มือ</a></li><li data-aud="team"><a href="use.troubleshooting.html">ปัญหาที่พบบ่อย</a></li><li data-aud="team|lead"><a href="use.commands.html">ภาคผนวก: คำสั่งและกติกา</a></li></ul></details>
+<div class="side-downloads"><p>ดาวน์โหลด</p><ul><li><a href="user-guide.th.pdf" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ PDF</a></li><li><a href="user-guide.th.docx" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ Word (DOCX)</a></li></ul></div>
+</nav>
+<main id="content" tabindex="-1">
+<div class="page">
+<article class="chapter sheet" data-page="use.install">
+<header class="head"><nav class="crumbs" aria-label="ตำแหน่งของหน้านี้"><ol><li><a href="index.html">คู่มือการใช้งาน</a></li><li>เริ่มต้น</li><li><a href="use.install.html" aria-current="page">ติดตั้ง plugin</a></li></ol></nav><span class="kind">วิธีทำ</span><h1>ติดตั้ง plugin</h1><p class="summary">ติดตั้ง manual-kit เข้า Claude Code ด้วยสองคำสั่ง ครั้งเดียวต่อเครื่อง ราว 3 นาที</p><div class="control"><span>อัปเดตล่าสุด <b>2026-10-07</b></span><button type="button" class="btn print" data-print hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>พิมพ์หน้านี้</button></div></header>
+<div class="sheet-body">
+<dl class="facts" aria-label="ข้อมูลของหน้านี้"><div><dt>สำหรับ</dt><dd class="who">ทีมที่ทำคู่มือ</dd></div><div><dt>ใช้เวลา</dt><dd>3 นาที</dd></div><div><dt>ทำครั้งเดียวต่อเครื่อง</dt><dd>ใช่</dd></div></dl>
+<details class="toc-inline"><summary>ในหน้านี้</summary><ol><li class="l2"><a href="#sec-2-1">ก่อนเริ่ม</a></li><li class="l2"><a href="#sec-2-2">ขั้นตอน</a></li><li class="l2"><a href="#sec-2-3">ผลลัพธ์ที่ได้</a></li><li class="l2"><a href="#sec-2-4">ปัญหาที่พบบ่อย</a></li><li class="l2"><a href="#sec-2-5">หน้าที่เกี่ยวข้อง</a></li></ol></details>
+<div class="body">
+<p>manual-kit มาเป็น plugin ของ Claude Code repo ของ manual-kit ทำหน้าที่เป็น &quot;ร้าน&quot; (marketplace)
+ชื่อ <code>manual-kit</code> ที่มี plugin ชื่อ <code>manual-kit</code> อยู่ข้างใน เราจึงเพิ่มร้านก่อน แล้วค่อยติดตั้ง plugin จากร้านนั้น
+ทำครั้งเดียวต่อเครื่อง ใช้ได้กับทุกโครงการ</p>
+<h2 id="sec-2-1">ก่อนเริ่ม</h2>
+<ul>
+<li><strong>Claude Code</strong> ติดตั้งแล้ว (เปิดด้วยคำสั่ง <code>claude</code> ได้)</li>
+<li><strong>Node.js 22.17 ขึ้นไป</strong> ตรวจด้วย <code>node -v</code> ถ้าต่ำกว่านี้ manual-kit จะแจ้งว่า
+<code>manual-kit: Node.js 22.17 or newer is needed</code> (macOS อัปเดตด้วย <code>brew upgrade node</code>)</li>
+<li>ไม่บังคับ: <code>pandoc</code> (ทำไฟล์ Word), <code>ffmpeg</code> (ทำวิดีโอ), LibreOffice (ใส่เลขหน้าในสารบัญของไฟล์ Word)
+ไม่ต้องติดตั้งตอนนี้ Claude จะถามก่อนเมื่องานที่สั่งต้องใช้</li>
+</ul>
+<h2 id="sec-2-2">ขั้นตอน</h2>
+<ol>
+<li>เปิด terminal แล้วเพิ่ม marketplace ของ manual-kit</li>
+<li>ติดตั้ง plugin จาก marketplace นั้น</li>
+<li>ตรวจว่าติดตั้งแล้วด้วย <code>claude plugin list</code></li>
+</ol>
+<pre><code class="language-bash">claude plugin marketplace add https://github.com/nathawat/manual-kit.git
+claude plugin install manual-kit@manual-kit
+</code></pre>
+<p>ภาพด้านล่างเป็นตัวอย่างผลการติดตั้ง:</p>
+<div class="walk" data-walk="install" data-zoom="ขยายภาพ">
+<ol class="steps">
+<li class="step" id="step-install-1"><p class="step-text"><span class="step-n" aria-hidden="true">1</span><span>ตรวจรุ่น Node ต้องเป็น 22.17 ขึ้นไป</span></p><figure class="figure step" id="fig-2-1"><img src="../../media/th/install-1.png" width="960" height="110" loading="lazy" decoding="async" alt="ตรวจรุ่น Node ต้องเป็น 22.17 ขึ้นไป"><figcaption>ตรวจรุ่น Node ต้องเป็น 22.17 ขึ้นไป</figcaption></figure></li>
+<li class="step" id="step-install-2"><p class="step-text"><span class="step-n" aria-hidden="true">2</span><span>เพิ่ม marketplace ของ manual-kit ได้ marketplace ชื่อ manual-kit</span></p><figure class="figure step" id="fig-2-2"><img src="../../media/th/install-2.png" width="960" height="260" loading="lazy" decoding="async" alt="เพิ่ม marketplace ของ manual-kit ได้ marketplace ชื่อ manual-kit"><figcaption>เพิ่ม marketplace ของ manual-kit ได้ marketplace ชื่อ manual-kit</figcaption></figure></li>
+<li class="step" id="step-install-3"><p class="step-text"><span class="step-n" aria-hidden="true">3</span><span>ติดตั้ง plugin manual-kit จาก marketplace นั้น</span></p><figure class="figure step" id="fig-2-3"><img src="../../media/th/install-3.png" width="960" height="338" loading="lazy" decoding="async" alt="ติดตั้ง plugin manual-kit จาก marketplace นั้น"><figcaption>ติดตั้ง plugin manual-kit จาก marketplace นั้น</figcaption></figure></li>
+<li class="step" id="step-install-4"><p class="step-text"><span class="step-n" aria-hidden="true">4</span><span>ตรวจว่า plugin ติดตั้งและเปิดใช้แล้ว</span></p><figure class="figure step" id="fig-2-4"><img src="../../media/th/install-4.png" width="960" height="512" loading="lazy" decoding="async" alt="ตรวจว่า plugin ติดตั้งและเปิดใช้แล้ว"><figcaption>ตรวจว่า plugin ติดตั้งและเปิดใช้แล้ว</figcaption></figure></li>
+</ol>
+</div>
+<ol start="4">
+<li>เปิด Claude Code ใหม่ในโฟลเดอร์โครงการ ครั้งแรกที่เปิด plugin จะติดตั้งเครื่องมือที่ต้องใช้เองในเบื้องหลัง
+(เบราว์เซอร์ Chromium สำหรับถ่ายภาพและแพ็กเกจอีกสามตัว) ใช้เวลา 2–3 นาที ไม่ต้องรัน npm หรือ pnpm เอง
+ถ้าต้องการสั่งติดตั้งทันที พิมพ์ใน Claude Code ว่า <code>! manual-kit setup</code> (คำสั่ง <strong>setup</strong>)</li>
+</ol>
+<h2 id="sec-2-3">ผลลัพธ์ที่ได้</h2>
+<p><code>claude plugin list</code> แสดง <code>manual-kit@manual-kit</code> สถานะ <code>enabled</code> และใน Claude Code พิมพ์ <code>/manual</code> แล้วเห็นคำสั่ง
+ถ้าต้องการดูว่าเครื่องพร้อมแค่ไหน พิมพ์ <code>! manual-kit doctor</code> (คำสั่ง <strong>doctor</strong>) จะบอกที่อยู่ของ plugin
+โฟลเดอร์ข้อมูล รุ่น Node และโปรแกรมเสริมที่มีหรือขาด:</p>
+<figure class="figure" id="fig-2-5"><img src="../../media/th/doctor.png" width="960" height="302" loading="lazy" decoding="async" alt="manual-kit doctor บนเครื่องทดสอบหลังติดตั้ง"><figcaption>manual-kit doctor บนเครื่องทดสอบหลังติดตั้ง</figcaption></figure>
+<p>บรรทัด <code>runtime: not installed yet</code> แปลว่ายังไม่ได้ใช้ครั้งแรก ไม่ใช่ข้อผิดพลาด ส่วน <code>soffice: missing</code> แปลว่าไม่มี LibreOffice
+ไฟล์ Word จะยังทำได้ แต่สารบัญจะยังไม่มีเลขหน้าจนกว่าจะเปิดใน Word แล้วอัปเดต</p>
+<h2 id="sec-2-4">ปัญหาที่พบบ่อย</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>อาการ</th>
+<th>สาเหตุ</th>
+<th>วิธีแก้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>marketplace add</code> ไม่ผ่าน (permission denied)</td>
+<td>ยังไม่มีสิทธิ์ repo หรือ ssh key ยังไม่อยู่ใน GitLab</td>
+<td>ขอสิทธิ์จากหัวหน้าทีม ใส่ ssh key แล้วลองใหม่</td>
+</tr>
+<tr>
+<td><code>/manual</code> ไม่ขึ้น</td>
+<td>Claude Code ยังไม่โหลด plugin ใหม่ หรือชื่อสั้นชนกับคำสั่งอื่น</td>
+<td>เปิด Claude Code ใหม่ หรือใช้ชื่อเต็ม <code>/manual-kit:manual</code></td>
+</tr>
+<tr>
+<td>ใช้ครั้งแรกช้า</td>
+<td>กำลังติดตั้ง Chromium และแพ็กเกจ</td>
+<td>รอ 2–3 นาที เกิดครั้งเดียว</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sec-2-5">หน้าที่เกี่ยวข้อง</h2>
+<ul>
+<li><a href="use.new-manual.html">ทำคู่มือใหม่ด้วย /manual</a></li>
+<li><a href="use.troubleshooting.html">ปัญหาที่พบบ่อย</a></li>
+</ul>
+
+</div>
+<nav class="pager" aria-label="หน้าก่อนหน้าและถัดไป"><a rel="prev" href="use.about.html"><small>ก่อนหน้า</small><strong>manual-kit คืออะไรและทำอะไรได้</strong></a><a rel="next" href="use.new-manual.html"><small>ถัดไป</small><strong>ทำคู่มือใหม่ด้วย /manual</strong></a></nav>
+</div>
+</article>
+<aside class="toc" aria-label="ในหน้านี้"><p>ในหน้านี้</p><ol><li class="l2"><a href="#sec-2-1">ก่อนเริ่ม</a></li><li class="l2"><a href="#sec-2-2">ขั้นตอน</a></li><li class="l2"><a href="#sec-2-3">ผลลัพธ์ที่ได้</a></li><li class="l2"><a href="#sec-2-4">ปัญหาที่พบบ่อย</a></li><li class="l2"><a href="#sec-2-5">หน้าที่เกี่ยวข้อง</a></li></ol></aside>
+</div>
+</main>
+</div>
+<footer class="site-footer">
+<p>คู่มือ manual-kit — คู่มือการใช้งาน · อัปเดตล่าสุด 2026-10-07</p>
+<p><a href="../../index.html">คู่มือทั้งหมด</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>เพิ่มผลลัพธ์หรือช่องทางเผยแพร่ — คู่มือการพัฒนา — คู่มือ manual-kit</title>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/brand.css">
+
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('mk-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};window.ManualKitWords={"results":"{n} รายการ","none":"ไม่พบหัวข้อที่ตรงกับคำค้น ลองใช้คำที่สั้นลงหรือคำอื่น","all":"ดูผลการค้นหาทั้งหมด","close":"ปิด","prev":"ก่อนหน้า","next":"ถัดไป","showFix":"ดูวิธีแก้","hideFix":"ซ่อนวิธีแก้","readSteps":"อ่านวิธีทำทีละขั้น","captions":"คำบรรยาย"}</script>
+<script src="../../assets/search-core.js" defer></script>
+<script src="search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#content">ข้ามไปที่เนื้อหา</a>
+<header class="top">
+<button type="button" class="top-btn top-btn--ghost nav-toggle" aria-expanded="false" aria-controls="site-nav"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span class="visually-hidden">สารบัญ</span></button>
+<a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">m</span><span>manual-kit</span></a>
+<details class="book-pill"><summary aria-label="เปลี่ยนเล่ม: คู่มือการพัฒนา"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>คู่มือการพัฒนา</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../../dev-guide/th/index.html" aria-current="true">คู่มือการพัฒนา</a></li><li><a href="../../user-guide/th/index.html">คู่มือการใช้งาน</a></li></ul></details>
+<form class="search" role="search" action="search.html" method="get">
+<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><label for="q" class="visually-hidden">ค้นหาในคู่มือ</label>
+<input type="search" id="q" name="q" placeholder="ค้นหาในคู่มือ" autocomplete="off" enterkeyhint="search" aria-keyshortcuts="Control+K Meta+K /" aria-controls="search-pop">
+<kbd class="kbd" aria-hidden="true">⌘K</kbd>
+<div id="search-pop" class="pop" hidden></div>
+</form>
+<div class="top-right">
+<button type="button" class="top-btn top-btn--ghost search-open" aria-label="ค้นหา"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<a class="top-btn top-btn--ghost top-faq" href="faq.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span class="faq-label">ปัญหาที่พบบ่อย</span></a>
+
+<button type="button" class="top-btn top-btn--ghost theme-toggle" aria-label="สลับโหมดสว่างและมืด" title="สลับโหมดสว่างและมืด"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+
+</div>
+</header>
+<div class="scrim" hidden></div>
+<div class="layout">
+<nav id="site-nav" class="side" aria-label="สารบัญ">
+<button type="button" class="top-btn side-close" aria-label="ปิดสารบัญ"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+<a class="reading" href="index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span><small>คุณกำลังอ่าน</small><strong>คู่มือการพัฒนา</strong></span></a>
+<a class="switch" href="../../user-guide/th/index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ไปที่ คู่มือการใช้งาน</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+<details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>โครงสร้าง</span><small>3</small></summary><ul><li data-aud="developer"><a href="dev.architecture.html">สถาปัตยกรรม</a></li><li data-aud="developer"><a href="dev.repo-layout.html">โครงสร้าง repo</a></li><li data-aud="developer"><a href="dev.setup.html">ตั้งเครื่องสำหรับพัฒนา</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><span>ต่อยอด</span><small>5</small></summary><ul><li data-aud="developer"><a href="dev.add-adapter.html">เพิ่ม adapter</a></li><li data-aud="developer"><a href="dev.add-check-rule.html">เพิ่มกฎตรวจ</a></li><li data-aud="developer"><a href="dev.add-capture-action.html">เพิ่ม action ถ่ายภาพ</a></li><li data-aud="developer"><a href="dev.add-output.html" aria-current="page">เพิ่มผลลัพธ์หรือช่องทางเผยแพร่</a></li><li data-aud="developer"><a href="dev.themes.html">ธีม แม่แบบลูกค้า และกฎ DOCX ภาษาไทย</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>คุณภาพและการปล่อย</span><small>4</small></summary><ul><li data-aud="developer"><a href="dev.skills.html">แก้และทดสอบ skill</a></li><li data-aud="developer"><a href="dev.testing.html">กลยุทธ์การทดสอบ</a></li><li data-aud="developer"><a href="dev.release.html">ปล่อยเวอร์ชันและกติกาการทำงาน</a></li><li data-aud="developer"><a href="dev.lessons.html">บทเรียนที่ได้</a></li></ul></details>
+<div class="side-downloads"><p>ดาวน์โหลด</p><ul><li><a href="dev-guide.th.pdf" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ PDF</a></li><li><a href="dev-guide.th.docx" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ Word (DOCX)</a></li></ul></div>
+</nav>
+<main id="content" tabindex="-1">
+<div class="page">
+<article class="chapter sheet" data-page="dev.add-output">
+<header class="head"><nav class="crumbs" aria-label="ตำแหน่งของหน้านี้"><ol><li><a href="index.html">คู่มือการพัฒนา</a></li><li>ต่อยอด</li><li><a href="dev.add-output.html" aria-current="page">เพิ่มผลลัพธ์หรือช่องทางเผยแพร่</a></li></ol></nav><span class="kind">วิธีทำ</span><h1>เพิ่มผลลัพธ์หรือช่องทางเผยแพร่</h1><p class="summary">เพิ่มรูปแบบผลลัพธ์หรือที่เผยแพร่ใหม่ โดยดู publish outline เป็นตัวอย่าง (render target ใหม่ + แผน + ไฟล์ mapping ที่ทำซ้ำได้)</p><div class="control"><span>อัปเดตล่าสุด <b>2026-10-07</b></span><button type="button" class="btn print" data-print hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>พิมพ์หน้านี้</button></div></header>
+<div class="sheet-body">
+<dl class="facts" aria-label="ข้อมูลของหน้านี้"><div><dt>สำหรับ</dt><dd class="who">นักพัฒนา</dd></div></dl>
+<details class="toc-inline"><summary>ในหน้านี้</summary><ol><li class="l2"><a href="#sec-7-1">ก่อนเริ่ม</a></li><li class="l2"><a href="#sec-7-2">ขั้นตอน</a></li><li class="l2"><a href="#sec-7-3">ผลลัพธ์ที่ได้</a></li><li class="l2"><a href="#sec-7-4">ปัญหาที่พบบ่อย</a></li><li class="l2"><a href="#sec-7-5">หน้าที่เกี่ยวข้อง</a></li></ol></details>
+<div class="body">
+<p>ผลลัพธ์ทุกแบบ (PDF, DOCX, เว็บ, Outline) เริ่มจากที่เดียวกัน: <code>renderBook</code> ใน <code>src/render.ts</code> แปลงหน้า Markdown
+พร้อม token ให้เป็นข้อความตาม <strong>target</strong> แล้วตัวสร้างแต่ละแบบนำไปใช้ต่อ การเพิ่มช่องทางใหม่จึงมีสามส่วน:
+target ใน render, ตัวสร้างหรือตัวส่ง, และคำสั่งใน CLI</p>
+<h2 id="sec-7-1">ก่อนเริ่ม</h2>
+<ul>
+<li>อ่าน API ของปลายทาง และหาวิธีทดสอบโดยไม่ยิงของจริง (Outline ใช้เซิร์ฟเวอร์จำลอง <code>tests/helpers/outline-mock.ts</code>)</li>
+<li>ความลับ (API key) อ่านจากตัวแปรสภาพแวดล้อมเท่านั้น ห้ามเขียนลงไฟล์ ห้ามพิมพ์ออกหน้าจอ</li>
+</ul>
+<h2 id="sec-7-2">ขั้นตอน</h2>
+<ol>
+<li>
+<p><strong>เพิ่ม target</strong> ใน <code>Target</code> ของ <code>src/render.ts</code> แล้วจัดการจุดที่ต่างกัน เช่น Outline ไม่มีวิดีโอในเอกสาร
+จึงแสดงภาพปกพร้อมลิงก์ MP4 และ callout กลายเป็น notice ของ Outline:</p>
+<pre><code class="language-ts">export type Target = 'html' | 'web' | 'pandoc' | 'outline'
+// ...
+if (target === 'outline') return `\n${figure(f.poster, caption, 'clip', alt)}\n\n[▶ ${escMd(`${L.play}: ${caption}`)} (MP4)](${f.mp4})\n`
+</code></pre>
+</li>
+<li>
+<p><strong>วางแผนก่อนส่ง</strong>: ฟังก์ชัน <code>plan</code> คืนรายการเอกสาร (เล่มละหนึ่ง หน้าละหนึ่ง) พร้อมไฟล์ที่ต้องแนบ โดยยังไม่ส่งอะไร
+ทั้ง <code>--dry-run</code> และการส่งจริงใช้แผนเดียวกัน สิ่งที่ dry-run แสดงจึงตรงกับสิ่งที่จะเกิดจริง</p>
+</li>
+<li>
+<p><strong>ทำให้ส่งซ้ำได้ผลเดิม</strong> (หลักการ #14): เก็บ mapping ไว้ในไฟล์ที่ commit ได้ (<code>manual/outline.json</code>: รหัสเอกสารต่อหน้า,
+hash ของข้อความที่ส่งล่าสุด, ไฟล์แนบตาม sha256 ของไฟล์) ส่งครั้งต่อไปจึงแก้เฉพาะที่เปลี่ยน อัปโหลดเฉพาะไฟล์ใหม่
+และกันการส่งผิดที่ด้วยการผูกไฟล์ไว้กับ wiki และ collection เดียว</p>
+</li>
+<li>
+<p><strong>อ่าน key จากสภาพแวดล้อมเท่านั้น</strong> และบอกวิธีแก้เมื่อไม่มี:</p>
+<pre><code class="language-ts">export const TOKEN_ENV = 'OUTLINE_API_KEY'
+// ... throw new UsageError(`set the Outline API key in the environment variable ${TOKEN_ENV} (it is never read from a file)`)
+</code></pre>
+</li>
+<li>
+<p><strong>ต่อเข้า CLI</strong> ใน <code>src/cli.ts</code> ใต้คำสั่งกลุ่ม <code>publish</code> (หรือเพิ่มรูปแบบให้ <code>build</code> ถ้าเป็นไฟล์):</p>
+<pre><code class="language-ts">const publish = program.command('publish').description('publish the built manual somewhere people read it')
+publish
+  .command('outline')
+  .option('--collection &lt;id&gt;', 'collection id or urlId (default: config outline.collection)')
+  .option('--dry-run', 'print what would be created, updated and uploaded; send nothing')
+  .action(async (opts) =&gt; { await publishOutline(await openProject(manualDir()), opts) })
+</code></pre>
+</li>
+<li>
+<p>เพิ่มค่าใน <code>ConfigSchema</code> ถ้ามี (เช่น <code>outline: { baseUrl, collection, parent }</code>) เทสต์กับ mock (สร้าง แก้ ไม่ส่งซ้ำ
+สร้างใหม่เมื่อถูกลบ ไม่มี key) อัปเดต <code>docs/reference.md</code> และ CHANGELOG แล้ว <code>pnpm verify</code></p>
+</li>
+<li>
+<p>คำสั่งใหม่เป็นรายการ coverage ของคู่มือเล่มนี้โดยอัตโนมัติ (adapter ของเล่มนี้อ่าน <code>.command(...)</code> ใน <code>src/cli.ts</code>)
+check ของ <code>docs/manual</code> จะไม่ผ่านจนกว่าจะมีหน้าคู่มือพูดถึงคำสั่งนั้น</p>
+</li>
+</ol>
+<h2 id="sec-7-3">ผลลัพธ์ที่ได้</h2>
+<p>ช่องทางใหม่ที่มี dry-run ส่งซ้ำได้ปลอดภัย ไม่รั่วความลับ และมีหน้าคู่มือกำกับ</p>
+<h2 id="sec-7-4">ปัญหาที่พบบ่อย</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>อาการ</th>
+<th>สาเหตุ</th>
+<th>วิธีแก้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ลิงก์ข้ามหน้าเสียบนปลายทาง</td>
+<td>ลิงก์ชี้ anchor ภายในไฟล์</td>
+<td>เขียนลิงก์ใหม่หลังรู้ที่อยู่เอกสาร (<code>finalText</code> แทนลิงก์ด้วย URL ของเอกสาร)</td>
+</tr>
+<tr>
+<td>ส่งซ้ำแล้วได้เอกสารซ้ำ</td>
+<td>ไม่มี mapping หรือไม่ได้ commit</td>
+<td>เก็บ mapping และ commit</td>
+</tr>
+<tr>
+<td>ภาพไม่ขึ้น</td>
+<td>ส่งที่อยู่ไฟล์ในเครื่อง</td>
+<td>อัปโหลดเป็นไฟล์แนบก่อน แล้วแทนที่อยู่ด้วย URL ของไฟล์แนบ</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sec-7-5">หน้าที่เกี่ยวข้อง</h2>
+<ul>
+<li><a href="dev.themes.html">ธีม แม่แบบลูกค้า และกฎ DOCX ภาษาไทย</a></li>
+<li><a href="dev.testing.html">กลยุทธ์การทดสอบ</a></li>
+</ul>
+
+</div>
+<nav class="pager" aria-label="หน้าก่อนหน้าและถัดไป"><a rel="prev" href="dev.add-capture-action.html"><small>ก่อนหน้า</small><strong>เพิ่ม action ถ่ายภาพ</strong></a><a rel="next" href="dev.themes.html"><small>ถัดไป</small><strong>ธีม แม่แบบลูกค้า และกฎ DOCX ภาษาไทย</strong></a></nav>
+</div>
+</article>
+<aside class="toc" aria-label="ในหน้านี้"><p>ในหน้านี้</p><ol><li class="l2"><a href="#sec-7-1">ก่อนเริ่ม</a></li><li class="l2"><a href="#sec-7-2">ขั้นตอน</a></li><li class="l2"><a href="#sec-7-3">ผลลัพธ์ที่ได้</a></li><li class="l2"><a href="#sec-7-4">ปัญหาที่พบบ่อย</a></li><li class="l2"><a href="#sec-7-5">หน้าที่เกี่ยวข้อง</a></li></ol></aside>
+</div>
+</main>
+</div>
+<footer class="site-footer">
+<p>คู่มือ manual-kit — คู่มือการพัฒนา · อัปเดตล่าสุด 2026-10-07</p>
+<p><a href="../../index.html">คู่มือทั้งหมด</a></p>
+</footer>
+</body>
+</html>

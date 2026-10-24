@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# manual-kit for Claude Code: runs the bundled CLI (dist/manual-kit.mjs) with its runtime packages from
+# MANUAL_KIT_HOME, installing them first if they are missing. `manual-kit setup` only installs; `manual-kit doctor`
+# prints where things are and which optional system tools (pandoc, LibreOffice, ffmpeg, HyperFrames) are present.
+set -euo pipefail
+# The plugin root, following symlinks to this file. A function, not $(...): macOS's bash 3.2 cannot parse a case
+# statement inside a command substitution.
+plugin_root() {
+  local src="${BASH_SOURCE[0]}" dir
+  while [ -L "$src" ]; do
+    dir="$(cd -P "$(dirname "$src")" && pwd)"
+    src="$(readlink "$src")"
+    [ "${src#/}" = "$src" ] && src="$dir/$src"
+  done
+  cd -P "$(dirname "$src")/.." && pwd
+}
+PLUGIN_ROOT="$(plugin_root)"
+. "$PLUGIN_ROOT/scripts/env.sh"
+mk_check_node || exit $?
+
+case "${1:-}" in
+  setup)
+    exec "$PLUGIN_ROOT/scripts/setup.sh"
+    ;;
+  doctor)
+    echo "plugin:   $PLUGIN_ROOT"
+    echo "home:     $MANUAL_KIT_HOME"
+    echo "browsers: $PLAYWRIGHT_BROWSERS_PATH"
+    echo "node:     $(node -v)"
+    if cmp -s "$PLUGIN_ROOT/runtime/package.json" "$MANUAL_KIT_HOME/.installed" 2>/dev/null; then echo "runtime:  installed"; else echo "runtime:  not installed yet (runs on first use)"; fi
+    for tool in pandoc soffice libreoffice ffmpeg; do
+      if command -v "$tool" >/dev/null 2>&1; then echo "$tool: $(command -v "$tool")"; else echo "$tool: missing"; fi
+    done
+    [ -d /Applications/LibreOffice.app ] && echo "LibreOffice.app: /Applications/LibreOffice.app"
+    # walkthrough videos render with this HyperFrames release (src/walkthrough/build.ts HYPERFRAMES), fetched by npx
+    hf=hyperframes@0.8.140
+    if (cd "${TMPDIR:-/tmp}" && npx --no-install "$hf" --version) >/dev/null 2>&1; then echo "hyperframes: $hf (downloaded)"
+    else echo "hyperframes: $hf not downloaded yet (the first \`manual-kit walkthrough build\` fetches it; needs ffmpeg)"; fi
+    exit 0
+    ;;
+esac
+
+"$PLUGIN_ROOT/scripts/setup.sh" >&2
+exec node "$PLUGIN_ROOT/dist/manual-kit.mjs" "$@"

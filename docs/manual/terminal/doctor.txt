@@ -1,0 +1,10 @@
+$ manual-kit doctor
+plugin:   ~/.claude/plugins/cache/manual-kit/manual-kit/06f97978c290
+home:     ~/.claude/plugins/data/manual-kit-manual-kit
+browsers: ~/.claude/plugins/data/manual-kit-manual-kit/ms-playwright
+node:     v24.21.0
+runtime:  not installed yet (runs on first use)
+pandoc: /opt/homebrew/bin/pandoc
+soffice: missing
+libreoffice: missing
+ffmpeg: /opt/homebrew/bin/ffmpeg

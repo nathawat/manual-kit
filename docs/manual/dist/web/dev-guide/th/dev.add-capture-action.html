@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>เพิ่ม action ถ่ายภาพ — คู่มือการพัฒนา — คู่มือ manual-kit</title>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/brand.css">
+
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('mk-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};window.ManualKitWords={"results":"{n} รายการ","none":"ไม่พบหัวข้อที่ตรงกับคำค้น ลองใช้คำที่สั้นลงหรือคำอื่น","all":"ดูผลการค้นหาทั้งหมด","close":"ปิด","prev":"ก่อนหน้า","next":"ถัดไป","showFix":"ดูวิธีแก้","hideFix":"ซ่อนวิธีแก้","readSteps":"อ่านวิธีทำทีละขั้น","captions":"คำบรรยาย"}</script>
+<script src="../../assets/search-core.js" defer></script>
+<script src="search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#content">ข้ามไปที่เนื้อหา</a>
+<header class="top">
+<button type="button" class="top-btn top-btn--ghost nav-toggle" aria-expanded="false" aria-controls="site-nav"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span class="visually-hidden">สารบัญ</span></button>
+<a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">m</span><span>manual-kit</span></a>
+<details class="book-pill"><summary aria-label="เปลี่ยนเล่ม: คู่มือการพัฒนา"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>คู่มือการพัฒนา</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../../dev-guide/th/index.html" aria-current="true">คู่มือการพัฒนา</a></li><li><a href="../../user-guide/th/index.html">คู่มือการใช้งาน</a></li></ul></details>
+<form class="search" role="search" action="search.html" method="get">
+<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><label for="q" class="visually-hidden">ค้นหาในคู่มือ</label>
+<input type="search" id="q" name="q" placeholder="ค้นหาในคู่มือ" autocomplete="off" enterkeyhint="search" aria-keyshortcuts="Control+K Meta+K /" aria-controls="search-pop">
+<kbd class="kbd" aria-hidden="true">⌘K</kbd>
+<div id="search-pop" class="pop" hidden></div>
+</form>
+<div class="top-right">
+<button type="button" class="top-btn top-btn--ghost search-open" aria-label="ค้นหา"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<a class="top-btn top-btn--ghost top-faq" href="faq.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span class="faq-label">ปัญหาที่พบบ่อย</span></a>
+
+<button type="button" class="top-btn top-btn--ghost theme-toggle" aria-label="สลับโหมดสว่างและมืด" title="สลับโหมดสว่างและมืด"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+
+</div>
+</header>
+<div class="scrim" hidden></div>
+<div class="layout">
+<nav id="site-nav" class="side" aria-label="สารบัญ">
+<button type="button" class="top-btn side-close" aria-label="ปิดสารบัญ"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+<a class="reading" href="index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span><small>คุณกำลังอ่าน</small><strong>คู่มือการพัฒนา</strong></span></a>
+<a class="switch" href="../../user-guide/th/index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ไปที่ คู่มือการใช้งาน</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+<details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>โครงสร้าง</span><small>3</small></summary><ul><li data-aud="developer"><a href="dev.architecture.html">สถาปัตยกรรม</a></li><li data-aud="developer"><a href="dev.repo-layout.html">โครงสร้าง repo</a></li><li data-aud="developer"><a href="dev.setup.html">ตั้งเครื่องสำหรับพัฒนา</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><span>ต่อยอด</span><small>5</small></summary><ul><li data-aud="developer"><a href="dev.add-adapter.html">เพิ่ม adapter</a></li><li data-aud="developer"><a href="dev.add-check-rule.html">เพิ่มกฎตรวจ</a></li><li data-aud="developer"><a href="dev.add-capture-action.html" aria-current="page">เพิ่ม action ถ่ายภาพ</a></li><li data-aud="developer"><a href="dev.add-output.html">เพิ่มผลลัพธ์หรือช่องทางเผยแพร่</a></li><li data-aud="developer"><a href="dev.themes.html">ธีม แม่แบบลูกค้า และกฎ DOCX ภาษาไทย</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>คุณภาพและการปล่อย</span><small>4</small></summary><ul><li data-aud="developer"><a href="dev.skills.html">แก้และทดสอบ skill</a></li><li data-aud="developer"><a href="dev.testing.html">กลยุทธ์การทดสอบ</a></li><li data-aud="developer"><a href="dev.release.html">ปล่อยเวอร์ชันและกติกาการทำงาน</a></li><li data-aud="developer"><a href="dev.lessons.html">บทเรียนที่ได้</a></li></ul></details>
+<div class="side-downloads"><p>ดาวน์โหลด</p><ul><li><a href="dev-guide.th.pdf" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ PDF</a></li><li><a href="dev-guide.th.docx" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ Word (DOCX)</a></li></ul></div>
+</nav>
+<main id="content" tabindex="-1">
+<div class="page">
+<article class="chapter sheet" data-page="dev.add-capture-action">
+<header class="head"><nav class="crumbs" aria-label="ตำแหน่งของหน้านี้"><ol><li><a href="index.html">คู่มือการพัฒนา</a></li><li>ต่อยอด</li><li><a href="dev.add-capture-action.html" aria-current="page">เพิ่ม action ถ่ายภาพ</a></li></ol></nav><span class="kind">วิธีทำ</span><h1>เพิ่ม action ถ่ายภาพ</h1><p class="summary">เพิ่มการกระทำบนหน้าเว็บก่อนถ่ายภาพ (เช่น hover, press) ใน shots.yaml โดยเพิ่ม schema หนึ่งแถวและตัวรันหนึ่งบรรทัด</p><div class="control"><span>อัปเดตล่าสุด <b>2026-10-07</b></span><button type="button" class="btn print" data-print hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>พิมพ์หน้านี้</button></div></header>
+<div class="sheet-body">
+<dl class="facts" aria-label="ข้อมูลของหน้านี้"><div><dt>สำหรับ</dt><dd class="who">นักพัฒนา</dd></div></dl>
+<details class="toc-inline"><summary>ในหน้านี้</summary><ol><li class="l2"><a href="#sec-6-1">ก่อนเริ่ม</a></li><li class="l2"><a href="#sec-6-2">ขั้นตอน</a></li><li class="l2"><a href="#sec-6-3">ผลลัพธ์ที่ได้</a></li><li class="l2"><a href="#sec-6-4">ปัญหาที่พบบ่อย</a></li><li class="l2"><a href="#sec-6-5">หน้าที่เกี่ยวข้อง</a></li></ol></details>
+<div class="body">
+<p>action คือสิ่งที่ capture ทำบนหน้าเว็บก่อนวาดกรอบแดงและถ่ายภาพ เช่น กด กรอก เลือก ชี้เมาส์ ทุก action มีสองที่:
+schema ใน <code>src/shots.ts</code> (ตรวจ shots.yaml ที่ขอบ) และตัวรันใน <code>src/capture.ts</code> ฟังก์ชัน <code>run</code></p>
+<h2 id="sec-6-1">ก่อนเริ่ม</h2>
+<ul>
+<li>action ใหม่ต้องทำซ้ำได้ผลเดิม และไม่ออกนอก allowlist (การเปิดหน้าใหม่ต้องผ่าน <code>goto</code> ที่ตรวจ host เสมอ)</li>
+<li>ถ้ารับข้อความจากผู้ใช้ ให้ผ่าน <code>fill(value, lang)</code> เพื่อรองรับ <code>{lang}</code> และ <code>{env:NAME}</code> (รหัสผ่านไม่อยู่ในไฟล์)</li>
+</ul>
+<h2 id="sec-6-2">ขั้นตอน</h2>
+<ol>
+<li>
+<p><strong>เขียนเทสต์ก่อน</strong> ใน <code>tests/capture.test.ts</code>: หน้า HTML เล็ก ๆ ที่เซิร์ฟจาก <code>tests/helpers/server.ts</code> บันทึกผลของ action
+ลงหน้าเอง (เช่น <code>onmouseenter=&quot;this.dataset.hover = '1'&quot;</code>) แล้วตรวจจากภาพหรือ DOM ว่า action ทำงานก่อนถ่าย</p>
+</li>
+<li>
+<p><strong>เพิ่ม schema</strong> หนึ่งแถวใน union <code>Action</code> (ใช้ <code>.strict()</code> เพื่อให้พิมพ์ผิดแล้ว shots.yaml ไม่ผ่าน แทนการถูกข้ามเงียบ ๆ):</p>
+<pre><code class="language-ts">export const Action = z.union([
+  z.object({ click: Selector }).strict(),
+  z.object({ fill: Selector, value: z.string() }).strict(),
+  /** A key (Playwright name: Enter, Escape, Control+A...), on the focused element or on `on`. */
+  z.object({ press: z.string().min(1), on: Selector.optional() }).strict(),
+  z.object({ hover: Selector }).strict(),
+  // ...
+])
+</code></pre>
+</li>
+<li>
+<p><strong>เพิ่มตัวรัน</strong> หนึ่งบรรทัดใน <code>run</code> ของ <code>src/capture.ts</code>:</p>
+<pre><code class="language-ts">else if ('press' in a) await (a.on ? page.press(a.on, a.press) : page.keyboard.press(a.press))
+else if ('hover' in a) await page.hover(a.hover)
+</code></pre>
+</li>
+<li>
+<p>ถ้า action ใช้ได้เฉพาะบางชนิดของ spec (เช่น <code>show</code> ใช้ได้กับหน้าต่าง terminal เท่านั้น) ให้ตรวจใน <code>loadShots</code>
+แล้วโยนข้อความที่บอกวิธีแก้ เช่น <code>&quot;show&quot; works only in a terminal spec</code></p>
+</li>
+<li>
+<p>action เป็นส่วนของ spec hash อยู่แล้ว (<code>specHash</code>) การแก้ action ใน shots.yaml จึงทำให้ <code>capture --changed</code> ถ่ายภาพนั้นใหม่เอง</p>
+</li>
+<li>
+<p>เพิ่มแถวในตาราง action ของ <code>docs/reference.md</code> (หัวข้อ shots.yaml) แล้ว <code>pnpm verify</code></p>
+</li>
+</ol>
+<h2 id="sec-6-3">ผลลัพธ์ที่ได้</h2>
+<p>ผู้เขียนคู่มือใช้ action ใหม่ใน shots.yaml ได้ทันที ทั้งใน <code>shots</code>, <code>steps</code>, <code>clips</code> และ <code>logins</code></p>
+<h2 id="sec-6-4">ปัญหาที่พบบ่อย</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>อาการ</th>
+<th>สาเหตุ</th>
+<th>วิธีแก้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ภาพไม่มีสไตล์</td>
+<td>CSS หรือฟอนต์จาก CDN ถูกบล็อกเพราะไม่อยู่ใน allowlist</td>
+<td>capture ไม่ผ่านพร้อม <code>stylesheet blocked</code> ให้เพิ่ม host ใน <code>capture.assetHosts</code> (ดู <a href="dev.lessons.html">บทเรียนที่ได้</a>)</td>
+</tr>
+<tr>
+<td>action กดโดนแถบเครื่องมือ dev ของเฟรมเวิร์ก</td>
+<td>overlay ของ Next.js / Vite บังปุ่ม</td>
+<td>overlay ที่รู้จักถูกซ่อนตั้งแต่โหลดหน้า (<code>DEV_OVERLAYS</code> ใน <code>src/config.ts</code>) เพิ่มตัวใหม่ที่นั่น</td>
+</tr>
+<tr>
+<td>กรอบแดงอยู่ใต้ modal</td>
+<td>ปุ่มอยู่ใน <code>dialog:modal</code></td>
+<td>capture วาดกรอบเป็น popover เหนือ top layer ให้แล้ว</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sec-6-5">หน้าที่เกี่ยวข้อง</h2>
+<ul>
+<li><a href="dev.add-output.html">เพิ่มผลลัพธ์หรือช่องทางเผยแพร่</a></li>
+<li><a href="dev.testing.html">กลยุทธ์การทดสอบ</a></li>
+</ul>
+
+</div>
+<nav class="pager" aria-label="หน้าก่อนหน้าและถัดไป"><a rel="prev" href="dev.add-check-rule.html"><small>ก่อนหน้า</small><strong>เพิ่มกฎตรวจ</strong></a><a rel="next" href="dev.add-output.html"><small>ถัดไป</small><strong>เพิ่มผลลัพธ์หรือช่องทางเผยแพร่</strong></a></nav>
+</div>
+</article>
+<aside class="toc" aria-label="ในหน้านี้"><p>ในหน้านี้</p><ol><li class="l2"><a href="#sec-6-1">ก่อนเริ่ม</a></li><li class="l2"><a href="#sec-6-2">ขั้นตอน</a></li><li class="l2"><a href="#sec-6-3">ผลลัพธ์ที่ได้</a></li><li class="l2"><a href="#sec-6-4">ปัญหาที่พบบ่อย</a></li><li class="l2"><a href="#sec-6-5">หน้าที่เกี่ยวข้อง</a></li></ol></aside>
+</div>
+</main>
+</div>
+<footer class="site-footer">
+<p>คู่มือ manual-kit — คู่มือการพัฒนา · อัปเดตล่าสุด 2026-10-07</p>
+<p><a href="../../index.html">คู่มือทั้งหมด</a></p>
+</footer>
+</body>
+</html>

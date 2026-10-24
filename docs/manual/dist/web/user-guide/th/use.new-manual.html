@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>ทำคู่มือใหม่ด้วย /manual — คู่มือการใช้งาน — คู่มือ manual-kit</title>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/brand.css">
+
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('mk-theme');if(t)document.documentElement.dataset.theme=t}catch(e){};window.ManualKitWords={"results":"{n} รายการ","none":"ไม่พบหัวข้อที่ตรงกับคำค้น ลองใช้คำที่สั้นลงหรือคำอื่น","all":"ดูผลการค้นหาทั้งหมด","close":"ปิด","prev":"ก่อนหน้า","next":"ถัดไป","showFix":"ดูวิธีแก้","hideFix":"ซ่อนวิธีแก้","readSteps":"อ่านวิธีทำทีละขั้น","captions":"คำบรรยาย"}</script>
+<script src="../../assets/search-core.js" defer></script>
+<script src="search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#content">ข้ามไปที่เนื้อหา</a>
+<header class="top">
+<button type="button" class="top-btn top-btn--ghost nav-toggle" aria-expanded="false" aria-controls="site-nav"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span class="visually-hidden">สารบัญ</span></button>
+<a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">m</span><span>manual-kit</span></a>
+<details class="book-pill"><summary aria-label="เปลี่ยนเล่ม: คู่มือการใช้งาน"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>คู่มือการใช้งาน</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../../user-guide/th/index.html" aria-current="true">คู่มือการใช้งาน</a></li><li><a href="../../dev-guide/th/index.html">คู่มือการพัฒนา</a></li></ul></details>
+<form class="search" role="search" action="search.html" method="get">
+<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><label for="q" class="visually-hidden">ค้นหาในคู่มือ</label>
+<input type="search" id="q" name="q" placeholder="ค้นหาในคู่มือ" autocomplete="off" enterkeyhint="search" aria-keyshortcuts="Control+K Meta+K /" aria-controls="search-pop">
+<kbd class="kbd" aria-hidden="true">⌘K</kbd>
+<div id="search-pop" class="pop" hidden></div>
+</form>
+<div class="top-right">
+<button type="button" class="top-btn top-btn--ghost search-open" aria-label="ค้นหา"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+<a class="top-btn top-btn--ghost top-faq" href="faq.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span class="faq-label">ปัญหาที่พบบ่อย</span></a>
+
+<button type="button" class="top-btn top-btn--ghost theme-toggle" aria-label="สลับโหมดสว่างและมืด" title="สลับโหมดสว่างและมืด"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+
+</div>
+</header>
+<div class="scrim" hidden></div>
+<div class="layout">
+<nav id="site-nav" class="side" aria-label="สารบัญ">
+<button type="button" class="top-btn side-close" aria-label="ปิดสารบัญ"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+<a class="reading" href="index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span><small>คุณกำลังอ่าน</small><strong>คู่มือการใช้งาน</strong></span></a>
+<a class="switch" href="../../dev-guide/th/index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ไปที่ คู่มือการพัฒนา</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<div class="aud" data-book="user-guide"><span class="aud-label" id="aud-label">ฉันเป็น…</span><div class="chips" role="group" aria-labelledby="aud-label"><button type="button" class="chip" data-aud="" aria-pressed="true">ดูทุกงาน <small>10</small></button><button type="button" class="chip" data-aud="team" aria-pressed="false">ทีมที่ทำคู่มือ <small>10</small></button><button type="button" class="chip" data-aud="lead" aria-pressed="false">หัวหน้าทีม / PM <small>6</small></button></div></div>
+<details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>เริ่มต้น</span><small>2</small></summary><ul><li data-aud="team|lead"><a href="use.about.html">manual-kit คืออะไรและทำอะไรได้</a></li><li data-aud="team"><a href="use.install.html">ติดตั้ง plugin</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg><span>ทำคู่มือ</span><small>2</small></summary><ul><li data-aud="team"><a href="use.new-manual.html" aria-current="page">ทำคู่มือใหม่ด้วย /manual</a></li><li data-aud="team|lead"><a href="use.spec.html">อ่านและแก้สเปกคู่มือ</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg><span>ส่งมอบและดูแล</span><small>3</small></summary><ul><li data-aud="team|lead"><a href="use.deliver.html">ส่งมอบคู่มือให้ลูกค้า</a></li><li data-aud="team|lead"><a href="use.keep-current.html">ดูแลคู่มือให้ตามระบบ</a></li><li data-aud="team"><a href="use.publish-wiki.html">เผยแพร่ขึ้น Outline wiki</a></li></ul></details><details class="group" open><summary><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h1M4 12h1M4 18h1"/></svg><span>อ้างอิง</span><small>3</small></summary><ul><li data-aud="team|lead"><a href="use.options.html">ตัวเลือกของคู่มือ</a></li><li data-aud="team"><a href="use.troubleshooting.html">ปัญหาที่พบบ่อย</a></li><li data-aud="team|lead"><a href="use.commands.html">ภาคผนวก: คำสั่งและกติกา</a></li></ul></details>
+<div class="side-downloads"><p>ดาวน์โหลด</p><ul><li><a href="user-guide.th.pdf" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ PDF</a></li><li><a href="user-guide.th.docx" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>ไฟล์ Word (DOCX)</a></li></ul></div>
+</nav>
+<main id="content" tabindex="-1">
+<div class="page">
+<article class="chapter sheet" data-page="use.new-manual">
+<header class="head"><nav class="crumbs" aria-label="ตำแหน่งของหน้านี้"><ol><li><a href="index.html">คู่มือการใช้งาน</a></li><li>ทำคู่มือ</li><li><a href="use.new-manual.html" aria-current="page">ทำคู่มือใหม่ด้วย /manual</a></li></ol></nav><span class="kind">วิธีทำ</span><h1>ทำคู่มือใหม่ด้วย /manual</h1><p class="summary">สั่ง Claude ทำคู่มือทั้งเล่มด้วยคำสั่งเดียว แล้วรู้ว่าระหว่างทางมันทำอะไร ถามอะไร และส่งอะไรคืนมา</p><div class="control"><span>อัปเดตล่าสุด <b>2026-10-07</b></span><button type="button" class="btn print" data-print hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>พิมพ์หน้านี้</button></div></header>
+<div class="sheet-body">
+<dl class="facts" aria-label="ข้อมูลของหน้านี้"><div><dt>สำหรับ</dt><dd class="who">ทีมที่ทำคู่มือ</dd></div><div><dt>ใช้เวลา</dt><dd>15–20 นาทีต่อคู่มือ 3 หน้า</dd></div></dl>
+<details class="toc-inline"><summary>ในหน้านี้</summary><ol><li class="l2"><a href="#sec-3-1">ก่อนเริ่ม</a></li><li class="l2"><a href="#sec-3-2">ขั้นตอน</a></li><li class="l2"><a href="#sec-3-3">ผลลัพธ์ที่ได้</a></li><li class="l2"><a href="#sec-3-4">ปัญหาที่พบบ่อย</a></li><li class="l2"><a href="#sec-3-5">หน้าที่เกี่ยวข้อง</a></li></ol></details>
+<div class="body">
+<p>คำสั่ง <code>/manual</code> สั่งให้ Claude ทำคู่มือทั้งเล่มเองตั้งแต่ต้นจนจบ คุณไม่ต้องรู้คำสั่งของ manual-kit เลย
+หน้านี้อธิบายวิธีสั่ง สิ่งที่ Claude ทำในแต่ละช่วง และสิ่งที่คุณต้องตอบ เพื่อให้รู้ว่ากำลังรออะไรอยู่และตรวจงานได้</p>
+<h2 id="sec-3-1">ก่อนเริ่ม</h2>
+<ul>
+<li>ติดตั้ง plugin แล้ว (<a href="use.install.html">ติดตั้ง plugin</a>)</li>
+<li>ระบบของโครงการ <strong>รันในเครื่องได้</strong> (README ของโครงการบอกวิธีรันยิ่งดี) Claude สร้างข้อมูลทดสอบเอง
+และ <strong>ไม่ใช้ระบบ production หรือข้อมูลจริงของลูกค้า</strong></li>
+<li>ถ้ามีข้อมูลเอกสาร ให้เตรียมไว้: ชื่อลูกค้า ชื่อโครงการ เลขที่เอกสาร เวอร์ชัน ผู้อนุมัติ ช่องทางติดต่อ
+ถ้าไม่บอก Claude จะใส่ <code>(รอระบุ)</code> ให้กรอกทีหลัง ไม่แต่งขึ้นเอง</li>
+</ul>
+<h2 id="sec-3-2">ขั้นตอน</h2>
+<ol>
+<li>
+<p>เปิด Claude Code ในโฟลเดอร์ของโครงการ (<code>cd</code> ไปที่ repo แล้วพิมพ์ <code>claude</code>)</p>
+</li>
+<li>
+<p>พิมพ์ <code>/manual</code> ตามด้วยสิ่งที่ต้องการเป็นประโยคธรรมดา เช่น</p>
+<pre><code class="language-text">/manual ทำคู่มือผู้ใช้ ภาษาไทย ออก PDF กับ Word
+/manual ทำคู่มือผู้ดูแลระบบ ภาษาไทย ออก PDF อย่างเดียว ลูกค้าคือ กรม... เลขที่เอกสาร XX-UM-001
+/manual ทำคู่มือเจ้าหน้าที่ พร้อมภาพทีละขั้นและวิดีโอ ออกเป็นเว็บด้วย
+</code></pre>
+<p>ถ้า <code>/manual</code> ไม่ขึ้น ใช้ชื่อเต็ม <code>/manual-kit:manual</code></p>
+</li>
+<li>
+<p>ตอบคำถามที่ Claude ถาม (ถามครั้งเดียวรวมกันตอนต้น) Claude จะถามก่อนเสมอเมื่อ</p>
+<ul>
+<li>ต้องใช้ <strong>API key ที่เสียเงิน</strong> เช่น ระบบที่เรียก AI หรือส่ง SMS ถ้าไม่อนุญาต Claude จะข้ามฟีเจอร์นั้นและบอกว่าหน้าไหนไม่มีภาพ</li>
+<li>ต้อง <strong>ติดตั้งโปรแกรม</strong> เช่น <code>brew install pandoc</code> สำหรับไฟล์ Word ถ้าตอบไม่ Claude จะทำเฉพาะสิ่งที่ทำได้ (PDF และเว็บไม่ต้องใช้โปรแกรมเพิ่ม)</li>
+</ul>
+</li>
+<li>
+<p>รอ Claude ทำงาน ระหว่างนี้คุณจะเห็น Claude เรียกคำสั่งของ manual-kit ตามลำดับ ภาพด้านล่างเป็น <strong>ตัวอย่าง</strong>
+ที่เรียบเรียงจากคำสั่งและผลลัพธ์จริงตอนทำคู่มือเล่มนี้:</p>
+</li>
+</ol>
+<div class="walk" data-walk="new-manual" data-zoom="ขยายภาพ">
+<ol class="steps">
+<li class="step" id="step-new-manual-1"><p class="step-text"><span class="step-n" aria-hidden="true">1</span><span>พิมพ์ /manual พร้อมสิ่งที่ต้องการ</span></p><figure class="figure step" id="fig-3-1"><img src="../../media/th/new-manual-1.png" width="960" height="110" loading="lazy" decoding="async" alt="พิมพ์ /manual พร้อมสิ่งที่ต้องการ"><figcaption>พิมพ์ /manual พร้อมสิ่งที่ต้องการ</figcaption></figure></li>
+<li class="step" id="step-new-manual-2"><p class="step-text"><span class="step-n" aria-hidden="true">2</span><span>Claude สแกนหลักฐาน (discover) แล้วเขียนสเปก</span></p><figure class="figure step" id="fig-3-2"><img src="../../media/th/new-manual-2.png" width="960" height="236" loading="lazy" decoding="async" alt="Claude สแกนหลักฐาน (discover) แล้วเขียนสเปก"><figcaption>Claude สแกนหลักฐาน (discover) แล้วเขียนสเปก</figcaption></figure></li>
+<li class="step" id="step-new-manual-3"><p class="step-text"><span class="step-n" aria-hidden="true">3</span><span>สร้างโครงคู่มือ (init) และรายการที่ต้องมีหน้า (inventory)</span></p><figure class="figure step" id="fig-3-3"><img src="../../media/th/new-manual-3.png" width="960" height="464" loading="lazy" decoding="async" alt="สร้างโครงคู่มือ (init) และรายการที่ต้องมีหน้า (inventory)"><figcaption>สร้างโครงคู่มือ (init) และรายการที่ต้องมีหน้า (inventory)</figcaption></figure></li>
+<li class="step" id="step-new-manual-4"><p class="step-text"><span class="step-n" aria-hidden="true">4</span><span>เขียนหน้า ถ่ายภาพ แล้วตรวจจนไม่มีข้อผิด (check)</span></p><figure class="figure step" id="fig-3-4"><img src="../../media/th/new-manual-4.png" width="960" height="740" loading="lazy" decoding="async" alt="เขียนหน้า ถ่ายภาพ แล้วตรวจจนไม่มีข้อผิด (check)"><figcaption>เขียนหน้า ถ่ายภาพ แล้วตรวจจนไม่มีข้อผิด (check)</figcaption></figure></li>
+<li class="step" id="step-new-manual-5"><p class="step-text"><span class="step-n" aria-hidden="true">5</span><span>ออก PDF, Word และเว็บ</span></p><figure class="figure step" id="fig-3-5"><img src="../../media/th/new-manual-5.png" width="960" height="938" loading="lazy" decoding="async" alt="ออก PDF, Word และเว็บ"><figcaption>ออก PDF, Word และเว็บ</figcaption></figure></li>
+</ol>
+</div>
+<ol start="5">
+<li>อ่านรายงานตอนจบ Claude จะบอกไฟล์ที่ได้ รายการ <code>(รอระบุ)</code> และตำแหน่งที่อยู่ ปัญหาของระบบที่เจอ และสิ่งที่ข้ามไปพร้อมเหตุผล</li>
+</ol>
+<p>ลำดับงานที่ Claude ทำ (ตามสกิล <strong>manual</strong>):</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>ช่วง</th>
+<th>Claude ทำอะไร</th>
+<th>คำสั่งของ manual-kit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>อ่านโครงการ</td>
+<td>README, CLAUDE.md, package.json, เอกสาร requirement / design</td>
+<td></td>
+</tr>
+<tr>
+<td>สแกนหลักฐาน</td>
+<td>หน้าจอ บทบาท สถานะของงาน ฟอร์ม ข้อความ API flag</td>
+<td><strong>discover</strong></td>
+</tr>
+<tr>
+<td>เขียนสเปก</td>
+<td><code>manual/manual-spec.md</code> แล้วสรุปให้ดู</td>
+<td></td>
+</tr>
+<tr>
+<td>สร้างโครง</td>
+<td>config ข้อมูลเอกสาร ผลลัพธ์ รายการที่ต้องมีหน้า</td>
+<td><strong>init</strong>, <strong>inventory</strong></td>
+</tr>
+<tr>
+<td>รันระบบ</td>
+<td>รันในเครื่องด้วยข้อมูลสมมติ จดทุกโปรเซสที่เปิด</td>
+<td></td>
+</tr>
+<tr>
+<td>เขียนหน้า</td>
+<td>ทีละหน้าตามแผนในสเปก</td>
+<td><strong>new-page</strong></td>
+</tr>
+<tr>
+<td>ถ่ายภาพ</td>
+<td>ภาพหน้าจอ ภาพทีละขั้น วิดีโอ แล้วเปิดดูทุกภาพ</td>
+<td><strong>capture</strong>, <strong>encode</strong></td>
+</tr>
+<tr>
+<td>ตรวจและออกไฟล์</td>
+<td>ตรวจจนไม่มีข้อผิด ออก PDF / Word / เว็บ แล้วเปิดดูผลเอง</td>
+<td><code>check</code>, <strong>build</strong></td>
+</tr>
+<tr>
+<td>เก็บงาน</td>
+<td>ปิดเซิร์ฟเวอร์และ container ที่ตัวเองเปิด (เฉพาะที่ตัวเองเปิด)</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sec-3-3">ผลลัพธ์ที่ได้</h2>
+<p>ทุกอย่างอยู่ในโฟลเดอร์ <code>manual/</code> ของโครงการ ให้ <strong>commit ไว้กับโค้ด</strong> เพื่อให้คู่มือตามโค้ดได้</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>ไฟล์</th>
+<th>คืออะไร</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>manual/dist/*.pdf</code>, <code>*.docx</code></td>
+<td>คู่มือส่งลูกค้า</td>
+</tr>
+<tr>
+<td><code>manual/dist/web/</code></td>
+<td>เว็บคู่มือ (ไฟล์ static เปิด <code>index.html</code> หรืออัปโหลดขึ้นโฮสต์ไหนก็ได้)</td>
+</tr>
+<tr>
+<td><code>manual/manual-spec.md</code></td>
+<td>สเปกคู่มือ (ใช้คุยกับลูกค้าหรือทีมได้)</td>
+</tr>
+<tr>
+<td><code>manual/discovery.md</code></td>
+<td>หลักฐานที่สแกนได้จากโค้ด</td>
+</tr>
+<tr>
+<td><code>manual/pages/</code></td>
+<td>เนื้อหาแต่ละหน้า (Markdown แก้เองได้)</td>
+</tr>
+<tr>
+<td><code>manual/media/</code></td>
+<td>ภาพและวิดีโอ</td>
+</tr>
+</tbody>
+</table></div>
+<p>หน้ายังไม่ได้รับรอง ขั้นต่อไปคืออ่านทวนและรับรอง ดู <a href="use.deliver.html">ส่งมอบคู่มือให้ลูกค้า</a></p>
+<h2 id="sec-3-4">ปัญหาที่พบบ่อย</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>อาการ</th>
+<th>สาเหตุ</th>
+<th>วิธีแก้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude บอกว่ารันระบบไม่ได้</td>
+<td>ไม่รู้วิธีรัน หรือต้องใช้ฐานข้อมูล/บริการที่ไม่มีในเครื่อง</td>
+<td>บอกวิธีรันหรือฐานข้อมูลที่ต้องใช้ หรือเพิ่มวิธีรันใน README ของโครงการ ถ้ารันไม่ได้จริง Claude ทำคู่มือแบบไม่มีภาพและบอกไว้ในรายงาน</td>
+</tr>
+<tr>
+<td>อยากเปลี่ยนแผนก่อนเขียนหน้า</td>
+<td>Claude ทำต่อทันทีหลังสรุปสเปก</td>
+<td>สั่ง <code>/manual spec</code> ก่อน (ดู <a href="use.spec.html">อ่านและแก้สเปกคู่มือ</a>) หรือบอกในคำขอว่า &quot;ขอดูสเปกก่อน&quot;</td>
+</tr>
+<tr>
+<td>มีคู่มือเดิมอยู่แล้ว</td>
+<td><code>manual/manual.config.yaml</code> มีอยู่</td>
+<td>Claude จะถือว่าเป็นการอัปเดต ถ้าต้องการเล่มใหม่ให้พูดว่า &quot;ใหม่&quot; ในคำขอ</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sec-3-5">หน้าที่เกี่ยวข้อง</h2>
+<ul>
+<li><a href="use.spec.html">อ่านและแก้สเปกคู่มือ</a></li>
+<li><a href="use.deliver.html">ส่งมอบคู่มือให้ลูกค้า</a></li>
+<li><a href="use.options.html">ตัวเลือกของคู่มือ</a></li>
+</ul>
+
+</div>
+<nav class="pager" aria-label="หน้าก่อนหน้าและถัดไป"><a rel="prev" href="use.install.html"><small>ก่อนหน้า</small><strong>ติดตั้ง plugin</strong></a><a rel="next" href="use.spec.html"><small>ถัดไป</small><strong>อ่านและแก้สเปกคู่มือ</strong></a></nav>
+</div>
+</article>
+<aside class="toc" aria-label="ในหน้านี้"><p>ในหน้านี้</p><ol><li class="l2"><a href="#sec-3-1">ก่อนเริ่ม</a></li><li class="l2"><a href="#sec-3-2">ขั้นตอน</a></li><li class="l2"><a href="#sec-3-3">ผลลัพธ์ที่ได้</a></li><li class="l2"><a href="#sec-3-4">ปัญหาที่พบบ่อย</a></li><li class="l2"><a href="#sec-3-5">หน้าที่เกี่ยวข้อง</a></li></ol></aside>
+</div>
+</main>
+</div>
+<footer class="site-footer">
+<p>คู่มือ manual-kit — คู่มือการใช้งาน · อัปเดตล่าสุด 2026-10-07</p>
+<p><a href="../../index.html">คู่มือทั้งหมด</a></p>
+</footer>
+</body>
+</html>

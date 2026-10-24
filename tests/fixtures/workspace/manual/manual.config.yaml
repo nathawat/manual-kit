@@ -1,0 +1,14 @@
+# Two repositories in one workspace: the web app the manual documents, and a prototype it must not read.
+projectRoot: ..
+languages: [en]
+books:
+  user-guide: { title: User guide }
+document:
+  title: Document system manual
+adapter:
+  type: generic
+  routes: { files: ["**/*.tsx"], pattern: 'path="([^"]+)"' }
+  roles: { files: ["**/*.tsx"], pattern: "role === '(\\w+)'" }
+  flags: { files: ["**/.env.example"], pattern: "^(FEATURE_\\w+)=", flags: m }
+  strings:
+    en: { files: ["**/*.tsx"], pattern: ">(\\w[^<>{}]*)<" }

@@ -1,0 +1,9 @@
+{
+  "name": "manual-kit",
+  "displayName": "manual-kit",
+  "description": "Write and maintain formal user manuals (คู่มือการใช้งาน) as PDF, Word and a docs website from the code and the running app. Start with /manual-kit:manual.",
+  "author": { "name": "manual-kit contributors" },
+  "repository": "https://github.com/nathawat/manual-kit",
+  "license": "MIT",
+  "keywords": ["manual", "documentation", "pdf", "docx", "thai"]
+}

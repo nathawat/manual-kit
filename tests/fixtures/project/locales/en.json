@@ -1,0 +1,4 @@
+{
+  "login": { "title": "Sign in", "email": "Email", "submit": "Sign in" },
+  "class": { "new": "Create class", "name": "Class name", "save": "Save" }
+}

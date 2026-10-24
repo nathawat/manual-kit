@@ -1,0 +1,122 @@
+/* manual-kit neutral print template. Plain and professional; projects override with templates.pdfCss. */
+:root {
+  --ink: #1f2328;
+  --muted: #59636e;
+  --rule: #c9ced4;
+  --tint: #f2f4f6;
+  --accent: #24476b;
+}
+@page {
+  size: A4;
+  margin: 22mm 18mm 20mm 20mm;
+}
+@page cover {
+  margin: 0;
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+html { font-family: 'Sarabun', 'Noto Sans Thai', sans-serif; font-size: 11pt; line-height: 1.6; color: var(--ink); }
+body { margin: 0; }
+h1, h2, h3 { line-height: 1.3; color: var(--accent); break-after: avoid; }
+h1 { font-size: 20pt; font-weight: 700; margin: 0 0 6mm; padding-bottom: 2mm; border-bottom: 1.5pt solid var(--accent); }
+h2 { font-size: 14pt; font-weight: 700; margin: 7mm 0 2mm; }
+h3 { font-size: 12pt; font-weight: 600; margin: 5mm 0 2mm; }
+.num { display: inline-block; min-width: 1.4em; margin-right: 0.4em; }
+p { margin: 0 0 3mm; orphans: 2; widows: 2; }
+ul, ol { margin: 0 0 3mm; padding-left: 7mm; }
+li { margin-bottom: 1.5mm; }
+a { color: var(--accent); text-decoration: none; }
+code, pre { font-family: 'SFMono-Regular', Menlo, Consolas, monospace; font-size: 9.5pt; }
+pre { background: var(--tint); padding: 3mm; white-space: pre-wrap; break-inside: avoid; }
+strong { font-weight: 600; }
+blockquote { margin: 0 0 3mm; padding: 2mm 4mm; border-left: 2pt solid var(--rule); color: var(--muted); }
+
+table { width: 100%; border-collapse: collapse; margin: 0 0 4mm; font-size: 10pt; break-inside: auto; }
+th, td { border: 0.5pt solid var(--rule); padding: 1.6mm 2.4mm; text-align: left; vertical-align: top; }
+th { background: var(--tint); font-weight: 600; }
+tr { break-inside: avoid; }
+.table-caption { font-weight: 600; margin: 4mm 0 1.5mm; break-after: avoid; }
+
+figure { margin: 4mm 0 5mm; break-inside: avoid; text-align: center; }
+figure img { max-width: 100%; max-height: 150mm; border: 0.5pt solid var(--rule); }
+figure.step img { max-height: 110mm; }
+/* a step's text and sub-bullets stay on the page of its screenshot */
+li > p:has(+ figure.step), li > p:has(+ ul + figure.step), li > ul:has(+ figure.step) { break-after: avoid; break-inside: avoid; }
+figcaption { font-size: 9.5pt; color: var(--muted); margin-top: 1.5mm; }
+.missing-box { border: 1pt dashed var(--rule); padding: 12mm 4mm; color: var(--muted); font-size: 9.5pt; }
+
+/* sections */
+section.front, section.intro, section.chapter, section.appendix { break-before: page; }
+section.cover { page: cover; height: 297mm; box-sizing: border-box; padding: 60mm 22mm 25mm; display: flex; flex-direction: column; }
+.cover-client { font-size: 13pt; color: var(--muted); margin-bottom: 8mm; }
+.cover-title { font-size: 28pt; font-weight: 700; color: var(--accent); line-height: 1.25; border: 0; margin: 0 0 4mm; padding: 0; }
+.cover-subtitle { font-size: 14pt; color: var(--muted); margin-bottom: 4mm; }
+.cover-book { font-size: 16pt; font-weight: 600; margin-bottom: 18mm; padding-top: 4mm; border-top: 1.5pt solid var(--accent); }
+.cover-fields { width: auto; margin-top: auto; font-size: 10.5pt; }
+.cover-fields th, .cover-fields td { border: 0; padding: 0.8mm 6mm 0.8mm 0; background: none; }
+.cover-fields th { color: var(--muted); font-weight: 400; }
+
+/* formal cover (templates.cover: formal, the default; DESIGN.md): thin brand band with the accent rule, organisation
+   centred, title and book at the left, illustration at the right, document fields and a footer line at the bottom */
+/* the cover is set in the body face (Sarabun): text copied or searched from the PDF keeps its Thai words whole */
+section.cover--formal { padding: 0; width: 210mm; overflow: hidden; background: #fff; color: #18202b; }
+.cover--formal .cover-band { flex: none; height: 9mm; background: var(--cover-brand); border-bottom: 1.6mm solid var(--cover-accent); }
+.cover--formal .cover-org { flex: none; display: flex; align-items: center; justify-content: center; gap: 4mm; margin: 16mm 20mm 0; text-align: left; }
+.cover--formal .cover-seal { height: 18mm; max-width: 30mm; object-fit: contain; }
+.cover--formal .cover-logo { height: 13mm; max-width: 44mm; object-fit: contain; }
+.cover--formal .cover-client { margin: 0; color: #18202b; font-size: 15pt; font-weight: 700; line-height: 1.3; }
+.cover--formal .cover-system { margin-top: 0.5mm; color: #556072; font-size: 9.5pt; }
+.cover--formal .cover-body { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 104mm; grid-template-rows: auto auto 1fr; column-gap: 4mm; align-content: start; padding: 22mm 20mm 0; }
+.cover--formal .cover-title { grid-column: 1 / -1; }
+.cover--formal .cover-text { grid-column: 1; grid-row: 2; }
+.cover--formal .cover-title { margin: 0; padding: 0; border: 0; font-size: 36pt; line-height: 1.18; font-weight: 700; color: var(--cover-brand-ink); }
+.cover--formal .cover-book { display: flex; align-items: center; gap: 3mm; margin: 12mm 0 0; padding: 0; border: 0; font-size: 17pt; font-weight: 700; line-height: 1.3; }
+.cover--formal .cover-book-icon { height: 12mm; width: 12mm; object-fit: contain; }
+.cover--formal .cover-subtitle { max-width: 72mm; margin: 6mm 0 0; padding: 0; border: 0; font-size: 11pt; line-height: 1.7; color: #333d4b; }
+.cover--formal .cover-image { grid-column: 2; grid-row: 2 / 4; position: relative; min-height: 0; margin: 8mm -14mm 6mm 0; }
+.cover--formal .cover-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: top right; }
+/* the theme's drawing: outlines in the brand ink, the step markers in the accent */
+.cover--formal .cover-art { display: block; width: 100%; height: auto; color: var(--cover-brand-ink); }
+.cover-art .sh { fill: #fff; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; }
+.cover-art .ln { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; opacity: 0.7; }
+.cover-art .ln.b { stroke-width: 5; opacity: 1; }
+.cover-art .dash { stroke-dasharray: 2 7; opacity: 1; }
+.cover-art .ac { fill: #fff; stroke: var(--cover-accent); stroke-width: 2.5; }
+.cover-art .mk { fill: var(--cover-accent); }
+.cover-art .mkt { fill: #fff; font: 700 15px/1 'Sarabun', sans-serif; text-anchor: middle; }
+.cover-art .dot { fill: currentColor; opacity: 0.55; }
+.cover--formal .cover-fields { flex: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5mm 8mm; margin: 0 20mm; padding: 6mm 0 0; border-top: 0.4mm solid #c9d0da; }
+.cover--formal .cover-fields div { min-width: 0; }
+.cover--formal .cover-fields dt { font-size: 8.5pt; color: #556072; }
+.cover--formal .cover-fields dd { margin: 0.5mm 0 0; font-size: 11pt; font-weight: 600; color: #18202b; }
+.cover--formal .cover-foot { flex: none; display: flex; justify-content: space-between; gap: 8mm; margin: 9mm 20mm 12mm; font-size: 8.5pt; color: #556072; }
+.control th { width: 35%; }
+.approval td { height: 14mm; }
+
+/* lists with page numbers (paged.js target-counter) */
+.toc-list { list-style: none; padding: 0; margin: 0; }
+.toc-list li { margin: 0 0 1.4mm; }
+.toc-list li.l2 { padding-left: 8mm; font-size: 10pt; }
+.toc-list li.l1 { font-weight: 600; margin-top: 2.5mm; }
+.toc-list a { display: flex; align-items: baseline; color: var(--ink); }
+.toc-list .dots { flex: 1; border-bottom: 0.8pt dotted var(--rule); margin: 0 2mm; min-width: 5mm; }
+.toc-list a::after { content: target-counter(attr(href url), page); min-width: 7mm; text-align: right; }
+.revisions th:nth-child(1) { width: 12%; }
+.revisions th:nth-child(2) { width: 16%; }
+.revisions th:nth-child(3) { width: 20%; }
+.approval th:nth-child(1) { width: 30%; }
+.approval th:nth-child(2) { width: 25%; }
+.glossary th:nth-child(1) { width: 30%; }
+
+/* clips on paper: poster + QR code to the web page */
+.clip-qr { display: flex; align-items: center; justify-content: center; gap: 4mm; margin-top: 2mm; font-size: 8.5pt; color: var(--muted); text-align: left; }
+.clip-qr img { width: 24mm; height: 24mm; border: 0; }
+
+/* callouts: > [!TIP] / [!NOTE] / [!WARNING] */
+.callout { margin: 0 0 4mm; padding: 2.5mm 4mm; border: 0.3mm solid #c6d0e6; border-left: 1.4mm solid #1f5fd6; border-radius: 2mm; background: #f3f6fd; break-inside: avoid; }
+.callout > :last-child { margin-bottom: 0; }
+.callout-title { margin: 0 0 1mm; font-weight: 700; font-size: 0.9em; }
+.callout--tip { border-left-color: #1f9a5c; background: #eff9f3; }
+.callout--warning { border-left-color: #c98f00; background: #fff8e6; }

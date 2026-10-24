@@ -1,0 +1,6 @@
+{
+  "name": "shop-orders",
+  "description": "Order handling for a small shop",
+  "scripts": { "dev": "next dev", "db:seed": "tsx prisma/seed.ts" },
+  "dependencies": { "next": "15.0.0", "stripe": "17.0.0", "@prisma/client": "6.0.0", "next-auth": "5.0.0" }
+}

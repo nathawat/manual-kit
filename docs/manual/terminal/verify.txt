@@ -1,0 +1,21 @@
+$ pnpm verify
+> manual-kit@0.1.0 verify
+> pnpm check && pnpm bundle && pnpm test && pnpm build
+
+> manual-kit@0.1.0 check
+> tsc -p tsconfig.json --noEmit
+
+> manual-kit@0.1.0 bundle
+> node scripts/bundle-plugin.mjs
+
+bundled plugins/manual-kit/dist/manual-kit.mjs
+
+> manual-kit@0.1.0 test
+> vitest run
+
+ Test Files  29 passed (29)
+      Tests  180 passed | 1 skipped (181)
+   Duration  53.95s (tests 96%, import 3%, transform 1%)
+
+> manual-kit@0.1.0 build
+> tsc -p tsconfig.build.json

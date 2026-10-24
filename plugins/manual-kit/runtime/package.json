@@ -1,0 +1,10 @@
+{
+  "name": "manual-kit-runtime",
+  "private": true,
+  "description": "Packages the manual-kit plugin installs at session start (not bundled).",
+  "dependencies": {
+    "playwright": "1.63.0",
+    "pagedjs": "0.4.3",
+    "typescript": "5.9.3"
+  }
+}

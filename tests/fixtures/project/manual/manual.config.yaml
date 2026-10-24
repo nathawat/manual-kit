@@ -1,0 +1,31 @@
+languages: [th, en]
+books:
+  user-guide: { title: { th: คู่มือผู้ใช้, en: User guide } }
+document:
+  title: { th: คู่มือการใช้งานระบบห้องเรียน, en: Classroom system manual }
+  client: { th: โรงเรียนตัวอย่าง, en: Sample School }
+  project: Classroom
+  docNumber: DOC-001
+  version: "1.0"
+  date: "2026-10-05"
+  classification: { th: ใช้ภายใน, en: Internal }
+  approvers:
+    - { name: { th: สมชาย ใจดี, en: Somchai Jaidee }, role: { th: ผู้อนุมัติ, en: Approver } }
+  revisions:
+    - { version: "1.0", date: "2026-10-05", author: Team, changes: { th: ฉบับแรก, en: First issue } }
+  purpose: { th: อธิบายวิธีใช้งานระบบสำหรับครู, en: Explains how teachers use the system }
+  glossary:
+    - { term: { th: ห้องเรียน, en: Class }, definition: { th: กลุ่มนักเรียนที่ครูดูแล, en: A group of students a teacher looks after } }
+media: screenshots
+adapter:
+  type: json-i18n
+  files: { th: locales/th.json, en: locales/en.json }
+  routes: { files: ["src/**/*.ts"], pattern: "path: '([^']+)'" }
+  roles: { files: ["src/routes.ts"], pattern: "ROLES = \\[([^\\]]+)\\]" }
+  data: { limits: src/limits.json }
+capture:
+  baseUrl: http://127.0.0.1:4599
+  localStorage: { "app:lang": "{lang}" }
+wording:
+  forbidden:
+    - { pattern: "Cody", flags: "", message: "The mascot is Codi" }
