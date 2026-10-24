@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- README diagrams in the manual-kit theme: how a manual is made, and the loop that keeps it in step with the code
+  (`docs/diagrams`, drawn by `make.py`, exported to PNG by `export.mjs`).
 - A new demo video at the top of the README (`docs/media/manual-kit-demo.mp4`, 1:25): manual-kit's own manual in the
   new theme, Thai narration, captions and a soft pad. `tools/demo` rebuilds it; the narration is read by ElevenLabs
   through OpenRouter (the only step that needs an API key; manual-kit itself has none).

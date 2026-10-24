@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1216 404" width="1216" height="404" role="img" aria-labelledby="how-it-works-title how-it-works-desc">
+<title id="how-it-works-title">manual-kit ทำคู่มืออย่างไร</title>
+<desc id="how-it-works-desc">Claude อ่านโค้ดและเอกสารของโครงการ เขียนสเปกคู่มือ เขียนหน้าและถ่ายภาพจากระบบที่รันด้วยข้อมูลสมมติ คนในทีมอ่านทวนและรับรอง แล้วได้คู่มือเป็น PDF, Word และเว็บ</desc>
+<defs>
+<marker id="how-it-works-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#5b6b82"/></marker>
+<marker id="how-it-works-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#d9480f"/></marker>
+<marker id="how-it-works-arrow-soft" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#8a97a8"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="284" y="64" width="464" height="300" rx="8" fill="#eef3f8" stroke="#d5dde6"/>
+<rect x="764" y="64" width="220" height="300" rx="8" fill="#ffffff" stroke="#d9480f" stroke-opacity="0.35" stroke-dasharray="4,3"/>
+<text x="144" y="44" fill="#5b6b82" font-size="14" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">อ่านจากโครงการ</text>
+<text x="516" y="44" fill="#183b5e" font-size="14" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">Claude ทำด้วย manual-kit</text>
+<text x="874" y="44" fill="#d9480f" font-size="14" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">คนในทีม</text>
+<text x="1100" y="44" fill="#5b6b82" font-size="14" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">ได้คู่มือ</text>
+<path d="M248 132 H388 Q396 132 396 140 V156" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#how-it-works-arrow)"/>
+<path d="M248 284 H628 Q636 284 636 276 V244" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#how-it-works-arrow)"/>
+<rect x="388.0" y="294" width="104" height="20" rx="2" fill="#eef3f8"/><text x="440" y="308" fill="#5b6b82" font-size="12" font-weight="500" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">ถ่ายภาพหน้าจอ</text>
+<path d="M488 200 H536" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#how-it-works-arrow)"/>
+<path d="M728 200 H776" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#how-it-works-arrow)"/>
+<path d="M876 236 V320 Q876 328 868 328 H672 Q664 328 664 320 V244" fill="none" stroke="#8a97a8" stroke-width="1.4" stroke-dasharray="5,4" marker-end="url(#how-it-works-arrow-soft)"/>
+<rect x="766.0" y="334" width="108" height="20" rx="2" fill="#ffffff"/><text x="820" y="348" fill="#5b6b82" font-size="12" font-weight="500" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">แก้แล้วตรวจใหม่</text>
+<path d="M968 184 H992 Q1000 184 1000 176 V112 Q1000 104 1008 104 H1036" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#how-it-works-arrow)"/>
+<path d="M968 200 H1036" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#how-it-works-arrow)"/>
+<path d="M968 216 H992 Q1000 216 1000 224 V288 Q1000 296 1008 296 H1036" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#how-it-works-arrow)"/>
+<rect x="40" y="96" width="208" height="72" rx="6" fill="#ffffff"/>
+<rect x="40" y="96" width="208" height="72" rx="6" fill="#eef3f8" stroke="#d5dde6" stroke-width="1"/>
+<text x="144.0" y="130.0" fill="#18202b" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">โค้ดและเอกสาร</text>
+<text x="144.0" y="150.0" fill="#5b6b82" font-size="12" font-weight="400" font-family="Menlo, 'SF Mono', monospace" text-anchor="middle">README · SRS · routes</text>
+<rect x="40" y="248" width="208" height="72" rx="6" fill="#ffffff"/>
+<rect x="40" y="248" width="208" height="72" rx="6" fill="#eef3f8" stroke="#d5dde6" stroke-width="1"/>
+<text x="144.0" y="282.0" fill="#18202b" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">ระบบที่รันอยู่</text>
+<text x="144.0" y="302.0" fill="#5b6b82" font-size="12" font-weight="400" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">ใช้ข้อมูลสมมติ</text>
+<rect x="304" y="164" width="184" height="72" rx="6" fill="#ffffff"/>
+<rect x="304" y="164" width="184" height="72" rx="6" fill="#ffffff" stroke="#183b5e" stroke-width="1"/>
+<text x="396.0" y="198.0" fill="#18202b" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">สเปกคู่มือ</text>
+<text x="396.0" y="218.0" fill="#5b6b82" font-size="12" font-weight="400" font-family="Menlo, 'SF Mono', monospace" text-anchor="middle">manual-spec.md</text>
+<rect x="544" y="164" width="184" height="72" rx="6" fill="#ffffff"/>
+<rect x="544" y="164" width="184" height="72" rx="6" fill="#ffffff" stroke="#183b5e" stroke-width="1"/>
+<text x="636.0" y="198.0" fill="#18202b" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">หน้าคู่มือและภาพ</text>
+<text x="636.0" y="218.0" fill="#5b6b82" font-size="12" font-weight="400" font-family="Menlo, 'SF Mono', monospace" text-anchor="middle">pages/ · media/</text>
+<rect x="784" y="164" width="184" height="72" rx="6" fill="#ffffff"/>
+<rect x="784" y="164" width="184" height="72" rx="6" fill="#fdf0ea" stroke="#d9480f" stroke-width="1.6"/>
+<text x="876.0" y="198.0" fill="#d9480f" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">อ่านทวนแล้วรับรอง</text>
+<text x="876.0" y="218.0" fill="#8a3a17" font-size="12" font-weight="400" font-family="Menlo, 'SF Mono', monospace" text-anchor="middle">check · sign</text>
+<rect x="1044" y="76" width="136" height="56" rx="6" fill="#ffffff"/>
+<rect x="1044" y="76" width="136" height="56" rx="6" fill="#183b5e" stroke="#183b5e" stroke-width="1"/>
+<text x="1112.0" y="102.0" fill="#ffffff" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">PDF</text>
+<text x="1112.0" y="122.0" fill="#c9d6e3" font-size="12" font-weight="400" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">ทางการ พร้อมพิมพ์</text>
+<rect x="1044" y="172" width="136" height="56" rx="6" fill="#ffffff"/>
+<rect x="1044" y="172" width="136" height="56" rx="6" fill="#183b5e" stroke="#183b5e" stroke-width="1"/>
+<text x="1112.0" y="198.0" fill="#ffffff" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">Word</text>
+<text x="1112.0" y="218.0" fill="#c9d6e3" font-size="12" font-weight="400" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">แก้ไขต่อได้</text>
+<rect x="1044" y="268" width="136" height="56" rx="6" fill="#ffffff"/>
+<rect x="1044" y="268" width="136" height="56" rx="6" fill="#183b5e" stroke="#183b5e" stroke-width="1"/>
+<text x="1112.0" y="294.0" fill="#ffffff" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">เว็บคู่มือ</text>
+<text x="1112.0" y="314.0" fill="#c9d6e3" font-size="12" font-weight="400" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">ค้นหาไทย · มือถือ</text>
+<text x="516" y="388" fill="#5b6b82" font-size="13" font-weight="400" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">ทุกข้อในสเปกบอกไฟล์ต้นทาง ภาพถ่ายจากระบบจริง ปิดบังข้อมูลส่วนตัว</text>
+</svg>

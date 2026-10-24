@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 688" width="1120" height="688" role="img" aria-labelledby="keep-current-title keep-current-desc">
+<title id="keep-current-title">คู่มือตามระบบทันเมื่อโค้ดเปลี่ยน</title>
+<desc id="keep-current-desc">เมื่อโค้ดเปลี่ยน manual-kit check หาหน้าที่ไม่ตรงระบบ /manual update แก้เฉพาะหน้าที่กระทบ ถ่ายภาพใหม่ คนอ่านแล้วรับรอง แล้วออกไฟล์ใหม่ ทุกรอบบันทึกกลับเข้าคู่มือในโฟลเดอร์ manual</desc>
+<defs>
+<marker id="keep-current-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#5b6b82"/></marker>
+<marker id="keep-current-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#d9480f"/></marker>
+<marker id="keep-current-arrow-soft" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#8a97a8"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<path d="M660.000 130.234 A236 236 0 0 1 738.044 189.093" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#keep-current-arrow)"/>
+<path d="M779.773 258.000 A236 236 0 0 1 780.207 428.881" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#keep-current-arrow)"/>
+<path d="M738.830 498.000 A236 236 0 0 1 661.086 557.255" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#keep-current-arrow)"/>
+<path d="M460.000 557.766 A236 236 0 0 1 381.956 498.907" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#keep-current-arrow)"/>
+<path d="M340.227 430.000 A236 236 0 0 1 339.793 259.119" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#keep-current-arrow)"/>
+<path d="M381.170 190.000 A236 236 0 0 1 458.914 130.745" fill="none" stroke="#5b6b82" stroke-width="1.4" marker-end="url(#keep-current-arrow)"/>
+<line x1="705.110" y1="430.000" x2="648.335" y2="395.000" stroke="#8a97a8" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#keep-current-arrow-soft)"/>
+<line x1="560.000" y1="546.000" x2="560.000" y2="398.000" stroke="#8a97a8" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#keep-current-arrow-soft)"/>
+<line x1="414.890" y1="430.000" x2="471.665" y2="395.000" stroke="#8a97a8" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#keep-current-arrow-soft)"/>
+<rect x="460.0" y="74.0" width="200" height="68" rx="6" fill="#ffffff"/>
+<rect x="460.0" y="74.0" width="200" height="68" rx="6" fill="#ffffff" stroke="#183b5e" stroke-width="1"/>
+<text x="560.0" y="106.0" fill="#18202b" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">โค้ดเปลี่ยน</text>
+<text x="560.0" y="126.0" fill="#5b6b82" font-size="12" font-weight="400" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">merge request ใหม่</text>
+<rect x="664.0" y="190.0" width="200" height="68" rx="6" fill="#ffffff"/>
+<rect x="664.0" y="190.0" width="200" height="68" rx="6" fill="#fdf0ea" stroke="#d9480f" stroke-width="1.6"/>
+<text x="764.0" y="222.0" fill="#d9480f" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">manual-kit check</text>
+<text x="764.0" y="242.0" fill="#8a3a17" font-size="12" font-weight="400" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">หาหน้าที่ไม่ตรงระบบ</text>
+<rect x="664.0" y="430.0" width="200" height="68" rx="6" fill="#ffffff"/>
+<rect x="664.0" y="430.0" width="200" height="68" rx="6" fill="#ffffff" stroke="#183b5e" stroke-width="1"/>
+<text x="764.0" y="462.0" fill="#18202b" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">/manual update</text>
+<text x="764.0" y="482.0" fill="#5b6b82" font-size="12" font-weight="400" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">แก้เฉพาะหน้าที่กระทบ</text>
+<rect x="460.0" y="546.0" width="200" height="68" rx="6" fill="#ffffff"/>
+<rect x="460.0" y="546.0" width="200" height="68" rx="6" fill="#ffffff" stroke="#183b5e" stroke-width="1"/>
+<text x="560.0" y="578.0" fill="#18202b" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">ถ่ายภาพใหม่</text>
+<text x="560.0" y="598.0" fill="#5b6b82" font-size="12" font-weight="400" font-family="Menlo, 'SF Mono', monospace" text-anchor="middle">capture --changed</text>
+<rect x="256.0" y="430.0" width="200" height="68" rx="6" fill="#ffffff"/>
+<rect x="256.0" y="430.0" width="200" height="68" rx="6" fill="#ffffff" stroke="#183b5e" stroke-width="1"/>
+<text x="356.0" y="462.0" fill="#18202b" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">คนอ่านแล้วรับรอง</text>
+<text x="356.0" y="482.0" fill="#5b6b82" font-size="12" font-weight="400" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">manual-kit sign</text>
+<rect x="256.0" y="190.0" width="200" height="68" rx="6" fill="#ffffff"/>
+<rect x="256.0" y="190.0" width="200" height="68" rx="6" fill="#ffffff" stroke="#183b5e" stroke-width="1"/>
+<text x="356.0" y="222.0" fill="#18202b" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">ออกไฟล์ใหม่</text>
+<text x="356.0" y="242.0" fill="#5b6b82" font-size="12" font-weight="400" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">PDF · Word · เว็บ</text>
+<rect x="450.0" y="296.0" width="220" height="96" rx="8" fill="#183b5e"/>
+<text x="560" y="338" fill="#ffffff" font-size="16" font-weight="600" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">คู่มือในโฟลเดอร์ manual/</text>
+<text x="560" y="360" fill="#c9d6e3" font-size="13" font-weight="400" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">หน้า · ภาพ · การรับรอง</text>
+<text x="560" y="666" fill="#5b6b82" font-size="13" font-weight="400" font-family="'IBM Plex Sans Thai', 'Thonburi', sans-serif" text-anchor="middle">เส้นทึบ: ลำดับงานแต่ละรอบ · เส้นประ: สิ่งที่บันทึกกลับเข้าคู่มือ</text>
+</svg>
